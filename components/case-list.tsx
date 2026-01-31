@@ -71,55 +71,130 @@ export function CaseList({
           </Link>
         ) : null}
       </header>
-      <div style={{ display: 'grid', gap: '0.9rem' }}>
-        {displayedCases.map((item) => (
-          <article
-            key={item.id}
-            style={{
-              padding: 'clamp(1rem, 3.6vw, 1.2rem) clamp(1.05rem, 3.8vw, 1.35rem)',
-              borderRadius: '1rem',
-              border: '1px solid var(--color-border)',
-              background: 'linear-gradient(135deg, rgba(220, 233, 255, 0.82), rgba(240, 246, 255, 0.95))',
-              display: 'grid',
-              gap: '0.35rem'
-            }}
-          >
-            <div
+      <div style={{ display: 'grid', gap: '1rem' }}>
+        {displayedCases.map((item) => {
+          // Extract inference values
+          const inf = item.inference;
+          const prob = inf && typeof inf.probability === 'number' ? inf.probability : null;
+          const pred = inf
+            ? typeof inf.prediction === 'string' ? inf.prediction
+              : typeof (inf.prediction as any)?.prediction === 'string' ? (inf.prediction as any).prediction
+              : null
+            : null;
+          const risk = inf ? (inf.riskLevel || (inf as any).risk_level) : null;
+          const riskColor = risk === 'high' ? 'rgb(220, 38, 38)'
+            : risk === 'medium' ? 'rgb(217, 119, 6)'
+            : 'rgb(22, 163, 74)';
+          const riskBg = risk === 'high' ? 'rgba(239, 68, 68, 0.1)'
+            : risk === 'medium' ? 'rgba(245, 158, 11, 0.1)'
+            : 'rgba(34, 197, 94, 0.1)';
+
+          return (
+            <article
+              key={item.id}
               style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                flexWrap: 'wrap',
-                gap: '0.6rem'
+                padding: '1.25rem 1.35rem',
+                borderRadius: '1rem',
+                border: '1px solid var(--color-border)',
+                background: 'var(--color-card)',
+                display: 'grid',
+                gridTemplateColumns: prob !== null ? '1fr auto' : '1fr',
+                gap: '1rem',
+                alignItems: 'center'
               }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                <span
-                  className="pill"
+              {/* Left: Case Info */}
+              <div style={{ display: 'grid', gap: '0.6rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
+                  <strong style={{ fontSize: '1.1rem' }}>{item.demographics.caseLabel}</strong>
+                </div>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>
+                  <span>{item.demographics.ageMonths} months</span>
+                  <span>{item.demographics.sex}</span>
+                  <span>{formatDate(item.submittedAt)}</span>
+                </div>
+                {item.notes && (
+                  <p style={{
+                    margin: 0,
+                    color: 'var(--color-text-secondary)',
+                    fontSize: '0.9rem',
+                    lineHeight: 1.5,
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical'
+                  }}>
+                    {item.notes}
+                  </p>
+                )}
+                {showActions && (
+                  <Link
+                    href={`/cases/${item.id}`}
+                    style={{ fontWeight: 600, color: 'var(--color-accent)', fontSize: '0.9rem' }}
+                  >
+                    View details →
+                  </Link>
+                )}
+              </div>
+
+              {/* Right: Prediction Result */}
+              {prob !== null && (
+                <div
                   style={{
-                    background: 'rgba(91,108,240,0.1)',
-                    color: 'var(--color-accent)'
+                    padding: '1rem 1.25rem',
+                    borderRadius: '0.85rem',
+                    background: riskBg,
+                    minWidth: '140px',
+                    textAlign: 'center'
                   }}
                 >
-                  {item.demographics.subtype}
-                </span>
-                <strong>{item.demographics.caseLabel}</strong>
-              </div>
-              <span style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
-                {formatDate(item.submittedAt)}
-              </span>
-            </div>
-            <p style={{ margin: 0, color: 'var(--color-text-secondary)' }}>{item.notes}</p>
-            {showActions ? (
-              <Link
-                href={`/cases/${item.id}`}
-                style={{ fontWeight: 600, color: 'var(--color-accent)', fontSize: '0.95rem' }}
-              >
-                Review inference →
-              </Link>
-            ) : null}
-          </article>
-        ))}
+                  <div style={{
+                    fontSize: '0.7rem',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    color: 'var(--color-text-secondary)',
+                    marginBottom: '0.35rem',
+                    fontWeight: 600
+                  }}>
+                    Prediction
+                  </div>
+                  <div style={{
+                    fontSize: '1.1rem',
+                    fontWeight: 700,
+                    color: riskColor,
+                    marginBottom: '0.5rem'
+                  }}>
+                    {pred}
+                  </div>
+                  {/* Mini probability bar */}
+                  <div style={{
+                    height: '6px',
+                    borderRadius: '3px',
+                    background: 'rgba(0,0,0,0.08)',
+                    overflow: 'hidden',
+                    marginBottom: '0.35rem'
+                  }}>
+                    <div style={{
+                      height: '100%',
+                      width: `${prob * 100}%`,
+                      background: riskColor,
+                      borderRadius: '3px',
+                      transition: 'width 0.3s ease'
+                    }} />
+                  </div>
+                  <div style={{
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    color: riskColor
+                  }}>
+                    {(prob * 100).toFixed(1)}%
+                  </div>
+                </div>
+              )}
+            </article>
+          );
+        })}
       </div>
       {enablePagination && orderedCases.length > pageSize ? (
         <div

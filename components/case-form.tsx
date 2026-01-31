@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { z } from 'zod';
 
 import { useToast } from '@/components/toast';
-import type { CaseRecord, CaseSubmission } from '@/lib/types';
+import type { CaseRecord, CaseSubmission, IntellectualDisability } from '@/lib/types';
 
 const prenatalOptions = ['Natural', 'IVF', 'Twin', 'Complication'] as const;
 const delayOptions = ['None', 'Motor', 'Language', 'Cognitive', 'Global'] as const;
@@ -18,11 +18,38 @@ const concernOptions = [
   'Sleep',
   'Sensory'
 ] as const;
-const subtypeOptions = [
-  'F84.0 Childhood autism',
-  'F84.1 Atypical autism',
-  'F84.5 Asperger syndrome'
+const intellectualDisabilityOptions = [
+  { value: 'N', label: 'None' },
+  { value: 'F70.0', label: 'Mild (F70.0)' },
+  { value: 'F71', label: 'Moderate (F71)' },
+  { value: 'F72', label: 'Severe (F72)' }
 ] as const;
+
+const fieldLabels: Record<string, string> = {
+  caseLabel: 'Case label',
+  ageMonths: 'Age (months)',
+  sex: 'Sex',
+  parentalAgeMother: 'Parental age - mother',
+  parentalAgeFather: 'Parental age - father',
+  diagnosticAgeMonths: 'Diagnostic age',
+  prenatalFactors: 'Prenatal factors',
+  delays: 'Developmental delays',
+  dysmorphicFeatures: 'Dysmorphic features',
+  intellectualDisability: 'Intellectual disability',
+  comorbidities: 'Comorbidities',
+  regressionObserved: 'Regression',
+  adosScore: 'ADOS score',
+  adirScore: 'ADI-R score',
+  iqDq: 'IQ / Developmental Quotient',
+  eegAnomalies: 'EEG anomalies',
+  mriFindings: 'MRI findings',
+  neurologicalExam: 'Neurological examination',
+  headCircumference: 'Head circumference',
+  concerns: 'Behavioral concerns',
+  languageLevel: 'Language level',
+  sensoryNotes: 'Sensory notes',
+  notes: 'Clinical notes'
+};
 
 const schema = z.object({
   caseLabel: z.string().min(2),
@@ -30,17 +57,19 @@ const schema = z.object({
   sex: z.enum(['Male', 'Female']),
   parentalAgeMother: z.number().min(16).max(55),
   parentalAgeFather: z.number().min(16).max(70),
-  subtype: z.enum(subtypeOptions),
   diagnosticAgeMonths: z.number().min(6).max(216),
   prenatalFactors: z.array(z.enum(prenatalOptions)).min(1),
   delays: z.array(z.enum(delayOptions)).min(1),
   dysmorphicFeatures: z.boolean(),
+  intellectualDisability: z.enum(['N', 'F70.0', 'F71', 'F72']),
   comorbidities: z.string(),
   regressionObserved: z.boolean(),
   adosScore: z.number().min(1).max(30),
   adirScore: z.number().min(1).max(40),
+  iqDq: z.number().min(20).max(150),
   eegAnomalies: z.boolean(),
   mriFindings: z.string().optional(),
+  neurologicalExam: z.string().min(1),
   headCircumference: z.number().min(40).max(60),
   concerns: z.array(z.enum(concernOptions)).min(1),
   languageLevel: z.enum(['Functional', 'Delayed', 'Absent']),
@@ -56,17 +85,19 @@ const defaults: FormValues = {
   sex: 'Male',
   parentalAgeMother: 32,
   parentalAgeFather: 35,
-  subtype: 'F84.0 Childhood autism',
   diagnosticAgeMonths: 18,
   prenatalFactors: ['Natural'],
   delays: ['Language'],
   dysmorphicFeatures: false,
+  intellectualDisability: 'N',
   comorbidities: '',
   regressionObserved: false,
   adosScore: 12,
   adirScore: 20,
+  iqDq: 85,
   eegAnomalies: false,
   mriFindings: '',
+  neurologicalExam: 'N',
   headCircumference: 50,
   concerns: ['Sensory'],
   languageLevel: 'Delayed',
@@ -115,14 +146,19 @@ export function CaseForm() {
     const parsed = schema.safeParse(values);
     if (!parsed.success) {
       const validationErrors: Record<string, string> = {};
+      const errorFields: string[] = [];
       parsed.error.issues.forEach((issue) => {
         const path = issue.path.join('.');
         validationErrors[path] = issue.message;
+        errorFields.push(fieldLabels[path] || path);
       });
       setErrors(validationErrors);
+      console.error('[CaseForm] Validation errors:', validationErrors);
       toast.show({
         title: 'Validation failed',
-        description: 'Review highlighted fields to align with the clinical schema.',
+        description: errorFields.length === 1
+          ? `Please check: ${errorFields[0]}`
+          : `Please check ${errorFields.length} fields: ${errorFields.slice(0, 3).join(', ')}${errorFields.length > 3 ? '...' : ''}`,
         tone: 'danger'
       });
       return;
@@ -228,13 +264,6 @@ export function CaseForm() {
               <option value="Female">Female</option>
             </select>
           </Field>
-          <Field label="Autism subtype">
-            <select value={values.subtype} onChange={textChange('subtype')} style={inputStyle}>
-              {subtypeOptions.map((option) => (
-                <option key={option}>{option}</option>
-              ))}
-            </select>
-          </Field>
           <Field label="Diagnostic age (months)">
             <input
               type="number"
@@ -295,6 +324,19 @@ export function CaseForm() {
             value={values.regressionObserved}
             onChange={(val) => handleBoolean('regressionObserved', val)}
           />
+          <Field label="Intellectual disability">
+            <select
+              value={values.intellectualDisability}
+              onChange={textChange('intellectualDisability')}
+              style={inputStyle}
+            >
+              {intellectualDisabilityOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </Field>
         </div>
         <Field label="Comorbidities">
           <input
@@ -339,6 +381,17 @@ export function CaseForm() {
               style={inputStyle}
             />
           </Field>
+          <Field label="IQ / Developmental Quotient" error={errors.iqDq}>
+            <input
+              type="number"
+              min={20}
+              max={150}
+              value={values.iqDq}
+              onChange={numericChange('iqDq')}
+              style={inputStyle}
+              placeholder="20-150"
+            />
+          </Field>
         </div>
         <ToggleRow
           label="EEG anomalies"
@@ -352,6 +405,15 @@ export function CaseForm() {
             rows={3}
             style={textareaStyle}
             placeholder="Normal structural MRI"
+          />
+        </Field>
+        <Field label="Neurological examination" error={errors.neurologicalExam}>
+          <textarea
+            value={values.neurologicalExam}
+            onChange={textChange('neurologicalExam')}
+            rows={2}
+            style={textareaStyle}
+            placeholder="N for normal, or describe abnormalities (e.g., hypotonia, abnormal reflexes)"
           />
         </Field>
       </section>
@@ -397,6 +459,28 @@ export function CaseForm() {
       </section>
 
       <footer className="form-footer">
+        {Object.keys(errors).length > 0 && (
+          <div
+            style={{
+              padding: '1rem',
+              borderRadius: '0.75rem',
+              background: 'rgba(239, 68, 68, 0.08)',
+              border: '1px solid rgba(239, 68, 68, 0.2)',
+              width: '100%'
+            }}
+          >
+            <p style={{ margin: '0 0 0.5rem', fontWeight: 600, color: 'rgb(220, 38, 38)' }}>
+              Please fix the following errors:
+            </p>
+            <ul style={{ margin: 0, paddingLeft: '1.2rem', color: 'rgb(185, 28, 28)' }}>
+              {Object.entries(errors).map(([field, message]) => (
+                <li key={field} style={{ fontSize: '0.9rem' }}>
+                  <strong>{fieldLabels[field] || field}:</strong> {message}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         <p
           style={{
             margin: 0,
@@ -583,13 +667,13 @@ function toSubmission(values: FormValues): CaseSubmission {
         mother: values.parentalAgeMother,
         father: values.parentalAgeFather
       },
-      subtype: values.subtype,
       diagnosticAgeMonths: values.diagnosticAgeMonths,
       prenatalFactors: [...values.prenatalFactors]
     },
     development: {
       delays: [...values.delays],
       dysmorphicFeatures: values.dysmorphicFeatures,
+      intellectualDisability: values.intellectualDisability as IntellectualDisability,
       comorbidities: values.comorbidities
         ? values.comorbidities.split(',').map((item) => item.trim()).filter(Boolean)
         : [],
@@ -598,8 +682,10 @@ function toSubmission(values: FormValues): CaseSubmission {
     assessments: {
       adosScore: values.adosScore,
       adirScore: values.adirScore,
+      iqDq: values.iqDq,
       eegAnomalies: values.eegAnomalies,
       mriFindings: values.mriFindings?.trim() ? values.mriFindings.trim() : null,
+      neurologicalExam: values.neurologicalExam.trim() || 'N',
       headCircumference: values.headCircumference
     },
     behaviors: {
