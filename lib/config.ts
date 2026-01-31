@@ -36,7 +36,7 @@ function parseChainstorePeers(value: string | undefined): string[] {
       if (typeof entry !== 'string') {
         throw new Error('CHAINSTORE_PEERS entries must be strings');
       }
-      return ensureHttpProtocol(entry)!;
+      return entry;
     });
   } catch (error) {
     console.error('Failed to parse CHAINSTORE_PEERS env var:', error);
@@ -87,6 +87,11 @@ if (!cstoreApiUrl || !r1fsApiUrl) {
   );
 }
 
+// Aspire ASD Screening API configuration
+const aspireApiUrl = ensureHttpProtocol(process.env.ASPIRE_API_URL) || 'http://localhost:5083';
+const aspireApiEnabled = process.env.ASPIRE_API_ENABLED !== 'false';
+const aspireApiTimeoutMs = parseInt(process.env.ASPIRE_API_TIMEOUT_MS || '30000', 10);
+
 const authSessionCookieName = process.env.AUTH_SESSION_COOKIE || 'r1-session';
 const parsedSessionTtl = parseInt(process.env.AUTH_SESSION_TTL_SECONDS || '86400', 10);
 const authSessionTtlSeconds = Number.isFinite(parsedSessionTtl) ? parsedSessionTtl : 86400;
@@ -107,6 +112,11 @@ export const platformConfig = {
   chainstorePeers,
   casesHKey: process.env.RATIO1_CASES_HKEY || 'ratio1-asd-cases',
   jobsHKey: process.env.RATIO1_JOBS_HKEY || 'ratio1-asd-jobs',
+  aspire: {
+    apiUrl: aspireApiUrl,
+    enabled: aspireApiEnabled,
+    timeoutMs: aspireApiTimeoutMs
+  },
   auth: {
     sessionCookieName: authSessionCookieName,
     sessionTtlSeconds: authSessionTtlSeconds,

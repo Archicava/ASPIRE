@@ -35,7 +35,7 @@ export default async function CasesPage() {
         </header>
         <ProbabilityBars categories={aggregatedCategories} />
       </section>
-      <CaseList title="All cases" cases={cases} showActions={false} enablePagination />
+      <CaseList title="All cases" cases={cases} showActions={true} enablePagination />
     </main>
   );
 }
@@ -43,8 +43,14 @@ export default async function CasesPage() {
 function aggregateCategories(cases: CaseRecord[]) {
   const categoryMap = new Map<string, number>();
   cases.forEach((record) => {
-    record.inference.categories.forEach((category) => {
-      categoryMap.set(category.label, (categoryMap.get(category.label) ?? 0) + category.probability);
+    // Handle both mapped inference and raw API response
+    const categories = Array.isArray(record.inference?.categories)
+      ? record.inference.categories
+      : [];
+    categories.forEach((category) => {
+      if (category && typeof category.label === 'string' && typeof category.probability === 'number') {
+        categoryMap.set(category.label, (categoryMap.get(category.label) ?? 0) + category.probability);
+      }
     });
   });
   const count = cases.length || 1;

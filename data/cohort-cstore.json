@@ -25,14 +25,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 45,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 48
+      "headCircumference": 48,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -82,14 +85,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52.5
+      "headCircumference": 52.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -142,14 +148,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -197,14 +206,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 34,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -252,14 +264,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 33,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -308,14 +323,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 34,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52.5
+      "headCircumference": 52.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -363,14 +381,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 32,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -419,14 +440,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -474,14 +498,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 21,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -532,14 +559,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 20,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -592,14 +622,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 34,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -650,14 +683,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 32,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -709,14 +745,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 36,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -768,14 +807,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 32,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 60
+      "headCircumference": 60,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -823,14 +865,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -878,14 +923,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -933,14 +981,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 33,
       "eegAnomalies": true,
       "mriFindings": "Normal MRI",
-      "headCircumference": 56
+      "headCircumference": 56,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -990,14 +1041,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 32,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -1048,14 +1102,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 20,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -1105,14 +1162,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 20,
       "adirScore": 32,
       "eegAnomalies": true,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -1161,14 +1221,17 @@
         "Chronic disease",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 37,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -1219,14 +1282,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 9,
       "adirScore": 38,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 51.5
+      "headCircumference": 51.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -1277,14 +1343,17 @@
         "Chronic disease",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 35,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -1336,14 +1405,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 32,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -1391,14 +1463,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 33,
       "eegAnomalies": true,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -1447,14 +1522,17 @@
         "Chronic disease",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 35,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 48
+      "headCircumference": 48,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -1502,14 +1580,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 32,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 44
+      "headCircumference": 44,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -1555,14 +1636,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 3,
       "adirScore": 34,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 48
+      "headCircumference": 48,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -1610,14 +1694,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 39,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -1668,14 +1755,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 14,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -1723,14 +1813,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 46,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -1783,14 +1876,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 34,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -1840,14 +1936,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 36,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -1896,14 +1995,17 @@
         "Chronic disease",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 35,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -1952,14 +2054,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 38,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -2008,14 +2113,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 34,
       "eegAnomalies": true,
       "mriFindings": "Normal MRI",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -2064,14 +2172,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 33,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 48
+      "headCircumference": 48,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -2117,14 +2228,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 36,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -2176,14 +2290,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 7,
       "adirScore": 35,
       "eegAnomalies": true,
       "mriFindings": null,
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -2235,14 +2352,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -2293,14 +2413,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 35,
       "adirScore": 35,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 46
+      "headCircumference": 46,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -2348,14 +2471,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 39,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -2405,14 +2531,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 36,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -2461,14 +2590,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 36,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -2515,14 +2647,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 12,
       "adirScore": 12,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -2568,14 +2703,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 33,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -2623,14 +2761,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 49,
       "adirScore": 48,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -2678,14 +2819,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 4,
       "adirScore": 14,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -2733,14 +2877,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 10,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -2788,14 +2935,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 39,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 47.5
+      "headCircumference": 47.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -2845,14 +2995,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 11,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -2904,14 +3057,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 18,
       "adirScore": 41,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -2960,14 +3116,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 41,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 48
+      "headCircumference": 48,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -3015,14 +3174,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 17,
       "adirScore": 44,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53.5
+      "headCircumference": 53.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -3073,14 +3235,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 40,
       "eegAnomalies": true,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -3130,14 +3295,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -3185,14 +3353,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 39,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -3239,14 +3410,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 49,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -3294,14 +3468,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 18,
       "adirScore": 41,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -3348,14 +3525,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 39,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52.5
+      "headCircumference": 52.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -3401,14 +3581,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50.5
+      "headCircumference": 50.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -3459,14 +3642,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 39,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -3516,14 +3702,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 38,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -3573,14 +3762,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 43,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -3628,14 +3820,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 38,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -3683,14 +3878,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 38,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -3740,14 +3938,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -3793,14 +3994,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 39,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -3850,14 +4054,17 @@
         "Chronic disease",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 38,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -3908,14 +4115,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -3963,14 +4173,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 11,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -4019,14 +4232,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 38,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -4074,14 +4290,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 38,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -4130,14 +4349,17 @@
       "comorbidities": [
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -4189,14 +4411,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 39,
       "eegAnomalies": true,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -4242,14 +4467,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 38,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -4297,14 +4525,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 39,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -4355,14 +4586,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 39,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -4408,14 +4642,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 36,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 46
+      "headCircumference": 46,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -4463,14 +4700,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 16,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 50.5
+      "headCircumference": 50.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -4520,14 +4760,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 41,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -4577,14 +4820,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50.5
+      "headCircumference": 50.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -4633,14 +4879,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 41,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 56
+      "headCircumference": 56,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -4690,14 +4939,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 56
+      "headCircumference": 56,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -4747,14 +4999,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 55,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 46
+      "headCircumference": 46,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -4804,14 +5059,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -4859,14 +5117,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 55,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -4912,14 +5173,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 41,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -4969,14 +5233,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 54.5
+      "headCircumference": 54.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -5027,14 +5294,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 39,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -5084,14 +5354,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 38,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 47.5
+      "headCircumference": 47.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -5137,14 +5410,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 39,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -5192,14 +5468,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 25,
       "adirScore": 38,
       "eegAnomalies": true,
       "mriFindings": null,
-      "headCircumference": 56
+      "headCircumference": 56,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -5245,14 +5524,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 11,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -5298,14 +5580,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 17,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -5353,14 +5638,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 20,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -5406,14 +5694,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 28,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49.5
+      "headCircumference": 49.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -5459,14 +5750,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -5516,14 +5810,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 27,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 46
+      "headCircumference": 46,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -5569,14 +5866,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 35,
       "eegAnomalies": true,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -5626,14 +5926,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 38,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -5684,14 +5987,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -5739,14 +6045,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 20,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -5794,14 +6103,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 37,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -5851,14 +6163,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 19,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52.5
+      "headCircumference": 52.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -5906,14 +6221,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 31,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -5962,14 +6280,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 20,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -6018,14 +6339,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -6075,14 +6399,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 47,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -6133,14 +6460,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 27,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 47
+      "headCircumference": 47,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -6188,14 +6518,17 @@
       "comorbidities": [
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 45,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50.5
+      "headCircumference": 50.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -6245,14 +6578,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 23,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -6300,14 +6636,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 34,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -6356,14 +6695,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 31,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -6411,14 +6753,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 35,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -6466,14 +6811,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 9,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -6519,14 +6867,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -6574,14 +6925,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 48
+      "headCircumference": 48,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -6630,14 +6984,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 28,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -6685,14 +7042,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -6740,14 +7100,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 24,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 56
+      "headCircumference": 56,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -6795,14 +7158,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 18,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -6848,14 +7214,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 12,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -6903,14 +7272,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 18,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -6958,14 +7330,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 17,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -7013,14 +7388,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 25,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -7068,14 +7446,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 48
+      "headCircumference": 48,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -7121,14 +7502,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52.5
+      "headCircumference": 52.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -7176,14 +7560,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -7231,14 +7618,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 17,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -7284,14 +7674,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 11,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -7339,14 +7732,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 45,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -7395,14 +7791,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 45
+      "headCircumference": 45,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -7450,14 +7849,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 29,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -7505,14 +7907,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 24,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 60
+      "headCircumference": 60,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -7559,14 +7964,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -7616,14 +8024,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 18,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -7671,14 +8082,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -7728,14 +8142,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 19,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -7783,14 +8200,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 14,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 47
+      "headCircumference": 47,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -7840,14 +8260,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 26,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -7898,14 +8321,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 14,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 47
+      "headCircumference": 47,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -7954,14 +8380,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -8011,14 +8440,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 18,
       "eegAnomalies": true,
       "mriFindings": "Normal MRI",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -8069,14 +8501,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 35,
       "eegAnomalies": true,
       "mriFindings": "Normal MRI",
-      "headCircumference": 56
+      "headCircumference": 56,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -8125,14 +8560,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 14,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": null,
-      "headCircumference": 47.5
+      "headCircumference": 47.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -8183,14 +8621,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 20,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 47.5
+      "headCircumference": 47.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -8241,14 +8682,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 56
+      "headCircumference": 56,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -8298,14 +8742,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 18,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 48
+      "headCircumference": 48,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -8355,14 +8802,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 20,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -8411,14 +8861,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 25,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -8467,14 +8920,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 23,
       "adirScore": 44,
       "eegAnomalies": true,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -8523,14 +8979,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 45
+      "headCircumference": 45,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -8581,14 +9040,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 32,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 46
+      "headCircumference": 46,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -8636,14 +9098,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 34,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 43
+      "headCircumference": 43,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -8693,14 +9158,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 39,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -8748,14 +9216,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -8805,14 +9276,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 19,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 45
+      "headCircumference": 45,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -8860,14 +9334,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 47,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -8913,14 +9390,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 17,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 46
+      "headCircumference": 46,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -8970,14 +9450,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 33,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -9027,14 +9510,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -9084,14 +9570,17 @@
       "comorbidities": [
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 23,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -9137,14 +9626,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 18,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -9192,14 +9684,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 18,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -9247,14 +9742,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 18,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -9300,14 +9798,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -9353,14 +9854,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -9410,14 +9914,17 @@
       "comorbidities": [
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 16,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -9465,14 +9972,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 19,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -9520,14 +10030,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 57,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -9576,14 +10089,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 33,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -9632,14 +10148,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 12,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51.5
+      "headCircumference": 51.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -9688,14 +10207,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 16,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": "Normal MRI",
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -9744,14 +10266,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 17,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -9803,14 +10328,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -9858,14 +10386,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -9913,14 +10444,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 9,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -9968,14 +10502,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 25,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -10023,14 +10560,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 57
+      "headCircumference": 57,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -10080,14 +10620,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -10134,14 +10677,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 18,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -10187,14 +10733,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 35,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -10240,14 +10789,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -10295,14 +10847,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 33,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -10353,14 +10908,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 24,
       "adirScore": 36,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -10410,14 +10968,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 27,
       "adirScore": 52,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -10465,14 +11026,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 20,
       "adirScore": 35,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -10522,14 +11086,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 28,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -10580,14 +11147,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 11,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -10633,14 +11203,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -10688,14 +11261,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -10741,14 +11317,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 18,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 45.5
+      "headCircumference": 45.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -10797,14 +11376,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 20,
       "eegAnomalies": true,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -10852,14 +11434,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 45,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 46
+      "headCircumference": 46,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -10908,14 +11493,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": "Normal MRI",
-      "headCircumference": 45
+      "headCircumference": 45,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -10963,14 +11551,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 58
+      "headCircumference": 58,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -11020,14 +11611,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 17,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -11074,14 +11668,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 19,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -11131,14 +11728,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 43,
       "eegAnomalies": true,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -11190,14 +11790,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 16,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 59
+      "headCircumference": 59,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -11247,14 +11850,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 21,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -11304,14 +11910,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 17,
       "adirScore": 34,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -11357,14 +11966,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 16,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -11413,14 +12025,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 19,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 45
+      "headCircumference": 45,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -11469,14 +12084,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 19,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 46
+      "headCircumference": 46,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -11525,14 +12143,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 15,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -11579,14 +12200,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 20,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -11633,14 +12257,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 19,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -11690,14 +12317,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 35,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -11743,14 +12373,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 19,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -11798,14 +12431,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 35,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -11855,14 +12491,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 44
+      "headCircumference": 44,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -11913,14 +12552,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 14,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -11971,14 +12613,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -12026,14 +12671,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 61,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -12081,14 +12729,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -12138,14 +12789,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 47
+      "headCircumference": 47,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -12193,14 +12847,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -12250,14 +12907,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 52,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -12307,14 +12967,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 29,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 47
+      "headCircumference": 47,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -12360,14 +13023,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 45,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -12415,14 +13081,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -12468,14 +13137,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -12523,14 +13195,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 17,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -12580,14 +13255,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -12635,14 +13313,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 45,
       "eegAnomalies": true,
       "mriFindings": "Normal MRI",
-      "headCircumference": 51.8
+      "headCircumference": 51.8,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -12692,14 +13373,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 45,
       "eegAnomalies": true,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 51.5
+      "headCircumference": 51.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -12749,14 +13433,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 12,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -12805,14 +13492,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 43,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51.5
+      "headCircumference": 51.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -12860,14 +13550,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -12919,14 +13612,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 45,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -12976,14 +13672,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 48
+      "headCircumference": 48,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -13029,14 +13728,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -13084,14 +13786,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 12,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 48
+      "headCircumference": 48,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -13137,14 +13842,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 42,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -13192,14 +13900,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -13247,14 +13958,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 47
+      "headCircumference": 47,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -13300,14 +14014,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -13354,14 +14071,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -13409,14 +14129,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 61
+      "headCircumference": 61,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -13466,14 +14189,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -13521,14 +14247,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 14,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -13574,14 +14303,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 9,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 47
+      "headCircumference": 47,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -13627,14 +14359,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 11,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -13680,14 +14415,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 20,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 57
+      "headCircumference": 57,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -13735,14 +14473,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 15,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -13788,14 +14529,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 9,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -13845,14 +14589,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 34,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 48
+      "headCircumference": 48,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -13900,14 +14647,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 11,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -13953,14 +14703,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 21,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -14006,14 +14759,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -14061,14 +14817,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 11,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -14118,14 +14877,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 58
+      "headCircumference": 58,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -14175,14 +14937,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 14,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": null,
-      "headCircumference": 47
+      "headCircumference": 47,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -14228,14 +14993,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 9,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52.5
+      "headCircumference": 52.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -14286,14 +15054,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -14341,14 +15112,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -14394,14 +15168,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 14,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 531
+      "headCircumference": 531,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -14452,14 +15229,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49.5
+      "headCircumference": 49.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -14507,14 +15287,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 9,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -14560,14 +15343,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -14615,14 +15401,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 20,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -14672,14 +15461,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 46
+      "headCircumference": 46,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -14728,14 +15520,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 20,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -14781,14 +15576,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 9,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -14837,14 +15635,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 9,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -14895,14 +15696,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 11,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -14948,14 +15752,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 12,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -15006,14 +15813,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 45,
       "eegAnomalies": true,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 57.5
+      "headCircumference": 57.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -15063,14 +15873,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 35,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 56
+      "headCircumference": 56,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -15117,14 +15930,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 17,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -15172,14 +15988,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 41
+      "headCircumference": 41,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -15227,14 +16046,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 12,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51.5
+      "headCircumference": 51.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -15282,14 +16104,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 56,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -15337,14 +16162,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 59
+      "headCircumference": 59,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -15393,14 +16221,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -15448,14 +16279,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 5,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -15503,14 +16337,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": "Normal MRI",
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -15559,14 +16396,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -15616,14 +16456,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 14,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -15671,14 +16514,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 58
+      "headCircumference": 58,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -15724,14 +16570,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 49
+      "headCircumference": 49,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -15780,14 +16629,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -15835,14 +16687,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -15893,14 +16748,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 47
+      "headCircumference": 47,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -15949,14 +16807,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 48
+      "headCircumference": 48,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -16004,14 +16865,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -16062,14 +16926,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": true,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 47
+      "headCircumference": 47,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -16120,14 +16987,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -16175,14 +17045,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 59
+      "headCircumference": 59,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -16233,14 +17106,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 59
+      "headCircumference": 59,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -16286,14 +17162,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 47.5
+      "headCircumference": 47.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -16341,14 +17220,17 @@
       "comorbidities": [
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -16397,14 +17279,17 @@
         "Chronic disease",
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 12,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 47.5
+      "headCircumference": 47.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -16452,14 +17337,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -16509,14 +17397,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -16567,14 +17458,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -16620,14 +17514,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 9,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 55
+      "headCircumference": 55,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -16673,14 +17570,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 8,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 55.5
+      "headCircumference": 55.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -16727,14 +17627,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -16785,14 +17688,17 @@
       "comorbidities": [
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 9,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 45.5
+      "headCircumference": 45.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -16841,14 +17747,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 3,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 45.5
+      "headCircumference": 45.5,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -16896,14 +17805,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 34,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -16954,14 +17866,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 14,
       "adirScore": 45,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 54
+      "headCircumference": 54,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -17010,14 +17925,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 40,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -17067,14 +17985,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 11,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Normal MRI",
-      "headCircumference": 53
+      "headCircumference": 53,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -17121,14 +18042,17 @@
       ],
       "dysmorphicFeatures": false,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 11,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 50
+      "headCircumference": 50,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -17177,14 +18101,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 19,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 47
+      "headCircumference": 47,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -17231,14 +18158,17 @@
       ],
       "dysmorphicFeatures": true,
       "comorbidities": [],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 19,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 47
+      "headCircumference": 47,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -17287,14 +18217,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 47
+      "headCircumference": 47,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -17345,14 +18278,17 @@
         "Recurrent infections",
         "Allergies"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 9,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -17402,14 +18338,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 13,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [
@@ -17459,14 +18398,17 @@
       "comorbidities": [
         "Recurrent infections"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 10,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": "Structural anomaly observed",
-      "headCircumference": 51
+      "headCircumference": 51,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],
@@ -17514,14 +18456,17 @@
       "comorbidities": [
         "Chronic disease"
       ],
-      "regressionObserved": false
+      "regressionObserved": false,
+      "intellectualDisability": "N"
     },
     "assessments": {
       "adosScore": 11,
       "adirScore": 30,
       "eegAnomalies": false,
       "mriFindings": null,
-      "headCircumference": 52
+      "headCircumference": 52,
+      "iqDq": 85,
+      "neurologicalExam": "N"
     },
     "behaviors": {
       "concerns": [],

@@ -2,9 +2,107 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { ProbabilityBars } from '@/components/probability-bars';
+import { RetryButton } from '@/components/retry-button';
 import { loadCaseRecord, loadInferenceJob } from '@/lib/data-platform';
 import { formatDate } from '@/lib/format';
 import { Hero } from '@/components/hero';
+import type { InferenceResult, RiskLevel } from '@/lib/types';
+
+// Normalize inference data - handles both old raw API format and new mapped format
+function normalizeInference(inference: any): InferenceResult {
+  // Default fallback
+  const defaultInference: InferenceResult = {
+    topPrediction: 'Pending',
+    categories: [],
+    explanation: 'Analysis pending.',
+    recommendedActions: ['Consult with a qualified healthcare professional for guidance.']
+  };
+
+  if (!inference || typeof inference !== 'object') {
+    return defaultInference;
+  }
+
+  // Check if this is a raw API response (has status, request_id, processed_at, etc.)
+  const isRawApiResponse =
+    inference.request_id ||
+    inference.processed_at ||
+    inference.processor_version ||
+    inference.input_summary ||
+    (inference.status === 'completed' || inference.status === 'error');
+
+  if (isRawApiResponse) {
+    console.log('[normalizeInference] Detected raw API response, converting...');
+    const probability = Number(inference.probability) || 0.5;
+    const confidence = Number(inference.confidence) || 0.8;
+    let riskLevel: RiskLevel = inference.risk_level;
+    if (!riskLevel) {
+      riskLevel = probability >= 0.7 ? 'high' : probability >= 0.4 ? 'medium' : 'low';
+    }
+
+    return {
+      topPrediction: inference.prediction || 'Unknown',
+      prediction: inference.prediction,
+      probability,
+      confidence,
+      riskLevel,
+      categories: [
+        {
+          label: inference.prediction === 'ASD' ? 'ASD' : 'Healthy',
+          probability: inference.prediction === 'ASD' ? probability : 1 - probability,
+          narrative: inference.prediction === 'ASD'
+            ? 'Elevated markers consistent with Autism Spectrum Disorder patterns.'
+            : 'Clinical profile within typical developmental range.'
+        },
+        {
+          label: inference.prediction === 'ASD' ? 'Healthy' : 'ASD',
+          probability: inference.prediction === 'ASD' ? 1 - probability : probability,
+          narrative: inference.prediction === 'ASD'
+            ? 'Typical development indicators present.'
+            : 'Some markers may warrant monitoring.'
+        }
+      ],
+      explanation: `Analysis complete with ${(probability * 100).toFixed(1)}% probability.`,
+      recommendedActions: ['Consult with a qualified healthcare professional for guidance.']
+    };
+  }
+
+  // Ensure required fields exist
+  return {
+    topPrediction: inference.topPrediction || inference.prediction || 'Unknown',
+    prediction: inference.prediction,
+    probability: inference.probability,
+    confidence: inference.confidence,
+    riskLevel: inference.riskLevel,
+    categories: Array.isArray(inference.categories) ? inference.categories : [],
+    explanation: inference.explanation || '',
+    recommendedActions: Array.isArray(inference.recommendedActions) ? inference.recommendedActions : []
+  };
+}
+
+const riskLevelStyles: Record<RiskLevel, { background: string; color: string; border: string }> = {
+  low: {
+    background: 'rgba(34, 197, 94, 0.1)',
+    color: 'rgb(22, 163, 74)',
+    border: '1px solid rgba(34, 197, 94, 0.3)'
+  },
+  medium: {
+    background: 'rgba(245, 158, 11, 0.1)',
+    color: 'rgb(217, 119, 6)',
+    border: '1px solid rgba(245, 158, 11, 0.3)'
+  },
+  high: {
+    background: 'rgba(239, 68, 68, 0.1)',
+    color: 'rgb(220, 38, 38)',
+    border: '1px solid rgba(239, 68, 68, 0.3)'
+  }
+};
+
+const intellectualDisabilityLabels: Record<string, string> = {
+  N: 'None',
+  'F70.0': 'Mild (F70.0)',
+  F71: 'Moderate (F71)',
+  F72: 'Severe (F72)'
+};
 
 // Force dynamic rendering (don't statically generate at build time)
 export const dynamic = 'force-dynamic';
@@ -20,6 +118,11 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
   }
 
   const job = record.jobId ? await loadInferenceJob(record.jobId) : undefined;
+
+  // Normalize inference data in case it's stored as raw API response
+  console.log('[CaseDetailPage] Raw record.inference:', JSON.stringify(record.inference, null, 2));
+  const inference = normalizeInference(record.inference);
+  console.log('[CaseDetailPage] Normalized inference:', JSON.stringify(inference, null, 2));
 
   return (
     <main className="page-shell">
@@ -131,6 +234,23 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
               </ul>
             </div>
           ) : null}
+          {job.status === 'failed' && (
+            <div
+              style={{
+                borderTop: '1px solid var(--color-border)',
+                paddingTop: '1rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                flexWrap: 'wrap'
+              }}
+            >
+              <p style={{ margin: 0, color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
+                The analysis failed. You can retry the prediction request.
+              </p>
+              <RetryButton caseId={record.id} />
+            </div>
+          )}
         </section>
       ) : null}
 
@@ -141,14 +261,63 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
         >
           <header>
             <p className="section-title">Inference outcome</p>
-            <h2 style={{ margin: '0.35rem 0 0', fontSize: 'clamp(1.2rem, 3.4vw, 1.4rem)', fontWeight: 600 }}>
-              {record.inference.topPrediction}
-            </h2>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+              <h2 style={{ margin: '0.35rem 0 0', fontSize: 'clamp(1.2rem, 3.4vw, 1.4rem)', fontWeight: 600 }}>
+                {typeof inference.prediction === 'string' ? inference.prediction :
+                 typeof inference.topPrediction === 'string' ? inference.topPrediction : 'Analysis Complete'}
+              </h2>
+              {inference.riskLevel && typeof inference.riskLevel === 'string' && riskLevelStyles[inference.riskLevel] && (
+                <span
+                  style={{
+                    padding: '0.3rem 0.75rem',
+                    borderRadius: '999px',
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                    ...riskLevelStyles[inference.riskLevel]
+                  }}
+                >
+                  {inference.riskLevel} risk
+                </span>
+              )}
+            </div>
           </header>
-          <ProbabilityBars categories={record.inference.categories} />
-          <p style={{ margin: 0, color: 'var(--color-text-secondary)', lineHeight: 1.6 }}>
-            {record.inference.explanation}
-          </p>
+          {inference.probability !== undefined && (
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+                gap: '1rem'
+              }}
+            >
+              <div>
+                <p style={{ margin: 0, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-secondary)' }}>
+                  Probability
+                </p>
+                <p style={{ margin: '0.2rem 0 0', fontSize: '1.5rem', fontWeight: 700 }}>
+                  {(inference.probability * 100).toFixed(1)}%
+                </p>
+              </div>
+              {inference.confidence !== undefined && (
+                <div>
+                  <p style={{ margin: 0, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-secondary)' }}>
+                    Confidence
+                  </p>
+                  <p style={{ margin: '0.2rem 0 0', fontSize: '1.5rem', fontWeight: 700 }}>
+                    {(inference.confidence * 100).toFixed(1)}%
+                  </p>
+                </div>
+              )}
+            </div>
+          )}
+          {inference.categories && Array.isArray(inference.categories) && inference.categories.length > 0 && (
+            <ProbabilityBars categories={inference.categories} />
+          )}
+          {inference.explanation && typeof inference.explanation === 'string' && (
+            <p style={{ margin: 0, color: 'var(--color-text-secondary)', lineHeight: 1.6 }}>
+              {inference.explanation}
+            </p>
+          )}
         </article>
         <article
           className="card"
@@ -156,12 +325,32 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
         >
           <p className="section-title">Recommended next steps</p>
           <ul style={{ margin: 0, paddingLeft: '1.2rem', display: 'grid', gap: '0.5rem' }}>
-            {record.inference.recommendedActions.map((action) => (
-              <li key={action} style={{ lineHeight: 1.55 }}>
-                {action}
+            {(Array.isArray(inference.recommendedActions) ? inference.recommendedActions : []).map((action, idx) => (
+              <li key={typeof action === 'string' ? action : idx} style={{ lineHeight: 1.55 }}>
+                {typeof action === 'string' ? action : 'See healthcare professional'}
               </li>
             ))}
+            {(!inference.recommendedActions || inference.recommendedActions.length === 0) && (
+              <li style={{ lineHeight: 1.55, color: 'var(--color-text-secondary)' }}>
+                Consult with a qualified healthcare professional for guidance.
+              </li>
+            )}
           </ul>
+          <div
+            style={{
+              marginTop: '0.5rem',
+              padding: '0.85rem',
+              borderRadius: '0.75rem',
+              background: 'rgba(245, 158, 11, 0.08)',
+              border: '1px solid rgba(245, 158, 11, 0.2)'
+            }}
+          >
+            <p style={{ margin: 0, fontSize: '0.85rem', color: 'rgb(180, 83, 9)', lineHeight: 1.5 }}>
+              <strong>Clinical Disclaimer:</strong> This is a screening tool, not a diagnostic instrument.
+              Results should be interpreted by qualified healthcare professionals.
+              Clinical follow-up is recommended regardless of the screening outcome.
+            </p>
+          </div>
         </article>
       </section>
 
@@ -192,11 +381,12 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
             items={[
               ['Delays', record.development.delays.join(', ')],
               ['Dysmorphic features', record.development.dysmorphicFeatures ? 'Yes' : 'No'],
+              ['Intellectual disability', intellectualDisabilityLabels[record.development.intellectualDisability] || record.development.intellectualDisability || '—'],
               ['Regression', record.development.regressionObserved ? 'Yes' : 'No'],
               ['Comorbidities', record.development.comorbidities.join(', ') || '—'],
               ['Behavioral concerns', record.behaviors.concerns.join(', ')],
               ['Language level', record.behaviors.languageLevel],
-              ['Sensory notes', record.behaviors.sensoryNotes]
+              ['Sensory notes', record.behaviors.sensoryNotes || '—']
             ]}
           />
           <DataList
@@ -204,8 +394,10 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
             items={[
               ['ADOS score', record.assessments.adosScore.toString()],
               ['ADI-R score', record.assessments.adirScore.toString()],
+              ['IQ / DQ', record.assessments.iqDq?.toString() ?? '—'],
               ['EEG anomalies', record.assessments.eegAnomalies ? 'Detected' : 'None'],
               ['MRI findings', record.assessments.mriFindings ?? '—'],
+              ['Neurological exam', record.assessments.neurologicalExam || '—'],
               ['Head circumference', `${record.assessments.headCircumference} cm`]
             ]}
           />

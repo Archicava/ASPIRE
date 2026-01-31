@@ -4,6 +4,16 @@ import { platformConfig } from '@/lib/config';
 import { getCohortCaseRecords, getMockInferenceJobs } from '@/lib/cohort-data';
 import { CaseRecord, CaseSubmission, InferenceJob, InferenceJobStatus, InferenceResult } from '@/lib/types';
 import { getRatio1NodeClient } from '@/lib/ratio1-client';
+import {
+  mapCaseToApiPayload,
+  validateApiPayload,
+  callAspireApi,
+  mapApiResponseToInferenceResult,
+  generateMockPredictionResponse,
+  AspireApiError,
+  AspireNetworkError,
+  AspireValidationError
+} from '@/lib/aspire-api';
 
 type ParsedHash<T> = {
   items: T[];
@@ -197,14 +207,15 @@ export async function storeCaseSubmission(
   const id = createCaseId(timestamp);
   const jobId = createJobId(timestamp);
 
-  const inference: InferenceResult =
+  // Create initial pending inference
+  let inference: InferenceResult =
     inferenceOverride ||
     ({
       topPrediction: 'Pending inference',
       categories: [
-        { label: 'Awaiting Ratio1 job', probability: 1 }
+        { label: 'Awaiting prediction', probability: 1 }
       ],
-      explanation: 'Inference job has been queued and is awaiting execution on a Ratio1 Edge Node.',
+      explanation: 'Inference job has been queued and is awaiting execution.',
       recommendedActions: ['Monitor job queue for completion.', 'Notify caregivers once results are available.']
     } satisfies InferenceResult);
 
@@ -218,11 +229,72 @@ export async function storeCaseSubmission(
   };
 
   if (platformConfig.MOCK_MODE) {
-    console.log('[data-platform] MOCK_MODE enabled - simulating case storage');
+    console.log('[data-platform] MOCK_MODE enabled - simulating case storage with prediction');
+
+    // Run prediction even in mock mode
+    const predictionResult = await runPrediction(submission, id);
+    if (predictionResult.inference) {
+      record.inference = predictionResult.inference;
+    }
+
     return record;
   }
 
   return storeCaseInLiveMode(record, submission, timestamp);
+}
+
+async function runPrediction(
+  submission: CaseSubmission,
+  caseId: string
+): Promise<{ inference?: InferenceResult; error?: string }> {
+  try {
+    // Map case data to API payload
+    const payload = mapCaseToApiPayload(submission, caseId);
+
+    // Validate payload before sending
+    const validation = validateApiPayload(payload);
+    if (!validation.valid) {
+      console.error('[runPrediction] Validation failed:', validation.errors);
+      return { error: `Validation failed: ${validation.errors.join(', ')}` };
+    }
+
+    let response;
+
+    if (platformConfig.MOCK_MODE || !platformConfig.aspire.enabled) {
+      // Use mock prediction in mock mode or if API is disabled
+      console.log('[runPrediction] Using mock prediction');
+      response = generateMockPredictionResponse(payload);
+    } else {
+      // Call real API
+      console.log('[runPrediction] Calling Aspire API');
+      response = await callAspireApi(payload);
+    }
+
+    // Map response to inference result
+    const inference = mapApiResponseToInferenceResult(response);
+    console.log('[runPrediction] Prediction completed:', inference.prediction, inference.riskLevel);
+
+    return { inference };
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error('[runPrediction] Prediction failed:', errorMessage);
+
+    if (error instanceof Error && (error as any).cause) {
+      console.error('[runPrediction] Error cause:', (error as any).cause);
+    }
+
+    if (error instanceof AspireValidationError) {
+      return { error: `Validation error: ${errorMessage}` };
+    }
+    if (error instanceof AspireApiError) {
+      return { error: `API error: ${errorMessage}` };
+    }
+    if (error instanceof AspireNetworkError) {
+      return { error: `Network error: ${errorMessage}` };
+    }
+
+    return { error: errorMessage };
+  }
 }
 
 function createCaseId(timestamp: Date) {
@@ -281,6 +353,7 @@ async function storeCaseInLiveMode(
     payloadCid: payloadCid ?? record.artifacts?.payloadCid
   };
 
+  // Create initial job with queued status
   const job: InferenceJob = {
     id: record.jobId ?? createJobId(timestamp),
     caseId: record.id,
@@ -293,6 +366,37 @@ async function storeCaseInLiveMode(
 
   record.jobId = job.id;
 
+  // Run prediction
+  const runningTimestamp = new Date();
+  job.status = 'running';
+  job.statusHistory = [
+    ...createStatusHistory('queued', timestamp),
+    { status: 'running', timestamp: runningTimestamp.toISOString() }
+  ];
+
+  const predictionResult = await runPrediction(submission, record.id);
+
+  const completedTimestamp = new Date();
+  if (predictionResult.inference) {
+    record.inference = predictionResult.inference;
+    job.status = 'succeeded';
+    job.completedAt = completedTimestamp.toISOString();
+    job.result = predictionResult.inference;
+    job.statusHistory = [
+      ...job.statusHistory,
+      { status: 'succeeded', timestamp: completedTimestamp.toISOString() }
+    ];
+  } else if (predictionResult.error) {
+    job.status = 'failed';
+    job.completedAt = completedTimestamp.toISOString();
+    job.error = predictionResult.error;
+    job.statusHistory = [
+      ...job.statusHistory,
+      { status: 'failed', timestamp: completedTimestamp.toISOString(), message: predictionResult.error }
+    ];
+  }
+
+  // Store case and job
   await client.cstore.hset({
     hkey: platformConfig.casesHKey,
     key: record.id,
@@ -306,4 +410,73 @@ async function storeCaseInLiveMode(
   });
 
   return record;
+}
+
+export async function retryCasePrediction(
+  caseId: string
+): Promise<{ success: boolean; caseRecord?: CaseRecord; error?: string }> {
+  // Load existing case record
+  const record = await loadCaseRecord(caseId);
+  if (!record) {
+    return { success: false, error: 'Case not found' };
+  }
+
+  // Extract submission data from case record
+  const submission: CaseSubmission = {
+    demographics: record.demographics,
+    development: record.development,
+    assessments: record.assessments,
+    behaviors: record.behaviors,
+    notes: record.notes
+  };
+
+  // Run prediction
+  const timestamp = new Date();
+  const predictionResult = await runPrediction(submission, caseId);
+
+  if (!predictionResult.inference) {
+    return { success: false, error: predictionResult.error || 'Prediction failed' };
+  }
+
+  // Update case record with new inference
+  record.inference = predictionResult.inference;
+
+  // Update job if exists
+  let job: InferenceJob | undefined;
+  if (record.jobId) {
+    job = await loadInferenceJob(record.jobId);
+  }
+
+  if (job) {
+    job.status = 'succeeded';
+    job.completedAt = timestamp.toISOString();
+    job.result = predictionResult.inference;
+    job.error = undefined;
+    job.statusHistory = [
+      ...(job.statusHistory || []),
+      { status: 'running', timestamp: new Date(timestamp.getTime() - 1000).toISOString(), message: 'Retry initiated' },
+      { status: 'succeeded', timestamp: timestamp.toISOString(), message: 'Retry successful' }
+    ];
+  }
+
+  // Persist updates
+  if (!platformConfig.MOCK_MODE) {
+    const client = getRatio1NodeClient();
+
+    await client.cstore.hset({
+      hkey: platformConfig.casesHKey,
+      key: record.id,
+      value: JSON.stringify(record)
+    });
+
+    if (job) {
+      await client.cstore.hset({
+        hkey: platformConfig.jobsHKey,
+        key: job.id,
+        value: JSON.stringify(job)
+      });
+    }
+  }
+
+  return { success: true, caseRecord: record };
 }
