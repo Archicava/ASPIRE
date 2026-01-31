@@ -1,5 +1,4 @@
 import { CaseList } from '@/components/case-list';
-import { ProbabilityBars } from '@/components/probability-bars';
 import { loadCaseRecords } from '@/lib/data-platform';
 import { CaseRecord } from '@/lib/types';
 import { Hero } from '@/components/hero';
@@ -9,35 +8,111 @@ export const dynamic = 'force-dynamic';
 
 export default async function CasesPage() {
   const cases = await loadCaseRecords();
-  const aggregatedCategories = aggregateCategories(cases);
+  const stats = computeStats(cases);
 
   return (
     <main className="page-shell">
       <Hero title="Case Library" />
+
+      {/* Stats Summary */}
       <section
-        className="card"
         style={{
-          padding: 'clamp(1.35rem, 4vw, 1.7rem)',
           display: 'grid',
-          gap: '1.2rem'
+          gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+          gap: '1rem'
         }}
       >
-        <header>
-          <span className="pill">Cohort distribution</span>
-          <h1 style={{ margin: '0.7rem 0 0', fontSize: 'clamp(1.35rem, 3.8vw, 1.6rem)' }}>
-            Inference phenotype mix
-          </h1>
-          <p style={{ margin: '0.35rem 0 0', color: 'var(--color-text-secondary)', lineHeight: 1.6 }}>
-            Each case routes through a multinomial classifier; probabilities shown are averaged across the
-            stored cohort. Use this view to monitor the balance between profound ASD, high-functioning,
-            and syndromic presentations.
-          </p>
-        </header>
-        <ProbabilityBars categories={aggregatedCategories} />
+        <StatCard label="Total Cases" value={stats.total} />
+        <StatCard
+          label="ASD Detected"
+          value={stats.asd}
+          color="rgb(220, 38, 38)"
+          bgColor="rgba(239, 68, 68, 0.1)"
+        />
+        <StatCard
+          label="Healthy"
+          value={stats.healthy}
+          color="rgb(22, 163, 74)"
+          bgColor="rgba(34, 197, 94, 0.1)"
+        />
+        <StatCard
+          label="High Risk"
+          value={stats.highRisk}
+          color="rgb(220, 38, 38)"
+          bgColor="rgba(239, 68, 68, 0.08)"
+        />
       </section>
+
       <CaseList title="All cases" cases={cases} showActions={true} enablePagination />
     </main>
   );
+}
+
+function StatCard({
+  label,
+  value,
+  color = 'var(--color-text-primary)',
+  bgColor = 'var(--color-card)'
+}: {
+  label: string;
+  value: string | number;
+  color?: string;
+  bgColor?: string;
+}) {
+  return (
+    <div
+      className="card"
+      style={{
+        padding: '1.25rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '0.5rem',
+        background: bgColor,
+        textAlign: 'center'
+      }}
+    >
+      <span style={{
+        fontSize: '0.75rem',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        color: 'var(--color-text-secondary)',
+        fontWeight: 600
+      }}>
+        {label}
+      </span>
+      <span style={{
+        fontSize: '1.75rem',
+        fontWeight: 700,
+        color,
+        lineHeight: 1
+      }}>
+        {value}
+      </span>
+    </div>
+  );
+}
+
+function computeStats(cases: CaseRecord[]) {
+  let asd = 0;
+  let healthy = 0;
+  let highRisk = 0;
+
+  cases.forEach((record) => {
+    const inf = record.inference;
+    if (!inf) return;
+
+    const pred = typeof inf.prediction === 'string' ? inf.prediction
+      : typeof (inf.prediction as any)?.prediction === 'string' ? (inf.prediction as any).prediction
+      : null;
+
+    if (pred === 'ASD') asd++;
+    else if (pred === 'Healthy') healthy++;
+
+    const risk = inf.riskLevel || (inf as any).risk_level;
+    if (risk === 'high') highRisk++;
+  });
+
+  return { total: cases.length, asd, healthy, highRisk };
 }
 
 function aggregateCategories(cases: CaseRecord[]) {
