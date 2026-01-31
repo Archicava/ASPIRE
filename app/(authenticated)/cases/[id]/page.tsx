@@ -8,75 +8,46 @@ import { formatDate } from '@/lib/format';
 import { Hero } from '@/components/hero';
 import type { InferenceResult, RiskLevel } from '@/lib/types';
 
-// Normalize inference data - handles both old raw API format and new mapped format
+// Normalize inference data - extract values from raw API response or mapped result
 function normalizeInference(inference: any): InferenceResult {
-  // Default fallback
-  const defaultInference: InferenceResult = {
-    topPrediction: 'Pending',
-    categories: [],
-    explanation: 'Analysis pending.',
-    recommendedActions: ['Consult with a qualified healthcare professional for guidance.']
-  };
-
   if (!inference || typeof inference !== 'object') {
-    return defaultInference;
+    return {
+      topPrediction: 'Pending',
+      categories: [],
+      explanation: 'Analysis pending.',
+      recommendedActions: []
+    };
   }
 
-  // Check if this is a raw API response (has status, request_id, processed_at, etc.)
-  const isRawApiResponse =
-    inference.request_id ||
-    inference.processed_at ||
-    inference.processor_version ||
-    inference.input_summary ||
-    (inference.status === 'completed' || inference.status === 'error');
+  // Check if topPrediction/prediction contains the raw API response (nested object)
+  const rawData = inference.topPrediction?.request_id ? inference.topPrediction :
+                  inference.prediction?.request_id ? inference.prediction :
+                  inference.request_id ? inference : null;
 
-  if (isRawApiResponse) {
-    console.log('[normalizeInference] Detected raw API response, converting...');
-    const probability = Number(inference.probability) || 0.5;
-    const confidence = Number(inference.confidence) || 0.8;
-    let riskLevel: RiskLevel = inference.risk_level;
-    if (!riskLevel) {
-      riskLevel = probability >= 0.7 ? 'high' : probability >= 0.4 ? 'medium' : 'low';
-    }
+  if (rawData) {
+    // Extract from raw API response
+    const prediction = rawData.prediction;
+    const probability = Number(rawData.probability);
+    const confidence = Number(rawData.confidence);
+    const riskLevel = rawData.risk_level;
 
     return {
-      topPrediction: inference.prediction || 'Unknown',
-      prediction: inference.prediction,
+      topPrediction: prediction,
+      prediction,
       probability,
       confidence,
       riskLevel,
       categories: [
-        {
-          label: inference.prediction === 'ASD' ? 'ASD' : 'Healthy',
-          probability: inference.prediction === 'ASD' ? probability : 1 - probability,
-          narrative: inference.prediction === 'ASD'
-            ? 'Elevated markers consistent with Autism Spectrum Disorder patterns.'
-            : 'Clinical profile within typical developmental range.'
-        },
-        {
-          label: inference.prediction === 'ASD' ? 'Healthy' : 'ASD',
-          probability: inference.prediction === 'ASD' ? 1 - probability : probability,
-          narrative: inference.prediction === 'ASD'
-            ? 'Typical development indicators present.'
-            : 'Some markers may warrant monitoring.'
-        }
+        { label: prediction, probability },
+        { label: prediction === 'ASD' ? 'Healthy' : 'ASD', probability: 1 - probability }
       ],
-      explanation: `Analysis complete with ${(probability * 100).toFixed(1)}% probability.`,
-      recommendedActions: ['Consult with a qualified healthcare professional for guidance.']
+      explanation: `${prediction} with ${(probability * 100).toFixed(1)}% probability.`,
+      recommendedActions: []
     };
   }
 
-  // Ensure required fields exist
-  return {
-    topPrediction: inference.topPrediction || inference.prediction || 'Unknown',
-    prediction: inference.prediction,
-    probability: inference.probability,
-    confidence: inference.confidence,
-    riskLevel: inference.riskLevel,
-    categories: Array.isArray(inference.categories) ? inference.categories : [],
-    explanation: inference.explanation || '',
-    recommendedActions: Array.isArray(inference.recommendedActions) ? inference.recommendedActions : []
-  };
+  // Already properly formatted
+  return inference;
 }
 
 const riskLevelStyles: Record<RiskLevel, { background: string; color: string; border: string }> = {

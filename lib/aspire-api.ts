@@ -4,7 +4,6 @@ import type {
   AspireApiResponse,
   AspireApiErrorResponse,
   CaseSubmission,
-  InferenceResult,
   RiskLevel
 } from '@/lib/types';
 
@@ -165,7 +164,6 @@ export async function callAspireApi(
   }
 
   const url = `${platformConfig.aspire.apiUrl}/predict`;
-  console.log(`[callAspireApi] Calling ${url}`);
 
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), platformConfig.aspire.timeoutMs);
@@ -184,17 +182,20 @@ export async function callAspireApi(
 
     const data = await response.json();
 
-    if (!response.ok || data.status === 'error') {
-      const errorData = data as AspireApiErrorResponse;
+    // The actual result is in data.result
+    const result = data.result || data;
+
+    if (!response.ok || result.status === 'error') {
       throw new AspireApiError(
-        errorData.error_message || errorData.error || 'Unknown API error',
-        errorData.error_code || 'UNKNOWN_ERROR',
-        errorData.error_type || 'processing',
-        errorData.request_id
+        result.error_message || result.error || 'Unknown API error',
+        result.error_code || 'UNKNOWN_ERROR',
+        result.error_type || 'processing',
+        result.request_id
       );
     }
 
-    return data as AspireApiResponse;
+    // Return just the result object with the prediction data
+    return result as AspireApiResponse;
   } catch (error) {
     clearTimeout(timeoutId);
 
@@ -204,147 +205,15 @@ export async function callAspireApi(
 
     if (error instanceof Error) {
       if (error.name === 'AbortError') {
-        throw new AspireNetworkError(
-          `Request timed out after ${platformConfig.aspire.timeoutMs}ms`
-        );
+        throw new AspireNetworkError(`Request timed out after ${platformConfig.aspire.timeoutMs}ms`);
       }
-
-      // Provide more detailed error messages
-      const cause = (error as any).cause;
-      let detailedMessage = error.message;
-
-      if (cause?.code === 'ECONNREFUSED') {
-        detailedMessage = `Connection refused - is the Aspire API running at ${platformConfig.aspire.apiUrl}?`;
-      } else if (cause?.code === 'ENOTFOUND') {
-        detailedMessage = `Host not found: ${platformConfig.aspire.apiUrl}`;
-      } else if (cause?.code === 'ETIMEDOUT') {
-        detailedMessage = `Connection timed out to ${platformConfig.aspire.apiUrl}`;
-      } else if (cause) {
-        detailedMessage = `${error.message} (${cause.code || cause.message || 'unknown cause'})`;
-      }
-
-      console.error(`[callAspireApi] Network error details:`, {
-        message: error.message,
-        cause: cause,
-        url: url
-      });
-
-      throw new AspireNetworkError(detailedMessage, error);
+      throw new AspireNetworkError(error.message, error);
     }
 
     throw new AspireNetworkError('Unknown network error');
   }
 }
 
-export function mapApiResponseToInferenceResult(response: AspireApiResponse): InferenceResult {
-  console.log('[mapApiResponseToInferenceResult] Raw response:', JSON.stringify(response, null, 2));
-
-  // Handle different possible field names and formats
-  const rawResponse = response as Record<string, unknown>;
-
-  const prediction = (response.prediction || rawResponse['Prediction'] || rawResponse['result'] || 'Unknown') as 'Healthy' | 'ASD';
-
-  // Try multiple possible field names for probability
-  let probability = response.probability;
-  if (probability === undefined || probability === null || isNaN(Number(probability))) {
-    probability = rawResponse['Probability'] as number
-      ?? rawResponse['prob'] as number
-      ?? rawResponse['score'] as number
-      ?? 0.5;
-  }
-  probability = Number(probability);
-  if (isNaN(probability)) probability = 0.5;
-
-  // Try multiple possible field names for confidence
-  let confidence = response.confidence;
-  if (confidence === undefined || confidence === null || isNaN(Number(confidence))) {
-    confidence = rawResponse['Confidence'] as number ?? 0.8;
-  }
-  confidence = Number(confidence);
-  if (isNaN(confidence)) confidence = 0.8;
-
-  // Try multiple possible field names for risk_level
-  let riskLevel: RiskLevel = response.risk_level
-    || rawResponse['risk_level'] as RiskLevel
-    || rawResponse['riskLevel'] as RiskLevel
-    || rawResponse['Risk_Level'] as RiskLevel;
-
-  if (!riskLevel) {
-    // Calculate from probability if not provided
-    if (probability >= 0.7) {
-      riskLevel = 'high';
-    } else if (probability >= 0.4) {
-      riskLevel = 'medium';
-    } else {
-      riskLevel = 'low';
-    }
-    console.log('[mapApiResponseToInferenceResult] risk_level not in response, calculated:', riskLevel);
-  }
-
-  console.log('[mapApiResponseToInferenceResult] Parsed values:', { prediction, probability, confidence, riskLevel });
-
-  // Generate explanation based on risk level and prediction
-  const probPercent = isNaN(probability) ? 'N/A' : `${(probability * 100).toFixed(1)}%`;
-  const explanationMap: Record<RiskLevel, string> = {
-    low: `The screening indicates a low probability (${probPercent}) of ASD markers. This suggests typical developmental patterns based on the clinical data provided.`,
-    medium: `The screening indicates a moderate probability (${probPercent}) of ASD markers. Further clinical assessment may be warranted to clarify the developmental profile.`,
-    high: `The screening indicates a high probability (${probPercent}) of ASD markers. A comprehensive specialist evaluation is strongly recommended.`
-  };
-
-  // Generate recommended actions based on prediction and risk level
-  const actionsMap: Record<RiskLevel, string[]> = {
-    low: [
-      'Continue routine developmental monitoring.',
-      'Schedule standard follow-up appointments.',
-      'Inform caregivers of typical developmental expectations.'
-    ],
-    medium: [
-      'Consider additional developmental assessments.',
-      'Monitor for emerging behavioral patterns.',
-      'Discuss findings with a developmental specialist.',
-      'Schedule follow-up evaluation in 3-6 months.'
-    ],
-    high: [
-      'Refer to a developmental pediatrician or child psychiatrist.',
-      'Initiate comprehensive ASD evaluation.',
-      'Consider early intervention services while awaiting formal diagnosis.',
-      'Provide family with ASD educational resources.',
-      'Schedule urgent specialist consultation.'
-    ]
-  };
-
-  // Build categories - ensure probability is a valid number
-  const safeProbability = isNaN(probability) ? 0.5 : probability;
-  const categories = [
-    {
-      label: prediction === 'ASD' ? 'ASD' : 'Healthy',
-      probability: prediction === 'ASD' ? safeProbability : (1 - safeProbability),
-      narrative:
-        prediction === 'ASD'
-          ? 'Elevated markers consistent with Autism Spectrum Disorder patterns.'
-          : 'Clinical profile within typical developmental range.'
-    },
-    {
-      label: prediction === 'ASD' ? 'Healthy' : 'ASD',
-      probability: prediction === 'ASD' ? (1 - safeProbability) : safeProbability,
-      narrative:
-        prediction === 'ASD'
-          ? 'Typical development indicators present.'
-          : 'Some markers may warrant monitoring.'
-    }
-  ];
-
-  return {
-    topPrediction: prediction || 'Unknown',
-    prediction,
-    probability: safeProbability,
-    confidence: isNaN(confidence) ? 0.8 : confidence,
-    riskLevel,
-    categories,
-    explanation: explanationMap[riskLevel] || 'Analysis complete. Please consult with a healthcare professional for interpretation.',
-    recommendedActions: actionsMap[riskLevel] || ['Consult with a qualified healthcare professional for guidance.']
-  };
-}
 
 export function generateMockPredictionResponse(
   payload: AspireApiRequest

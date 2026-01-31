@@ -8,7 +8,6 @@ import {
   mapCaseToApiPayload,
   validateApiPayload,
   callAspireApi,
-  mapApiResponseToInferenceResult,
   generateMockPredictionResponse,
   AspireApiError,
   AspireNetworkError,
@@ -270,9 +269,21 @@ async function runPrediction(
       response = await callAspireApi(payload);
     }
 
-    // Map response to inference result
-    const inference = mapApiResponseToInferenceResult(response);
-    console.log('[runPrediction] Prediction completed:', inference.prediction, inference.riskLevel);
+    // Save raw API response directly as inference result
+    const inference: InferenceResult = {
+      topPrediction: response.prediction,
+      prediction: response.prediction,
+      probability: response.probability,
+      confidence: response.confidence,
+      riskLevel: response.risk_level,
+      categories: [
+        { label: response.prediction, probability: response.probability },
+        { label: response.prediction === 'ASD' ? 'Healthy' : 'ASD', probability: 1 - response.probability }
+      ],
+      explanation: `${response.prediction} with ${(response.probability * 100).toFixed(1)}% probability.`,
+      recommendedActions: []
+    };
+    console.log('[runPrediction] Prediction completed:', response.prediction, response.risk_level);
 
     return { inference };
   } catch (error) {
