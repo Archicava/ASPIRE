@@ -107,16 +107,6 @@ export function CaseList({
               <div style={{ display: 'grid', gap: '0.6rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
                   <strong style={{ fontSize: '1.1rem' }}>{item.demographics.caseLabel}</strong>
-                  <span
-                    className="pill"
-                    style={{
-                      background: 'rgba(91,108,240,0.08)',
-                      color: 'var(--color-accent)',
-                      fontSize: '0.7rem'
-                    }}
-                  >
-                    {item.demographics.subtype.split(' ')[0]}
-                  </span>
                 </div>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>
                   <span>{item.demographics.ageMonths} months</span>

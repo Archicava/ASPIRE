@@ -13,8 +13,6 @@ export type BehaviorConcern =
   | 'Sleep'
   | 'Sensory';
 
-export type AutismSubtype = 'F84.0 Childhood autism' | 'F84.1 Atypical autism' | 'F84.5 Asperger syndrome';
-
 export type CaseSubmission = {
   demographics: {
     caseLabel: string;
@@ -24,7 +22,6 @@ export type CaseSubmission = {
       mother: number;
       father: number;
     };
-    subtype: AutismSubtype;
     diagnosticAgeMonths: number;
     prenatalFactors: PrenatalFactor[];
   };

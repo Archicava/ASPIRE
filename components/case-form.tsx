@@ -18,12 +18,6 @@ const concernOptions = [
   'Sleep',
   'Sensory'
 ] as const;
-const subtypeOptions = [
-  'F84.0 Childhood autism',
-  'F84.1 Atypical autism',
-  'F84.5 Asperger syndrome'
-] as const;
-
 const intellectualDisabilityOptions = [
   { value: 'N', label: 'None' },
   { value: 'F70.0', label: 'Mild (F70.0)' },
@@ -37,7 +31,6 @@ const fieldLabels: Record<string, string> = {
   sex: 'Sex',
   parentalAgeMother: 'Parental age - mother',
   parentalAgeFather: 'Parental age - father',
-  subtype: 'Autism subtype',
   diagnosticAgeMonths: 'Diagnostic age',
   prenatalFactors: 'Prenatal factors',
   delays: 'Developmental delays',
@@ -64,7 +57,6 @@ const schema = z.object({
   sex: z.enum(['Male', 'Female']),
   parentalAgeMother: z.number().min(16).max(55),
   parentalAgeFather: z.number().min(16).max(70),
-  subtype: z.enum(subtypeOptions),
   diagnosticAgeMonths: z.number().min(6).max(216),
   prenatalFactors: z.array(z.enum(prenatalOptions)).min(1),
   delays: z.array(z.enum(delayOptions)).min(1),
@@ -93,7 +85,6 @@ const defaults: FormValues = {
   sex: 'Male',
   parentalAgeMother: 32,
   parentalAgeFather: 35,
-  subtype: 'F84.0 Childhood autism',
   diagnosticAgeMonths: 18,
   prenatalFactors: ['Natural'],
   delays: ['Language'],
@@ -271,13 +262,6 @@ export function CaseForm() {
             <select value={values.sex} onChange={textChange('sex')} style={inputStyle}>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
-            </select>
-          </Field>
-          <Field label="Autism subtype">
-            <select value={values.subtype} onChange={textChange('subtype')} style={inputStyle}>
-              {subtypeOptions.map((option) => (
-                <option key={option}>{option}</option>
-              ))}
             </select>
           </Field>
           <Field label="Diagnostic age (months)">
@@ -683,7 +667,6 @@ function toSubmission(values: FormValues): CaseSubmission {
         mother: values.parentalAgeMother,
         father: values.parentalAgeFather
       },
-      subtype: values.subtype,
       diagnosticAgeMonths: values.diagnosticAgeMonths,
       prenatalFactors: [...values.prenatalFactors]
     },

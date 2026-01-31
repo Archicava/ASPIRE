@@ -120,7 +120,6 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
         className="card"
         style={{ padding: 'clamp(1.4rem, 4.5vw, 1.8rem)', display: 'grid', gap: '0.6rem' }}
       >
-        <span className="pill">{record.demographics.subtype}</span>
         <h1 style={{ margin: 0, fontSize: 'clamp(1.5rem, 4vw, 1.9rem)' }}>{record.demographics.caseLabel}</h1>
         <p style={{ margin: 0, color: 'var(--color-text-secondary)', lineHeight: 1.65 }}>
           Submitted {formatDate(record.submittedAt)} · {record.demographics.ageMonths} months ·{' '}

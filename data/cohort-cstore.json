@@ -10,7 +10,6 @@
         "mother": 31,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 23,
       "prenatalFactors": [
         "Natural"
@@ -76,7 +75,6 @@
         "mother": 41,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 46,
       "prenatalFactors": [
         "Natural"
@@ -141,7 +139,6 @@
         "mother": 36,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 60,
       "prenatalFactors": [
         "Natural",
@@ -209,7 +206,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 32,
       "prenatalFactors": [
         "Natural"
@@ -272,7 +268,6 @@
         "mother": 36,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -335,7 +330,6 @@
         "mother": 40,
         "father": 41
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural",
@@ -399,7 +393,6 @@
         "mother": 44,
         "father": 40
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 62,
       "prenatalFactors": [
         "Natural"
@@ -462,7 +455,6 @@
         "mother": 35,
         "father": 37
       },
-      "subtype": "F84.5 Asperger syndrome",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural",
@@ -526,7 +518,6 @@
         "mother": 35,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 23,
       "prenatalFactors": [
         "Natural"
@@ -589,7 +580,6 @@
         "mother": 36,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 27,
       "prenatalFactors": [
         "Natural",
@@ -655,7 +645,6 @@
         "mother": 37,
         "father": 38
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 35,
       "prenatalFactors": [
         "Natural",
@@ -723,7 +712,6 @@
         "mother": 29,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural",
@@ -789,7 +777,6 @@
         "mother": 34,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural",
@@ -856,7 +843,6 @@
         "mother": 33,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 84,
       "prenatalFactors": [
         "Natural",
@@ -923,7 +909,6 @@
         "mother": 39,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -986,7 +971,6 @@
         "mother": 37,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 252,
       "prenatalFactors": [
         "Natural"
@@ -1047,7 +1031,6 @@
         "mother": 37,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -1112,7 +1095,6 @@
         "mother": 30,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -1177,7 +1159,6 @@
         "mother": 31,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -1243,7 +1224,6 @@
         "mother": 35,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -1306,7 +1286,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -1372,7 +1351,6 @@
         "mother": 31,
         "father": 37
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -1438,7 +1416,6 @@
         "mother": 28,
         "father": 30
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 100,
       "prenatalFactors": [
         "Natural"
@@ -1504,7 +1481,6 @@
         "mother": 33,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 21,
       "prenatalFactors": [
         "Natural",
@@ -1571,7 +1547,6 @@
         "mother": 37,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 26,
       "prenatalFactors": [
         "Natural"
@@ -1632,7 +1607,6 @@
         "mother": 30,
         "father": 30
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 21,
       "prenatalFactors": [
         "Natural"
@@ -1696,7 +1670,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -1759,7 +1732,6 @@
         "mother": 37,
         "father": 35
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 38,
       "prenatalFactors": [
         "Natural"
@@ -1822,7 +1794,6 @@
         "mother": 39,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -1885,7 +1856,6 @@
         "mother": 37,
         "father": 45
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 144,
       "prenatalFactors": [
         "Natural"
@@ -1951,7 +1921,6 @@
         "mother": 35,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -2014,7 +1983,6 @@
         "mother": 40,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 26,
       "prenatalFactors": [
         "Natural",
@@ -2080,7 +2048,6 @@
         "mother": 27,
         "father": 28
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 23,
       "prenatalFactors": [
         "Natural"
@@ -2145,7 +2112,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -2211,7 +2177,6 @@
         "mother": 47,
         "father": 41
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural",
@@ -2273,7 +2238,6 @@
         "mother": 23,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -2339,7 +2303,6 @@
         "mother": 32,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural",
@@ -2401,7 +2364,6 @@
         "mother": 43,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 42,
       "prenatalFactors": [
         "Natural"
@@ -2464,7 +2426,6 @@
         "mother": 43,
         "father": 43
       },
-      "subtype": "F84.5 Asperger syndrome",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural",
@@ -2531,7 +2492,6 @@
         "mother": 41,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural",
@@ -2598,7 +2558,6 @@
         "mother": 36,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 16,
       "prenatalFactors": [
         "Natural"
@@ -2662,7 +2621,6 @@
         "mother": 41,
         "father": 45
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -2725,7 +2683,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -2790,7 +2747,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural",
@@ -2854,7 +2810,6 @@
         "mother": 41,
         "father": 42
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 18,
       "prenatalFactors": [
         "Natural",
@@ -2916,7 +2871,6 @@
         "mother": 44,
         "father": 42
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -2979,7 +2933,6 @@
         "mother": 47,
         "father": 45
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -3042,7 +2995,6 @@
         "mother": 33,
         "father": 34
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 61,
       "prenatalFactors": [
         "Natural"
@@ -3105,7 +3057,6 @@
         "mother": 27,
         "father": 30
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 69,
       "prenatalFactors": [
         "Natural"
@@ -3168,7 +3119,6 @@
         "mother": 34,
         "father": 40
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 22,
       "prenatalFactors": [
         "Natural"
@@ -3229,7 +3179,6 @@
         "mother": 33,
         "father": 33
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural",
@@ -3296,7 +3245,6 @@
         "mother": 33,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 18,
       "prenatalFactors": [
         "Natural",
@@ -3361,7 +3309,6 @@
         "mother": 39,
         "father": 41
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 72,
       "prenatalFactors": [
         "Natural"
@@ -3427,7 +3374,6 @@
         "mother": 43,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -3490,7 +3436,6 @@
         "mother": 36,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -3556,7 +3501,6 @@
         "mother": 43,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -3621,7 +3565,6 @@
         "mother": 39,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 29,
       "prenatalFactors": [
         "Natural"
@@ -3682,7 +3625,6 @@
         "mother": 32,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural",
@@ -3746,7 +3688,6 @@
         "mother": 28,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -3807,7 +3748,6 @@
         "mother": 44,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 21,
       "prenatalFactors": [
         "Natural",
@@ -3869,7 +3809,6 @@
         "mother": 32,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -3932,7 +3871,6 @@
         "mother": 48,
         "father": 48
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 33,
       "prenatalFactors": [
         "IVF",
@@ -3998,7 +3936,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 84,
       "prenatalFactors": [
         "Natural"
@@ -4063,7 +4000,6 @@
         "mother": 39,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -4128,7 +4064,6 @@
         "mother": 40,
         "father": 54
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 60,
       "prenatalFactors": [
         "Natural"
@@ -4189,7 +4124,6 @@
         "mother": 51,
         "father": 52
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 96,
       "prenatalFactors": [
         "Natural"
@@ -4252,7 +4186,6 @@
         "mother": 39,
         "father": 42
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 84,
       "prenatalFactors": [
         "Natural",
@@ -4317,7 +4250,6 @@
         "mother": 38,
         "father": 42
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -4378,7 +4310,6 @@
         "mother": 34,
         "father": 41
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 96,
       "prenatalFactors": [
         "Natural",
@@ -4445,7 +4376,6 @@
         "mother": 41,
         "father": 42
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 32,
       "prenatalFactors": [
         "Natural"
@@ -4509,7 +4439,6 @@
         "mother": 40,
         "father": 41
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 55,
       "prenatalFactors": [
         "Natural"
@@ -4572,7 +4501,6 @@
         "mother": 31,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 28,
       "prenatalFactors": [
         "Natural",
@@ -4638,7 +4566,6 @@
         "mother": 23,
         "father": 23
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 52,
       "prenatalFactors": [
         "Natural"
@@ -4699,7 +4626,6 @@
         "mother": 32,
         "father": 29
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 33,
       "prenatalFactors": [
         "Natural",
@@ -4765,7 +4691,6 @@
         "mother": 34,
         "father": 35
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural",
@@ -4830,7 +4755,6 @@
         "mother": 42,
         "father": 45
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 120,
       "prenatalFactors": [
         "Natural"
@@ -4891,7 +4815,6 @@
         "mother": 37,
         "father": 48
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 47,
       "prenatalFactors": [
         "Natural"
@@ -4956,7 +4879,6 @@
         "mother": 37,
         "father": 48
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 135,
       "prenatalFactors": [
         "Natural"
@@ -5020,7 +4942,6 @@
         "mother": 22,
         "father": 27
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 23,
       "prenatalFactors": [
         "Natural"
@@ -5081,7 +5002,6 @@
         "mother": 31,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -5146,7 +5066,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -5211,7 +5130,6 @@
         "mother": 36,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -5274,7 +5192,6 @@
         "mother": 39,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -5340,7 +5257,6 @@
         "mother": 39,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -5405,7 +5321,6 @@
         "mother": 33,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 27,
       "prenatalFactors": [
         "Natural"
@@ -5470,7 +5385,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 120,
       "prenatalFactors": [
         "Natural"
@@ -5535,7 +5449,6 @@
         "mother": 31,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 27,
       "prenatalFactors": [
         "Natural"
@@ -5596,7 +5509,6 @@
         "mother": 39,
         "father": 46
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -5659,7 +5571,6 @@
         "mother": 52,
         "father": 55
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 60,
       "prenatalFactors": [
         "Natural"
@@ -5724,7 +5635,6 @@
         "mother": 45,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural",
@@ -5790,7 +5700,6 @@
         "mother": 34,
         "father": 36
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -5853,7 +5762,6 @@
         "mother": 33,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -5914,7 +5822,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -5977,7 +5884,6 @@
         "mother": 36,
         "father": 39
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -6038,7 +5944,6 @@
         "mother": 35,
         "father": 40
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 54,
       "prenatalFactors": [
         "Natural"
@@ -6101,7 +6006,6 @@
         "mother": 40,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -6162,7 +6066,6 @@
         "mother": 31,
         "father": 39
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 23,
       "prenatalFactors": [
         "Natural"
@@ -6223,7 +6126,6 @@
         "mother": 42,
         "father": 46
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -6286,7 +6188,6 @@
         "mother": 51,
         "father": 55
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -6349,7 +6250,6 @@
         "mother": 26,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 21,
       "prenatalFactors": [
         "Natural"
@@ -6412,7 +6312,6 @@
         "mother": 31,
         "father": 29
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -6477,7 +6376,6 @@
         "mother": 41,
         "father": 42
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -6541,7 +6439,6 @@
         "mother": 34,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -6606,7 +6503,6 @@
         "mother": 41,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -6669,7 +6565,6 @@
         "mother": 32,
         "father": 42
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -6734,7 +6629,6 @@
         "mother": 32,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -6795,7 +6689,6 @@
         "mother": 37,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural",
@@ -6859,7 +6752,6 @@
         "mother": 35,
         "father": 51
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 34,
       "prenatalFactors": [
         "Natural",
@@ -6925,7 +6817,6 @@
         "mother": 24,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 162,
       "prenatalFactors": [
         "Natural"
@@ -6990,7 +6881,6 @@
         "mother": 25,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 21,
       "prenatalFactors": [
         "Natural"
@@ -7054,7 +6944,6 @@
         "mother": 34,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 27,
       "prenatalFactors": [
         "Natural"
@@ -7119,7 +7008,6 @@
         "mother": 30,
         "father": 31
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -7182,7 +7070,6 @@
         "mother": 35,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -7245,7 +7132,6 @@
         "mother": 45,
         "father": 45
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural",
@@ -7311,7 +7197,6 @@
         "mother": 23,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -7374,7 +7259,6 @@
         "mother": 43,
         "father": 47
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 3,
       "prenatalFactors": [
         "Natural"
@@ -7435,7 +7319,6 @@
         "mother": 41,
         "father": 51
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -7496,7 +7379,6 @@
         "mother": 39,
         "father": 39
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 21,
       "prenatalFactors": [
         "Natural"
@@ -7559,7 +7441,6 @@
         "mother": 34,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 23,
       "prenatalFactors": [
         "Natural"
@@ -7623,7 +7504,6 @@
         "mother": 44,
         "father": 46
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 22,
       "prenatalFactors": [
         "Natural"
@@ -7688,7 +7568,6 @@
         "mother": 45,
         "father": 47
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -7751,7 +7630,6 @@
         "mother": 33,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 18,
       "prenatalFactors": [
         "Natural"
@@ -7812,7 +7690,6 @@
         "mother": 34,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -7875,7 +7752,6 @@
         "mother": 34,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -7936,7 +7812,6 @@
         "mother": 35,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -7999,7 +7874,6 @@
         "mother": 31,
         "father": 28
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -8062,7 +7936,6 @@
         "mother": 35,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -8125,7 +7998,6 @@
         "mother": 43,
         "father": 40
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 14,
       "prenatalFactors": [
         "Natural"
@@ -8186,7 +8058,6 @@
         "mother": 35,
         "father": 50
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -8251,7 +8122,6 @@
         "mother": 37,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -8312,7 +8182,6 @@
         "mother": 34,
         "father": 40
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -8373,7 +8242,6 @@
         "mother": 28,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "Natural"
@@ -8436,7 +8304,6 @@
         "mother": 49,
         "father": 47
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -8500,7 +8367,6 @@
         "mother": 29,
         "father": 35
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -8563,7 +8429,6 @@
         "mother": 46,
         "father": 46
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -8626,7 +8491,6 @@
         "mother": 39,
         "father": 41
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural",
@@ -8690,7 +8554,6 @@
         "mother": 35,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -8755,7 +8618,6 @@
         "mother": 34,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -8818,7 +8680,6 @@
         "mother": 33,
         "father": 35
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -8881,7 +8742,6 @@
         "mother": 33,
         "father": 35
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 12,
       "prenatalFactors": [
         "Natural"
@@ -8944,7 +8804,6 @@
         "mother": 20,
         "father": 25
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -9011,7 +8870,6 @@
         "mother": 34,
         "father": 46
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -9075,7 +8933,6 @@
         "mother": 34,
         "father": 46
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 12,
       "prenatalFactors": [
         "Natural"
@@ -9139,7 +8996,6 @@
         "mother": 37,
         "father": 41
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -9204,7 +9060,6 @@
         "mother": 40,
         "father": 45
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural",
@@ -9272,7 +9127,6 @@
         "mother": 25,
         "father": 30
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural",
@@ -9336,7 +9190,6 @@
         "mother": 31,
         "father": 30
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural",
@@ -9402,7 +9255,6 @@
         "mother": 44,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -9466,7 +9318,6 @@
         "mother": 39,
         "father": 49
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural",
@@ -9533,7 +9384,6 @@
         "mother": 33,
         "father": 42
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 31,
       "prenatalFactors": [
         "Natural"
@@ -9596,7 +9446,6 @@
         "mother": 26,
         "father": 34
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 18,
       "prenatalFactors": [
         "Natural"
@@ -9660,7 +9509,6 @@
         "mother": 32,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -9724,7 +9572,6 @@
         "mother": 31,
         "father": 30
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 32,
       "prenatalFactors": [
         "Natural"
@@ -9790,7 +9637,6 @@
         "mother": 29,
         "father": 29
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -9854,7 +9700,6 @@
         "mother": 39,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -9919,7 +9764,6 @@
         "mother": 40,
         "father": 47
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -9984,7 +9828,6 @@
         "mother": 40,
         "father": 47
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 144,
       "prenatalFactors": [
         "Natural"
@@ -10045,7 +9888,6 @@
         "mother": 31,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "Natural",
@@ -10112,7 +9954,6 @@
         "mother": 27,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 42,
       "prenatalFactors": [
         "Natural"
@@ -10173,7 +10014,6 @@
         "mother": 33,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -10236,7 +10076,6 @@
         "mother": 35,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 42,
       "prenatalFactors": [
         "Natural"
@@ -10301,7 +10140,6 @@
         "mother": 43,
         "father": 46
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -10366,7 +10204,6 @@
         "mother": 36,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -10429,7 +10266,6 @@
         "mother": 43,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 14,
       "prenatalFactors": [
         "Natural"
@@ -10492,7 +10328,6 @@
         "mother": 43,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 14,
       "prenatalFactors": [
         "Natural"
@@ -10553,7 +10388,6 @@
         "mother": 43,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 14,
       "prenatalFactors": [
         "Natural"
@@ -10616,7 +10450,6 @@
         "mother": 41,
         "father": 45
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -10677,7 +10510,6 @@
         "mother": 38,
         "father": 40
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -10740,7 +10572,6 @@
         "mother": 34,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -10805,7 +10636,6 @@
         "mother": 30,
         "father": 31
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 42,
       "prenatalFactors": [
         "Natural"
@@ -10866,7 +10696,6 @@
         "mother": 23,
         "father": 30
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 60,
       "prenatalFactors": [
         "Natural"
@@ -10929,7 +10758,6 @@
         "mother": 23,
         "father": 30
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 38,
       "prenatalFactors": [
         "Natural"
@@ -10993,7 +10821,6 @@
         "mother": 33,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "IVF",
@@ -11057,7 +10884,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -11121,7 +10947,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 3,
       "prenatalFactors": [
         "Natural"
@@ -11187,7 +11012,6 @@
         "mother": 31,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural",
@@ -11254,7 +11078,6 @@
         "mother": 43,
         "father": 44
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -11315,7 +11138,6 @@
         "mother": 33,
         "father": 34
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -11378,7 +11200,6 @@
         "mother": 38,
         "father": 44
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 15,
       "prenatalFactors": [
         "Natural"
@@ -11441,7 +11262,6 @@
         "mother": 44,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -11506,7 +11326,6 @@
         "mother": 42,
         "father": 42
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -11569,7 +11388,6 @@
         "mother": 39,
         "father": 43
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "IVF",
@@ -11631,7 +11449,6 @@
         "mother": 29,
         "father": 31
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 3,
       "prenatalFactors": [
         "Natural"
@@ -11692,7 +11509,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "IVF"
@@ -11753,7 +11569,6 @@
         "mother": 35,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "Natural"
@@ -11818,7 +11633,6 @@
         "mother": 42,
         "father": 53
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "Natural",
@@ -11884,7 +11698,6 @@
         "mother": 46,
         "father": 47
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -11949,7 +11762,6 @@
         "mother": 33,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -12012,7 +11824,6 @@
         "mother": 39,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -12077,7 +11888,6 @@
         "mother": 25,
         "father": 28
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 16,
       "prenatalFactors": [
         "IVF"
@@ -12141,7 +11951,6 @@
         "mother": 50,
         "father": 55
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 26,
       "prenatalFactors": [
         "Natural"
@@ -12204,7 +12013,6 @@
         "mother": 35,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "Natural"
@@ -12265,7 +12073,6 @@
         "mother": 28,
         "father": 38
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -12326,7 +12133,6 @@
         "mother": 34,
         "father": 39
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 26,
       "prenatalFactors": [
         "Natural"
@@ -12390,7 +12196,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 27,
       "prenatalFactors": [
         "Natural"
@@ -12453,7 +12258,6 @@
         "mother": 22,
         "father": 28
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural",
@@ -12517,7 +12321,6 @@
         "mother": 33,
         "father": 38
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 42,
       "prenatalFactors": [
         "Natural"
@@ -12582,7 +12385,6 @@
         "mother": 36,
         "father": 40
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 28,
       "prenatalFactors": [
         "Natural"
@@ -12645,7 +12447,6 @@
         "mother": 30,
         "father": 28
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 14,
       "prenatalFactors": [
         "Natural",
@@ -12709,7 +12510,6 @@
         "mother": 34,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -12774,7 +12574,6 @@
         "mother": 43,
         "father": 50
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -12841,7 +12640,6 @@
         "mother": 28,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 31,
       "prenatalFactors": [
         "Natural",
@@ -12904,7 +12702,6 @@
         "mother": 28,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 31,
       "prenatalFactors": [
         "Natural",
@@ -12969,7 +12766,6 @@
         "mother": 30,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 38,
       "prenatalFactors": [
         "Natural"
@@ -13032,7 +12828,6 @@
         "mother": 31,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "IVF",
@@ -13096,7 +12891,6 @@
         "mother": 31,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "IVF",
@@ -13158,7 +12952,6 @@
         "mother": 39,
         "father": 45
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural",
@@ -13222,7 +13015,6 @@
         "mother": 35,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "IVF",
@@ -13284,7 +13076,6 @@
         "mother": 33,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 28,
       "prenatalFactors": [
         "IVF",
@@ -13348,7 +13139,6 @@
         "mother": 37,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -13411,7 +13201,6 @@
         "mother": 34,
         "father": 41
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -13472,7 +13261,6 @@
         "mother": 40,
         "father": 47
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 16,
       "prenatalFactors": [
         "Natural"
@@ -13537,7 +13325,6 @@
         "mother": 43,
         "father": 45
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -13602,7 +13389,6 @@
         "mother": 33,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "Natural",
@@ -13668,7 +13454,6 @@
         "mother": 24,
         "father": 25
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 35,
       "prenatalFactors": [
         "Natural"
@@ -13734,7 +13519,6 @@
         "mother": 37,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -13795,7 +13579,6 @@
         "mother": 40,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -13860,7 +13643,6 @@
         "mother": 23,
         "father": 60
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "IVF"
@@ -13923,7 +13705,6 @@
         "mother": 35,
         "father": 36
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 60,
       "prenatalFactors": [
         "Natural"
@@ -13988,7 +13769,6 @@
         "mother": 34,
         "father": 30
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "IVF"
@@ -14053,7 +13833,6 @@
         "mother": 37,
         "father": 45
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "IVF"
@@ -14116,7 +13895,6 @@
         "mother": 31,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -14179,7 +13957,6 @@
         "mother": 29,
         "father": 31
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 22,
       "prenatalFactors": [
         "Natural"
@@ -14240,7 +14017,6 @@
         "mother": 28,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -14303,7 +14079,6 @@
         "mother": 40,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -14366,7 +14141,6 @@
         "mother": 32,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -14429,7 +14203,6 @@
         "mother": 38,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -14494,7 +14267,6 @@
         "mother": 38,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -14559,7 +14331,6 @@
         "mother": 30,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -14622,7 +14393,6 @@
         "mother": 36,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 63,
       "prenatalFactors": [
         "Natural"
@@ -14686,7 +14456,6 @@
         "mother": 29,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 72,
       "prenatalFactors": [
         "Natural"
@@ -14751,7 +14520,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 32,
       "prenatalFactors": [
         "Natural",
@@ -14818,7 +14586,6 @@
         "mother": 25,
         "father": 31
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 16,
       "prenatalFactors": [
         "Natural"
@@ -14881,7 +14648,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -14942,7 +14708,6 @@
         "mother": 29,
         "father": 29
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -15005,7 +14770,6 @@
         "mother": 42,
         "father": 48
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 54,
       "prenatalFactors": [
         "Natural"
@@ -15066,7 +14830,6 @@
         "mother": 18,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 52,
       "prenatalFactors": [
         "Natural"
@@ -15131,7 +14894,6 @@
         "mother": 31,
         "father": 31
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -15192,7 +14954,6 @@
         "mother": 39,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -15253,7 +15014,6 @@
         "mother": 43,
         "father": 46
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 18,
       "prenatalFactors": [
         "Natural",
@@ -15317,7 +15077,6 @@
         "mother": 43,
         "father": 41
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 54,
       "prenatalFactors": [
         "Natural"
@@ -15380,7 +15139,6 @@
         "mother": 39,
         "father": 42
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 38,
       "prenatalFactors": [
         "Natural"
@@ -15445,7 +15203,6 @@
         "mother": 35,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -15506,7 +15263,6 @@
         "mother": 31,
         "father": 31
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -15567,7 +15323,6 @@
         "mother": 41,
         "father": 41
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 29,
       "prenatalFactors": [
         "Natural"
@@ -15628,7 +15383,6 @@
         "mother": 40,
         "father": 41
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -15689,7 +15443,6 @@
         "mother": 40,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 60,
       "prenatalFactors": [
         "Natural"
@@ -15752,7 +15505,6 @@
         "mother": 27,
         "father": 30
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -15815,7 +15567,6 @@
         "mother": 44,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -15880,7 +15631,6 @@
         "mother": 27,
         "father": 33
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 18,
       "prenatalFactors": [
         "Natural"
@@ -15941,7 +15691,6 @@
         "mother": 35,
         "father": 47
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 18,
       "prenatalFactors": [
         "Natural"
@@ -16002,7 +15751,6 @@
         "mother": 31,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -16065,7 +15813,6 @@
         "mother": 27,
         "father": 33
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 62,
       "prenatalFactors": [
         "Natural"
@@ -16128,7 +15875,6 @@
         "mother": 46,
         "father": 46
       },
-      "subtype": "F84.5 Asperger syndrome",
       "diagnosticAgeMonths": 175,
       "prenatalFactors": [
         "Natural"
@@ -16193,7 +15939,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -16256,7 +16001,6 @@
         "mother": 35,
         "father": 33
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 60,
       "prenatalFactors": [
         "Natural"
@@ -16319,7 +16063,6 @@
         "mother": 26,
         "father": 29
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural",
@@ -16383,7 +16126,6 @@
         "mother": 30,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 44,
       "prenatalFactors": [
         "Natural"
@@ -16446,7 +16188,6 @@
         "mother": 35,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "Natural"
@@ -16509,7 +16250,6 @@
         "mother": 42,
         "father": 42
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -16575,7 +16315,6 @@
         "mother": 39,
         "father": 39
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 132,
       "prenatalFactors": [
         "Natural"
@@ -16636,7 +16375,6 @@
         "mother": 39,
         "father": 39
       },
-      "subtype": "F84.5 Asperger syndrome",
       "diagnosticAgeMonths": 38,
       "prenatalFactors": [
         "Natural"
@@ -16699,7 +16437,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 43,
       "prenatalFactors": [
         "Natural"
@@ -16762,7 +16499,6 @@
         "mother": 32,
         "father": 31
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -16825,7 +16561,6 @@
         "mother": 44,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural",
@@ -16889,7 +16624,6 @@
         "mother": 40,
         "father": 39
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -16952,7 +16686,6 @@
         "mother": 42,
         "father": 42
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural",
@@ -17016,7 +16749,6 @@
         "mother": 36,
         "father": 35
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural",
@@ -17080,7 +16812,6 @@
         "mother": 31,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 20,
       "prenatalFactors": [
         "Natural"
@@ -17143,7 +16874,6 @@
         "mother": 47,
         "father": 52
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 27,
       "prenatalFactors": [
         "Natural"
@@ -17209,7 +16939,6 @@
         "mother": 46,
         "father": 50
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 33,
       "prenatalFactors": [
         "Natural"
@@ -17272,7 +17001,6 @@
         "mother": 33,
         "father": 47
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 64,
       "prenatalFactors": [
         "Natural",
@@ -17334,7 +17062,6 @@
         "mother": 28,
         "father": 28
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -17397,7 +17124,6 @@
         "mother": 33,
         "father": 47
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -17460,7 +17186,6 @@
         "mother": 36,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -17523,7 +17248,6 @@
         "mother": 46,
         "father": 45
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 17,
       "prenatalFactors": [
         "Natural"
@@ -17586,7 +17310,6 @@
         "mother": 33,
         "father": 44
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 90,
       "prenatalFactors": [
         "Natural",
@@ -17652,7 +17375,6 @@
         "mother": 33,
         "father": 44
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -17713,7 +17435,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -17778,7 +17499,6 @@
         "mother": 35,
         "father": 39
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 38,
       "prenatalFactors": [
         "Natural",
@@ -17842,7 +17562,6 @@
         "mother": 35,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -17907,7 +17626,6 @@
         "mother": 54,
         "father": 56
       },
-      "subtype": "F84.5 Asperger syndrome",
       "diagnosticAgeMonths": 180,
       "prenatalFactors": [
         "Natural"
@@ -17968,7 +17686,6 @@
         "mother": 26,
         "father": 29
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 48,
       "prenatalFactors": [
         "Natural"
@@ -18031,7 +17748,6 @@
         "mother": 37,
         "father": 39
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural",
@@ -18093,7 +17809,6 @@
         "mother": 36,
         "father": 42
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 55,
       "prenatalFactors": [
         "Natural"
@@ -18158,7 +17873,6 @@
         "mother": 36,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural",
@@ -18222,7 +17936,6 @@
         "mother": 36,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural",
@@ -18286,7 +17999,6 @@
         "mother": 46,
         "father": 52
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 205,
       "prenatalFactors": [
         "Natural"
@@ -18351,7 +18063,6 @@
         "mother": 36,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 60,
       "prenatalFactors": [
         "Natural",
@@ -18417,7 +18128,6 @@
         "mother": 41,
         "father": 43
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 50,
       "prenatalFactors": [
         "Natural",
@@ -18481,7 +18191,6 @@
         "mother": 32,
         "father": 50
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 168,
       "prenatalFactors": [
         "Natural"
@@ -18546,7 +18255,6 @@
         "mother": 51,
         "father": 50
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 132,
       "prenatalFactors": [
         "Natural",
@@ -18610,7 +18318,6 @@
         "mother": 28,
         "father": 30
       },
-      "subtype": "F84.5 Asperger syndrome",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -18671,7 +18378,6 @@
         "mother": 40,
         "father": 43
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 168,
       "prenatalFactors": [
         "Natural"
@@ -18734,7 +18440,6 @@
         "mother": 34,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural"
@@ -18798,7 +18503,6 @@
         "mother": 50,
         "father": 45
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 120,
       "prenatalFactors": [
         "Natural"
@@ -18863,7 +18567,6 @@
         "mother": 46,
         "father": 57
       },
-      "subtype": "F84.5 Asperger syndrome",
       "diagnosticAgeMonths": 156,
       "prenatalFactors": [
         "Natural"
@@ -18928,7 +18631,6 @@
         "mother": 34,
         "father": 42
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 29,
       "prenatalFactors": [
         "Natural"
@@ -18992,7 +18694,6 @@
         "mother": 34,
         "father": 42
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 31,
       "prenatalFactors": [
         "Natural"
@@ -19053,7 +18754,6 @@
         "mother": 34,
         "father": 42
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -19114,7 +18814,6 @@
         "mother": 43,
         "father": 43
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural",
@@ -19178,7 +18877,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural",
@@ -19242,7 +18940,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 17,
       "prenatalFactors": [
         "Natural",
@@ -19306,7 +19003,6 @@
         "mother": 33,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 28,
       "prenatalFactors": [
         "Natural"
@@ -19371,7 +19067,6 @@
         "mother": 28,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 28,
       "prenatalFactors": [
         "Natural",
@@ -19437,7 +19132,6 @@
         "mother": 39,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural",
@@ -19501,7 +19195,6 @@
         "mother": 32,
         "father": 35
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 60,
       "prenatalFactors": [
         "Natural"
@@ -19564,7 +19257,6 @@
         "mother": 37,
         "father": 37
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural",
@@ -19626,7 +19318,6 @@
         "mother": 40,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural",
@@ -19690,7 +19381,6 @@
         "mother": 40,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 24,
       "prenatalFactors": [
         "Natural",
@@ -19752,7 +19442,6 @@
         "mother": 36,
         "father": 36
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "IVF",
@@ -19816,7 +19505,6 @@
         "mother": 36,
         "father": 36
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "IVF",
@@ -19884,7 +19572,6 @@
         "mother": 27,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -19949,7 +19636,6 @@
         "mother": 27,
         "father": 37
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 36,
       "prenatalFactors": [
         "Natural"
@@ -20012,7 +19698,6 @@
         "mother": 34,
         "father": 35
       },
-      "subtype": "F84.1 Atypical autism",
       "diagnosticAgeMonths": 21,
       "prenatalFactors": [
         "Natural"
@@ -20075,7 +19760,6 @@
         "mother": 28,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 33,
       "prenatalFactors": [
         "Natural"
@@ -20136,7 +19820,6 @@
         "mother": 29,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 50,
       "prenatalFactors": [
         "Natural"
@@ -20197,7 +19880,6 @@
         "mother": 32,
         "father": 45
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 26,
       "prenatalFactors": [
         "Natural"
@@ -20260,7 +19942,6 @@
         "mother": 33,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 18,
       "prenatalFactors": [
         "Natural"
@@ -20321,7 +20002,6 @@
         "mother": 32,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 79,
       "prenatalFactors": [
         "Natural"
@@ -20382,7 +20062,6 @@
         "mother": 34,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 126,
       "prenatalFactors": [
         "Natural"
@@ -20443,7 +20122,6 @@
         "mother": 31,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 72,
       "prenatalFactors": [
         "Natural",
@@ -20505,7 +20183,6 @@
         "mother": 32,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 38,
       "prenatalFactors": [
         "Natural"
@@ -20566,7 +20243,6 @@
         "mother": 36,
         "father": 31
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 172,
       "prenatalFactors": [
         "Natural"
@@ -20627,7 +20303,6 @@
         "mother": 26,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 180,
       "prenatalFactors": [
         "Natural"
@@ -20688,7 +20363,6 @@
         "mother": 32,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 49,
       "prenatalFactors": [
         "Natural"
@@ -20749,7 +20423,6 @@
         "mother": 32,
         "father": 31
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 55,
       "prenatalFactors": [
         "Natural"
@@ -20812,7 +20485,6 @@
         "mother": 36,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 97,
       "prenatalFactors": [
         "Natural"
@@ -20873,7 +20545,6 @@
         "mother": 30,
         "father": 40
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 137,
       "prenatalFactors": [
         "Natural",
@@ -20935,7 +20606,6 @@
         "mother": 35,
         "father": 45
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 128,
       "prenatalFactors": [
         "Natural"
@@ -20996,7 +20666,6 @@
         "mother": 37,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 35,
       "prenatalFactors": [
         "Natural"
@@ -21057,7 +20726,6 @@
         "mother": 22,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 43,
       "prenatalFactors": [
         "Natural"
@@ -21118,7 +20786,6 @@
         "mother": 37,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 75,
       "prenatalFactors": [
         "Natural",
@@ -21180,7 +20847,6 @@
         "mother": 27,
         "father": 50
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 120,
       "prenatalFactors": [
         "Natural"
@@ -21241,7 +20907,6 @@
         "mother": 26,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 179,
       "prenatalFactors": [
         "Natural"
@@ -21302,7 +20967,6 @@
         "mother": 20,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 39,
       "prenatalFactors": [
         "Natural"
@@ -21363,7 +21027,6 @@
         "mother": 27,
         "father": 42
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 35,
       "prenatalFactors": [
         "Natural"
@@ -21424,7 +21087,6 @@
         "mother": 31,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 62,
       "prenatalFactors": [
         "Natural"
@@ -21487,7 +21149,6 @@
         "mother": 30,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 13,
       "prenatalFactors": [
         "Natural"
@@ -21548,7 +21209,6 @@
         "mother": 29,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 88,
       "prenatalFactors": [
         "Natural"
@@ -21609,7 +21269,6 @@
         "mother": 26,
         "father": 40
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 31,
       "prenatalFactors": [
         "Natural"
@@ -21672,7 +21331,6 @@
         "mother": 36,
         "father": 29
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 164,
       "prenatalFactors": [
         "Natural"
@@ -21735,7 +21393,6 @@
         "mother": 36,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 144,
       "prenatalFactors": [
         "Natural"
@@ -21796,7 +21453,6 @@
         "mother": 34,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 68,
       "prenatalFactors": [
         "Natural"
@@ -21857,7 +21513,6 @@
         "mother": 22,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 42,
       "prenatalFactors": [
         "Natural"
@@ -21918,7 +21573,6 @@
         "mother": 43,
         "father": 40
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 49,
       "prenatalFactors": [
         "Natural"
@@ -21979,7 +21633,6 @@
         "mother": 32,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 37,
       "prenatalFactors": [
         "Natural"
@@ -22040,7 +21693,6 @@
         "mother": 34,
         "father": 29
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 89,
       "prenatalFactors": [
         "Natural"
@@ -22101,7 +21753,6 @@
         "mother": 24,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 187,
       "prenatalFactors": [
         "Natural"
@@ -22162,7 +21813,6 @@
         "mother": 31,
         "father": 30
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 65,
       "prenatalFactors": [
         "Natural"
@@ -22223,7 +21873,6 @@
         "mother": 34,
         "father": 31
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 44,
       "prenatalFactors": [
         "IVF"
@@ -22284,7 +21933,6 @@
         "mother": 31,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 60,
       "prenatalFactors": [
         "Natural",
@@ -22346,7 +21994,6 @@
         "mother": 36,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 145,
       "prenatalFactors": [
         "Natural"
@@ -22407,7 +22054,6 @@
         "mother": 38,
         "father": 27
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 203,
       "prenatalFactors": [
         "Natural"
@@ -22468,7 +22114,6 @@
         "mother": 25,
         "father": 40
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 144,
       "prenatalFactors": [
         "Natural"
@@ -22531,7 +22176,6 @@
         "mother": 36,
         "father": 29
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 179,
       "prenatalFactors": [
         "Natural"
@@ -22594,7 +22238,6 @@
         "mother": 33,
         "father": 42
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 143,
       "prenatalFactors": [
         "Natural",
@@ -22656,7 +22299,6 @@
         "mother": 31,
         "father": 29
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 102,
       "prenatalFactors": [
         "Natural"
@@ -22717,7 +22359,6 @@
         "mother": 24,
         "father": 41
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 164,
       "prenatalFactors": [
         "Natural"
@@ -22778,7 +22419,6 @@
         "mother": 39,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 63,
       "prenatalFactors": [
         "IVF"
@@ -22839,7 +22479,6 @@
         "mother": 33,
         "father": 26
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 92,
       "prenatalFactors": [
         "Natural"
@@ -22900,7 +22539,6 @@
         "mother": 23,
         "father": 29
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 32,
       "prenatalFactors": [
         "Natural"
@@ -22961,7 +22599,6 @@
         "mother": 30,
         "father": 41
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 19,
       "prenatalFactors": [
         "IVF"
@@ -23022,7 +22659,6 @@
         "mother": 33,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 51,
       "prenatalFactors": [
         "Natural",
@@ -23086,7 +22722,6 @@
         "mother": 34,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 81,
       "prenatalFactors": [
         "Natural"
@@ -23147,7 +22782,6 @@
         "mother": 31,
         "father": 23
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 134,
       "prenatalFactors": [
         "Natural"
@@ -23208,7 +22842,6 @@
         "mother": 33,
         "father": 41
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 56,
       "prenatalFactors": [
         "IVF"
@@ -23269,7 +22902,6 @@
         "mother": 42,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 190,
       "prenatalFactors": [
         "Natural"
@@ -23330,7 +22962,6 @@
         "mother": 39,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 61,
       "prenatalFactors": [
         "Natural"
@@ -23393,7 +23024,6 @@
         "mother": 27,
         "father": 31
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 164,
       "prenatalFactors": [
         "Natural"
@@ -23454,7 +23084,6 @@
         "mother": 29,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 86,
       "prenatalFactors": [
         "Natural"
@@ -23515,7 +23144,6 @@
         "mother": 31,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 59,
       "prenatalFactors": [
         "Natural"
@@ -23576,7 +23204,6 @@
         "mother": 23,
         "father": 27
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 18,
       "prenatalFactors": [
         "Natural"
@@ -23637,7 +23264,6 @@
         "mother": 25,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 42,
       "prenatalFactors": [
         "Natural"
@@ -23698,7 +23324,6 @@
         "mother": 23,
         "father": 40
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 57,
       "prenatalFactors": [
         "Natural",
@@ -23760,7 +23385,6 @@
         "mother": 26,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 47,
       "prenatalFactors": [
         "Natural"
@@ -23823,7 +23447,6 @@
         "mother": 38,
         "father": 29
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 85,
       "prenatalFactors": [
         "Natural"
@@ -23884,7 +23507,6 @@
         "mother": 27,
         "father": 30
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 111,
       "prenatalFactors": [
         "Natural"
@@ -23947,7 +23569,6 @@
         "mother": 26,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 37,
       "prenatalFactors": [
         "Natural"
@@ -24008,7 +23629,6 @@
         "mother": 36,
         "father": 38
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 111,
       "prenatalFactors": [
         "Natural"
@@ -24071,7 +23691,6 @@
         "mother": 29,
         "father": 23
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 63,
       "prenatalFactors": [
         "Natural"
@@ -24132,7 +23751,6 @@
         "mother": 34,
         "father": 22
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 75,
       "prenatalFactors": [
         "Natural"
@@ -24193,7 +23811,6 @@
         "mother": 28,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 94,
       "prenatalFactors": [
         "Natural"
@@ -24254,7 +23871,6 @@
         "mother": 22,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 60,
       "prenatalFactors": [
         "IVF"
@@ -24315,7 +23931,6 @@
         "mother": 34,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 19,
       "prenatalFactors": [
         "Natural"
@@ -24376,7 +23991,6 @@
         "mother": 24,
         "father": 32
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 32,
       "prenatalFactors": [
         "Natural"
@@ -24437,7 +24051,6 @@
         "mother": 29,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 77,
       "prenatalFactors": [
         "Natural",
@@ -24499,7 +24112,6 @@
         "mother": 28,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 107,
       "prenatalFactors": [
         "Natural"
@@ -24560,7 +24172,6 @@
         "mother": 32,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 196,
       "prenatalFactors": [
         "Natural",
@@ -24622,7 +24233,6 @@
         "mother": 29,
         "father": 28
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 53,
       "prenatalFactors": [
         "Natural"
@@ -24683,7 +24293,6 @@
         "mother": 31,
         "father": 22
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 119,
       "prenatalFactors": [
         "Natural"
@@ -24744,7 +24353,6 @@
         "mother": 24,
         "father": 40
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 70,
       "prenatalFactors": [
         "Natural"
@@ -24805,7 +24413,6 @@
         "mother": 42,
         "father": 45
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 160,
       "prenatalFactors": [
         "Natural"
@@ -24866,7 +24473,6 @@
         "mother": 25,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 85,
       "prenatalFactors": [
         "Natural"
@@ -24927,7 +24533,6 @@
         "mother": 38,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 87,
       "prenatalFactors": [
         "Natural"
@@ -24988,7 +24593,6 @@
         "mother": 32,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 143,
       "prenatalFactors": [
         "Natural"
@@ -25049,7 +24653,6 @@
         "mother": 32,
         "father": 43
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 56,
       "prenatalFactors": [
         "Natural"
@@ -25110,7 +24713,6 @@
         "mother": 33,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 14,
       "prenatalFactors": [
         "Natural"
@@ -25171,7 +24773,6 @@
         "mother": 22,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 34,
       "prenatalFactors": [
         "Natural"
@@ -25234,7 +24835,6 @@
         "mother": 36,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 32,
       "prenatalFactors": [
         "Natural"
@@ -25297,7 +24897,6 @@
         "mother": 29,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 166,
       "prenatalFactors": [
         "Natural"
@@ -25358,7 +24957,6 @@
         "mother": 38,
         "father": 27
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 44,
       "prenatalFactors": [
         "Natural",
@@ -25420,7 +25018,6 @@
         "mother": 31,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 22,
       "prenatalFactors": [
         "Natural"
@@ -25481,7 +25078,6 @@
         "mother": 30,
         "father": 39
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 22,
       "prenatalFactors": [
         "Natural"
@@ -25542,7 +25138,6 @@
         "mother": 25,
         "father": 33
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 113,
       "prenatalFactors": [
         "Natural"
@@ -25603,7 +25198,6 @@
         "mother": 28,
         "father": 35
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 105,
       "prenatalFactors": [
         "Natural"
@@ -25664,7 +25258,6 @@
         "mother": 34,
         "father": 29
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 15,
       "prenatalFactors": [
         "Natural"
@@ -25725,7 +25318,6 @@
         "mother": 25,
         "father": 37
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 148,
       "prenatalFactors": [
         "Natural",
@@ -25787,7 +25379,6 @@
         "mother": 22,
         "father": 27
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 73,
       "prenatalFactors": [
         "Natural"
@@ -25850,7 +25441,6 @@
         "mother": 27,
         "father": 36
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 107,
       "prenatalFactors": [
         "Natural"
@@ -25911,7 +25501,6 @@
         "mother": 36,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 115,
       "prenatalFactors": [
         "Natural"
@@ -25972,7 +25561,6 @@
         "mother": 40,
         "father": 26
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 30,
       "prenatalFactors": [
         "Natural"
@@ -26033,7 +25621,6 @@
         "mother": 28,
         "father": 40
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 22,
       "prenatalFactors": [
         "Natural"
@@ -26094,7 +25681,6 @@
         "mother": 24,
         "father": 34
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 179,
       "prenatalFactors": [
         "Natural",
@@ -26156,7 +25742,6 @@
         "mother": 30,
         "father": 44
       },
-      "subtype": "F84.0 Childhood autism",
       "diagnosticAgeMonths": 100,
       "prenatalFactors": [
         "Natural"
