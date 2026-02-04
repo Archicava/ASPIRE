@@ -72,6 +72,8 @@ Update rules:
 - 2026-02-04: Placed the download button inline with the download client header.
 - 2026-02-04: Tightened spacing between the Release info label and details.
 - 2026-02-04: Reduced padding and gaps on the download page cards and release rows.
+- 2026-02-04: Added navbar and footer to the homepage and enabled a public navbar view.
+- 2026-02-04: Removed the research link from the public navbar on the homepage.
 - 2026-02-04: Centered the download content inside a single narrow card layout.
 - 2026-02-04: Reduced bottom padding on the download page to tighten footer spacing.
 - 2026-02-04: Set download page grid items to align to the start to prevent stretching.
