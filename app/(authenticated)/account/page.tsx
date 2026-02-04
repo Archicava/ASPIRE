@@ -96,15 +96,6 @@ export default function AccountPage() {
           }}
         >
           <span className="section-title">Account</span>
-          <h1
-            style={{
-              margin: 0,
-              fontSize: 'clamp(1.2rem, 3vw, 1.45rem)',
-              letterSpacing: '0.01em'
-            }}
-          >
-            Credential security
-          </h1>
         </header>
         <div style={accentGlowStyle} aria-hidden="true" />
         <div style={accentGlowSecondaryStyle} aria-hidden="true" />

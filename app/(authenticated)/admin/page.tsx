@@ -339,7 +339,7 @@ export default function AdminPage() {
                 {formattedUsers.map((record) => (
                   <tr key={record.username} style={{ borderBottom: '1px solid var(--color-border)' }}>
                     <td style={tdStyle}>{record.username}</td>
-                    <td style={tdStyle}>{record.displayName || '—'}</td>
+                    <td style={tdStyle}>{record.displayName || '-'}</td>
                     <td style={tdStyle}>{record.role ?? 'user'}</td>
                     <td style={tdStyle}>{formatDate(record.createdAt)}</td>
                     <td style={tdStyle}>{formatDate(record.updatedAt)}</td>

@@ -32,7 +32,7 @@ const researchChapters = [
     takeaways: [
       'Median diagnostic age for early-identified cases was 18 months, underscoring the benefit of milestone surveillance and parental concern logging.',
       'Behavioral challenges such as aggressivity and self-injury demanded clear intervention recommendations, hence the emphasis on actionable inference narratives.',
-      'Auditability via Ratio1’s CStore ensures each inference job retains immutable proofs—critical for cross-institutional studies and regulatory reviews.'
+      'Auditability via Ratio1’s CStore ensures each inference job retains immutable proofs-critical for cross-institutional studies and regulatory reviews.'
     ]
   }
 ];
@@ -95,7 +95,7 @@ export default function ResearchInsightsPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.9rem' }}>
           <MetricCard label="Gender split" value={`${stats.gender.male}M / ${stats.gender.female}F`} description="72% of records are male, mirroring the cohort publication." />
           <MetricCard label="Pregnancy profile" value={`${stats.pregnancy.natural} natural / ${stats.pregnancy.ivf} IVF`} description={`${stats.pregnancy.twin} twin gestations; ${stats.pregnancy.abnormalEvolution} flagged with complications.`} />
-          <MetricCard label="Median diagnosis age" value={`${stats.diagnosisAge.median ?? '—'} months`} description="Used as the early-diagnosis benchmark in the workspace view." />
+          <MetricCard label="Median diagnosis age" value={`${stats.diagnosisAge.median ?? '-'} months`} description="Used as the early-diagnosis benchmark in the workspace view." />
           <MetricCard label="Minimally verbal" value={`${Math.round((stats.language.absent / stats.totalCases) * 100)}%`} description="Language status informs AAC planning inside Ratio1 workflows." />
           <MetricCard label="EEG anomalies" value={`${stats.eegAnomalyRate}%`} description="Rate of focal/bilateral EEG findings across the cohort." />
           <MetricCard label="MRI anomalies" value={`${stats.mriAnomalyRate}%`} description="Structural MRI anomalies present within the cohort dataset." />

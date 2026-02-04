@@ -32,7 +32,7 @@ export default function LandingPage() {
         <section className="fade-in">
           <span className="pill">Aspire - Archicava Case Inference Studio</span>
           <h1 className="hero-title">
-            Clinical intelligence for autism cohorts — powered by decentralized AI.
+            Clinical intelligence for autism cohorts - powered by decentralized AI.
           </h1>
           <p className="hero-lead">
             Securely orchestrate Ratio1 inference jobs, capture structured case data aligned with the

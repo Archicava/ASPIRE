@@ -10,7 +10,7 @@ const navLinks = [
   { href: '/predict', label: 'Predictive Lab' },
   { href: '/cases', label: 'Case Library' },
   { href: '/research/insights', label: 'Research' },
-  { href: '/account', label: 'Account' }
+  { href: '/download', label: 'Download' },
 ];
 
 export function Navbar() {
@@ -82,7 +82,11 @@ export function Navbar() {
         </div>
         <div className="nav-right">
           <div className="nav-user-card">
-            <div className="nav-user" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+            <Link
+              href="/account"
+              className="nav-user"
+              style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}
+            >
               <div
                 aria-hidden="true"
                 style={{
@@ -103,7 +107,7 @@ export function Navbar() {
               <p style={{ margin: 0, fontWeight: 700, fontSize: 'clamp(0.85rem, 2.4vw, 0.95rem)' }}>
                 {user.displayName || 'Operator'}
               </p>
-            </div>
+            </Link>
             <button
               type="button"
               onClick={() => {

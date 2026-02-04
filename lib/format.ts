@@ -8,7 +8,7 @@ export function formatDate(isoString: string) {
 
 export function formatTimeDistance(submittedAt: string, completedAt?: string) {
   if (!completedAt) {
-    return '—';
+    return '-';
   }
   const start = new Date(submittedAt).getTime();
   const end = new Date(completedAt).getTime();

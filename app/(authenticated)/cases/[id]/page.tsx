@@ -164,7 +164,7 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
                 Payload CID
               </dt>
               <dd style={{ margin: '0.2rem 0 0', fontWeight: 600, overflowWrap: 'anywhere' }}>
-                {job.payloadCid ? <code style={{ wordBreak: 'break-all' }}>{job.payloadCid}</code> : '—'}
+                {job.payloadCid ? <code style={{ wordBreak: 'break-all' }}>{job.payloadCid}</code> : '-'}
               </dd>
             </div>
             <div>
@@ -351,12 +351,12 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
             items={[
               ['Delays', record.development.delays.join(', ')],
               ['Dysmorphic features', record.development.dysmorphicFeatures ? 'Yes' : 'No'],
-              ['Intellectual disability', intellectualDisabilityLabels[record.development.intellectualDisability] || record.development.intellectualDisability || '—'],
+              ['Intellectual disability', intellectualDisabilityLabels[record.development.intellectualDisability] || record.development.intellectualDisability || '-'],
               ['Regression', record.development.regressionObserved ? 'Yes' : 'No'],
-              ['Comorbidities', record.development.comorbidities.join(', ') || '—'],
+              ['Comorbidities', record.development.comorbidities.join(', ') || '-'],
               ['Behavioral concerns', record.behaviors.concerns.join(', ')],
               ['Language level', record.behaviors.languageLevel],
-              ['Sensory notes', record.behaviors.sensoryNotes || '—']
+              ['Sensory notes', record.behaviors.sensoryNotes || '-']
             ]}
           />
           <DataList
@@ -364,10 +364,10 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
             items={[
               ['ADOS score', record.assessments.adosScore.toString()],
               ['ADI-R score', record.assessments.adirScore.toString()],
-              ['IQ / DQ', record.assessments.iqDq?.toString() ?? '—'],
+              ['IQ / DQ', record.assessments.iqDq?.toString() ?? '-'],
               ['EEG anomalies', record.assessments.eegAnomalies ? 'Detected' : 'None'],
-              ['MRI findings', record.assessments.mriFindings ?? '—'],
-              ['Neurological exam', record.assessments.neurologicalExam || '—'],
+              ['MRI findings', record.assessments.mriFindings ?? '-'],
+              ['Neurological exam', record.assessments.neurologicalExam || '-'],
               ['Head circumference', `${record.assessments.headCircumference} cm`]
             ]}
           />

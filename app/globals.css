@@ -43,7 +43,7 @@ button {
 }
 
 main {
-  min-height: 100vh;
+  min-height: 40vh;
 }
 
 .card {
@@ -128,6 +128,13 @@ main {
   gap: 1.5rem;
   max-width: var(--layout-max);
   margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+}
+
+.page-shell-flex {
+  gap: 1.5rem;
+  max-width: var(--layout-max);
+  margin: 10rem auto;
   padding: 0 1.5rem 5rem;
 }
 
@@ -358,7 +365,11 @@ main {
   padding: clamp(1rem, 3.6vw, 1.2rem);
   border-radius: 1rem;
   border: 1px solid var(--color-border);
-  background: linear-gradient(135deg, rgba(220, 233, 255, 0.82), rgba(240, 246, 255, 0.95));
+  background: linear-gradient(
+    135deg,
+    rgba(220, 233, 255, 0.82),
+    rgba(240, 246, 255, 0.95)
+  );
   display: grid;
   gap: 0.6rem;
 }
@@ -432,6 +443,11 @@ main {
   }
 
   .page-shell {
+    padding: 0 1.1rem 4rem;
+    gap: 1.25rem;
+  }
+
+  .page-shell-flex {
     padding: 0 1.1rem 4rem;
     gap: 1.25rem;
   }

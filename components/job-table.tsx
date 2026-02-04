@@ -68,7 +68,7 @@ export function JobTable({ jobs }: JobTableProps) {
                     {job.payloadCid ? (
                       <code style={{ fontSize: '0.8rem' }}>{job.payloadCid.slice(0, 12)}…</code>
                     ) : (
-                      '—'
+                      '-'
                     )}
                   </td>
                   <td style={tdStyle}>
@@ -82,7 +82,7 @@ export function JobTable({ jobs }: JobTableProps) {
                       {job.status}
                     </span>
                   </td>
-                  <td style={tdStyle}>{job.edgeNode ?? '—'}</td>
+                  <td style={tdStyle}>{job.edgeNode ?? '-'}</td>
                   <td style={tdStyle}>{formatDate(job.submittedAt)}</td>
                   <td style={tdStyle}>{formatTimeDistance(job.submittedAt, job.completedAt)}</td>
                 </tr>
@@ -105,7 +105,7 @@ export function JobTable({ jobs }: JobTableProps) {
             <div className="job-table-row">
               <span className="job-table-label">Payload CID</span>
               <span className="job-table-value">
-                {job.payloadCid ? <code>{job.payloadCid}</code> : '—'}
+                {job.payloadCid ? <code>{job.payloadCid}</code> : '-'}
               </span>
             </div>
             <div className="job-table-row">
@@ -122,7 +122,7 @@ export function JobTable({ jobs }: JobTableProps) {
             </div>
             <div className="job-table-row">
               <span className="job-table-label">Edge node</span>
-              <span className="job-table-value">{job.edgeNode ?? '—'}</span>
+              <span className="job-table-value">{job.edgeNode ?? '-'}</span>
             </div>
             <div className="job-table-row">
               <span className="job-table-label">Submitted</span>

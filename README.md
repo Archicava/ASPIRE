@@ -151,7 +151,7 @@ Run `npm run seed:cohort` to regenerate the JSON seeds (`data/cohort-seed.json`,
 updated.
 
 When the endpoints are configured the server routes reuse the Ratio1 Drive
-methodology—constructing a singleton Edge SDK instance via
+methodology-constructing a singleton Edge SDK instance via
 `@ratio1/edge-sdk-ts`, hydrating the node via the env-driven URLs, and
 persisting submissions into CStore while surfacing R1FS/CStore health snapshots.
 
