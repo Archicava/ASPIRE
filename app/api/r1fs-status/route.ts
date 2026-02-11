@@ -1,8 +1,17 @@
 import { NextResponse } from 'next/server';
 
+import { platformConfig } from '@/lib/config';
 import { loadPlatformStatus } from '@/lib/data-platform';
 
 export async function GET() {
+  // In local mode, R1FS is not used for file storage
+  if (platformConfig.useLocal) {
+    return NextResponse.json({
+      status: 'online',
+      mode: 'local',
+    });
+  }
+
   try {
     const status = await loadPlatformStatus();
 
