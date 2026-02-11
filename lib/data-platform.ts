@@ -19,7 +19,7 @@ export async function loadCaseRecords(): Promise<CaseRecord[]> {
   const storage = getStorageAdapter();
   const storedCases = await storage.getAllCases();
 
-  if (platformConfig.MOCK_MODE) {
+  if (platformConfig.MOCK_DATA) {
     // Combine seed data with any user-created cases
     const seedCases = getCohortCaseRecords();
     const seedIds = new Set(seedCases.map(c => c.id));
@@ -46,7 +46,7 @@ export async function loadCaseRecord(caseId: string): Promise<CaseRecord | undef
     return storedCase;
   }
 
-  if (platformConfig.MOCK_MODE) {
+  if (platformConfig.MOCK_DATA) {
     // Fall back to seed data
     const seedCases = getCohortCaseRecords();
     return seedCases.find(c => c.id === caseId);
@@ -59,7 +59,7 @@ export async function loadInferenceJobs(): Promise<InferenceJob[]> {
   const storage = getStorageAdapter();
   const storedJobs = await storage.getAllJobs();
 
-  if (platformConfig.MOCK_MODE) {
+  if (platformConfig.MOCK_DATA) {
     // Combine mock jobs with any user-created jobs
     const mockJobs = getMockInferenceJobs();
     const mockIds = new Set(mockJobs.map(j => j.id));
@@ -78,7 +78,7 @@ export async function loadInferenceJob(jobId: string): Promise<InferenceJob | un
     return storedJob;
   }
 
-  if (platformConfig.MOCK_MODE) {
+  if (platformConfig.MOCK_DATA) {
     // Fall back to mock jobs
     const mockJobs = getMockInferenceJobs();
     return mockJobs.find(j => j.id === jobId);
@@ -95,11 +95,12 @@ export async function loadPlatformStatus(): Promise<{
   const storage = getStorageAdapter();
   const storageStatus = await storage.getStatus();
 
-  // If using local storage (or mock mode with local storage), we don't need CSTORE/R1FS status
+  // If using local storage, we don't need CSTORE/R1FS status
   if (platformConfig.useLocalStorage) {
     return {
       storage: {
         ...storageStatus,
+        mockData: platformConfig.MOCK_DATA,
         mockMode: platformConfig.MOCK_MODE
       } as unknown as Record<string, unknown>
     };

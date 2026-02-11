@@ -1,4 +1,4 @@
-import { ENFORCE_MOCK_MODE, DEFAULT_USE_LOCAL_STORAGE, DEFAULT_DATA_DIR } from './constants';
+import { ENFORCE_MOCK_MODE, DEFAULT_MOCK_DATA, DEFAULT_USE_LOCAL_STORAGE, DEFAULT_DATA_DIR } from './constants';
 
 const rawDebug = process.env.NODE_ENV !== 'production' || process.env.DEBUG === 'true';
 
@@ -61,7 +61,7 @@ const chainstorePeers = parseChainstorePeers(
 );
 
 /**
- * Mock mode logic:
+ * Mock mode logic (for API calls):
  * 1. If MOCK_MODE env variable is set, use its value (takes precedence)
  * 2. If MOCK_MODE env variable is not set, use ENFORCE_MOCK_MODE constant
  */
@@ -69,28 +69,30 @@ const mockMode = process.env.MOCK_MODE !== undefined
   ? process.env.MOCK_MODE === 'true'
   : ENFORCE_MOCK_MODE;
 
+/**
+ * Mock data logic (for displaying seed cases in library):
+ * 1. If MOCK_DATA env variable is set, use its value (takes precedence)
+ * 2. If MOCK_DATA env variable is not set, use DEFAULT_MOCK_DATA constant
+ */
+const mockData = process.env.MOCK_DATA !== undefined
+  ? process.env.MOCK_DATA === 'true'
+  : DEFAULT_MOCK_DATA;
+
 if (mockMode) {
-  console.log('[config] Mock mode enabled:',
+  console.log('[config] Mock mode (API) enabled:',
     process.env.MOCK_MODE !== undefined
       ? `via MOCK_MODE env variable (${process.env.MOCK_MODE})`
       : `via ENFORCE_MOCK_MODE constant (${ENFORCE_MOCK_MODE})`
   );
 }
 
-// Even in MOCK_MODE, we need endpoints for authentication
-if (!cstoreApiUrl || !r1fsApiUrl) {
-  if (mockMode) {
-    console.warn('[config] MOCK_MODE enabled but endpoints not configured. Authentication will require valid endpoints.');
-  }
-  throw new Error(
-    'Missing Ratio1 endpoints. Set R1EN_CHAINSTORE_API_URL and R1EN_R1FS_API_URL (or EE_/legacy variants).'
+if (mockData) {
+  console.log('[config] Mock data (seed cases) enabled:',
+    process.env.MOCK_DATA !== undefined
+      ? `via MOCK_DATA env variable (${process.env.MOCK_DATA})`
+      : `via DEFAULT_MOCK_DATA constant (${DEFAULT_MOCK_DATA})`
   );
 }
-
-// Aspire ASD Screening API configuration
-const aspireApiUrl = ensureHttpProtocol(process.env.ASPIRE_API_URL) || 'http://localhost:5083';
-const aspireApiEnabled = process.env.ASPIRE_API_ENABLED !== 'false';
-const aspireApiTimeoutMs = parseInt(process.env.ASPIRE_API_TIMEOUT_MS || '30000', 10);
 
 // Storage backend configuration
 const useLocalStorage = process.env.USE_LOCAL_STORAGE !== undefined
@@ -98,6 +100,18 @@ const useLocalStorage = process.env.USE_LOCAL_STORAGE !== undefined
   : DEFAULT_USE_LOCAL_STORAGE;
 
 const dataDir = process.env.DATA_DIR || DEFAULT_DATA_DIR;
+
+// Aspire ASD Screening API configuration
+const aspireApiUrl = ensureHttpProtocol(process.env.ASPIRE_API_URL) || 'http://localhost:5083';
+const aspireApiEnabled = process.env.ASPIRE_API_ENABLED !== 'false';
+const aspireApiTimeoutMs = parseInt(process.env.ASPIRE_API_TIMEOUT_MS || '30000', 10);
+
+// CSTORE endpoints are only required when not using local storage
+if (!useLocalStorage && (!cstoreApiUrl || !r1fsApiUrl)) {
+  throw new Error(
+    'Missing Ratio1 endpoints. Set R1EN_CHAINSTORE_API_URL and R1EN_R1FS_API_URL (or EE_/legacy variants), or use USE_LOCAL_STORAGE=true.'
+  );
+}
 
 const authSessionCookieName = process.env.AUTH_SESSION_COOKIE || 'r1-session';
 const parsedSessionTtl = parseInt(process.env.AUTH_SESSION_TTL_SECONDS || '86400', 10);
@@ -114,6 +128,7 @@ const cstoreAuthSecret =
 export const platformConfig = {
   DEBUG: rawDebug,
   MOCK_MODE: mockMode,
+  MOCK_DATA: mockData,
   cstoreApiUrl,
   r1fsApiUrl,
   chainstorePeers,
