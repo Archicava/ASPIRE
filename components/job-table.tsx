@@ -52,9 +52,7 @@ export function JobTable({ jobs }: JobTableProps) {
               <tr style={{ textAlign: 'left', color: 'var(--color-text-secondary)' }}>
                 <th style={thStyle}>Job ID</th>
                 <th style={thStyle}>Case</th>
-                <th style={thStyle}>Payload CID</th>
                 <th style={thStyle}>Status</th>
-                <th style={thStyle}>Edge node</th>
                 <th style={thStyle}>Submitted</th>
                 <th style={thStyle}>Duration</th>
               </tr>
@@ -64,13 +62,6 @@ export function JobTable({ jobs }: JobTableProps) {
                 <tr key={job.id} style={{ borderTop: '1px solid var(--color-border)' }}>
                   <td style={tdStyle}>{job.id}</td>
                   <td style={tdStyle}>{job.caseId}</td>
-                  <td style={tdStyle}>
-                    {job.payloadCid ? (
-                      <code style={{ fontSize: '0.8rem' }}>{job.payloadCid.slice(0, 12)}…</code>
-                    ) : (
-                      '-'
-                    )}
-                  </td>
                   <td style={tdStyle}>
                     <span
                       className="pill"
@@ -82,7 +73,6 @@ export function JobTable({ jobs }: JobTableProps) {
                       {job.status}
                     </span>
                   </td>
-                  <td style={tdStyle}>{job.edgeNode ?? '-'}</td>
                   <td style={tdStyle}>{formatDate(job.submittedAt)}</td>
                   <td style={tdStyle}>{formatTimeDistance(job.submittedAt, job.completedAt)}</td>
                 </tr>
@@ -103,12 +93,6 @@ export function JobTable({ jobs }: JobTableProps) {
               <span className="job-table-value">{job.caseId}</span>
             </div>
             <div className="job-table-row">
-              <span className="job-table-label">Payload CID</span>
-              <span className="job-table-value">
-                {job.payloadCid ? <code>{job.payloadCid}</code> : '-'}
-              </span>
-            </div>
-            <div className="job-table-row">
               <span className="job-table-label">Status</span>
               <span
                 className="pill"
@@ -119,10 +103,6 @@ export function JobTable({ jobs }: JobTableProps) {
               >
                 {job.status}
               </span>
-            </div>
-            <div className="job-table-row">
-              <span className="job-table-label">Edge node</span>
-              <span className="job-table-value">{job.edgeNode ?? '-'}</span>
             </div>
             <div className="job-table-row">
               <span className="job-table-label">Submitted</span>

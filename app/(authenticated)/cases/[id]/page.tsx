@@ -161,14 +161,6 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
             </div>
             <div>
               <dt style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--color-text-secondary)' }}>
-                Payload CID
-              </dt>
-              <dd style={{ margin: '0.2rem 0 0', fontWeight: 600, overflowWrap: 'anywhere' }}>
-                {job.payloadCid ? <code style={{ wordBreak: 'break-all' }}>{job.payloadCid}</code> : '-'}
-              </dd>
-            </div>
-            <div>
-              <dt style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--color-text-secondary)' }}>
                 Submitted
               </dt>
               <dd style={{ margin: '0.2rem 0 0', fontWeight: 600 }}>{formatDate(job.submittedAt)}</dd>
