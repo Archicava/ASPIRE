@@ -4,6 +4,7 @@ import { platformConfig } from '@/lib/config';
 import { getCohortCaseRecords, getMockInferenceJobs } from '@/lib/cohort-data';
 import { CaseRecord, CaseSubmission, InferenceJob, InferenceJobStatus, InferenceResult } from '@/lib/types';
 import { getRatio1NodeClient } from '@/lib/ratio1-client';
+import { getStorageAdapter } from '@/lib/storage';
 import {
   mapCaseToApiPayload,
   validateApiPayload,
@@ -14,76 +15,19 @@ import {
   AspireValidationError
 } from '@/lib/aspire-api';
 
-type ParsedHash<T> = {
-  items: T[];
-  raw: Record<string, unknown>;
-};
-
-function parseHashPayload<T>(payload: unknown): ParsedHash<T> {
-  const result: ParsedHash<T> = {
-    items: [],
-    raw: {}
-  };
-
-  if (!payload || typeof payload !== 'object') {
-    return result;
-  }
-
-  const entries = Object.entries(payload as Record<string, unknown>);
-
-  for (const [key, value] of entries) {
-    result.raw[key] = value;
-
-    if (value === null || value === undefined) {
-      continue;
-    }
-
-    if (Array.isArray(value)) {
-      value.forEach((item) => {
-        if (item && typeof item === 'object') {
-          result.items.push(item as T);
-        }
-      });
-      continue;
-    }
-
-    if (typeof value === 'object') {
-      result.items.push(value as T);
-      continue;
-    }
-
-    if (typeof value === 'string') {
-      try {
-        const parsed = JSON.parse(value);
-        if (Array.isArray(parsed)) {
-          parsed.forEach((item) => {
-            if (item && typeof item === 'object') {
-              result.items.push(item as T);
-            }
-          });
-        } else if (parsed && typeof parsed === 'object') {
-          result.items.push(parsed as T);
-        }
-      } catch {
-        // Ignore malformed JSON entries
-      }
-    }
-  }
-
-  return result;
-}
-
 export async function loadCaseRecords(): Promise<CaseRecord[]> {
+  const storage = getStorageAdapter();
+  const storedCases = await storage.getAllCases();
+
   if (platformConfig.MOCK_MODE) {
-    console.log('[data-platform] MOCK_MODE enabled - returning cohort seed data');
-    return getCohortCaseRecords();
+    // Combine seed data with any user-created cases
+    const seedCases = getCohortCaseRecords();
+    const seedIds = new Set(seedCases.map(c => c.id));
+    const userCases = storedCases.filter(c => !seedIds.has(c.id));
+    return [...seedCases, ...userCases];
   }
 
-  const client = getRatio1NodeClient();
-  const response = await client.cstore.hgetall({ hkey: platformConfig.casesHKey });
-
-  const parsed = parseHashPayload<CaseRecord>((response as any).result ?? response);
-  return parsed.items;
+  return storedCases;
 }
 
 export function loadCohortSeedCases(limit?: number): CaseRecord[] {
@@ -95,72 +39,49 @@ export function loadCohortSeedCases(limit?: number): CaseRecord[] {
 }
 
 export async function loadCaseRecord(caseId: string): Promise<CaseRecord | undefined> {
+  const storage = getStorageAdapter();
+  const storedCase = await storage.getCase(caseId);
+
+  if (storedCase) {
+    return storedCase;
+  }
+
   if (platformConfig.MOCK_MODE) {
-    const cases = getCohortCaseRecords();
-    return cases.find(c => c.id === caseId);
-  }
-
-  const client = getRatio1NodeClient();
-  const response = await client.cstore.hget({ hkey: platformConfig.casesHKey, key: caseId });
-
-  const value = (response as any).result ?? (response as any)?.value ?? response;
-
-  if (!value) {
-    return undefined;
-  }
-
-  if (typeof value === 'string') {
-    try {
-      return JSON.parse(value) as CaseRecord;
-    } catch {
-      return undefined;
-    }
-  }
-
-  if (typeof value === 'object') {
-    return value as CaseRecord;
+    // Fall back to seed data
+    const seedCases = getCohortCaseRecords();
+    return seedCases.find(c => c.id === caseId);
   }
 
   return undefined;
 }
 
 export async function loadInferenceJobs(): Promise<InferenceJob[]> {
+  const storage = getStorageAdapter();
+  const storedJobs = await storage.getAllJobs();
+
   if (platformConfig.MOCK_MODE) {
-    console.log('[data-platform] MOCK_MODE enabled - returning mock jobs');
-    return getMockInferenceJobs();
+    // Combine mock jobs with any user-created jobs
+    const mockJobs = getMockInferenceJobs();
+    const mockIds = new Set(mockJobs.map(j => j.id));
+    const userJobs = storedJobs.filter(j => !mockIds.has(j.id));
+    return [...mockJobs, ...userJobs];
   }
 
-  const client = getRatio1NodeClient();
-  const response = await client.cstore.hgetall({ hkey: platformConfig.jobsHKey });
-
-  const parsed = parseHashPayload<InferenceJob>((response as any).result ?? response);
-  return parsed.items;
+  return storedJobs;
 }
 
 export async function loadInferenceJob(jobId: string): Promise<InferenceJob | undefined> {
+  const storage = getStorageAdapter();
+  const storedJob = await storage.getJob(jobId);
+
+  if (storedJob) {
+    return storedJob;
+  }
+
   if (platformConfig.MOCK_MODE) {
-    const jobs = getMockInferenceJobs();
-    return jobs.find(j => j.id === jobId);
-  }
-
-  const client = getRatio1NodeClient();
-  const response = await client.cstore.hget({ hkey: platformConfig.jobsHKey, key: jobId });
-
-  const value = (response as any).result ?? (response as any)?.value ?? response;
-  if (!value) {
-    return undefined;
-  }
-
-  if (typeof value === 'string') {
-    try {
-      return JSON.parse(value) as InferenceJob;
-    } catch {
-      return undefined;
-    }
-  }
-
-  if (typeof value === 'object') {
-    return value as InferenceJob;
+    // Fall back to mock jobs
+    const mockJobs = getMockInferenceJobs();
+    return mockJobs.find(j => j.id === jobId);
   }
 
   return undefined;
@@ -169,23 +90,22 @@ export async function loadInferenceJob(jobId: string): Promise<InferenceJob | un
 export async function loadPlatformStatus(): Promise<{
   cstore?: Record<string, unknown>;
   r1fs?: Record<string, unknown>;
+  storage?: Record<string, unknown>;
 }> {
-  if (platformConfig.MOCK_MODE) {
-    console.log('[data-platform] MOCK_MODE enabled - returning mock platform status');
+  const storage = getStorageAdapter();
+  const storageStatus = await storage.getStatus();
+
+  // If using local storage (or mock mode with local storage), we don't need CSTORE/R1FS status
+  if (platformConfig.useLocalStorage) {
     return {
-      cstore: {
-        status: 'healthy',
-        mode: 'mock',
-        message: 'Mock mode - CStore simulation'
-      },
-      r1fs: {
-        status: 'healthy',
-        mode: 'mock',
-        message: 'Mock mode - R1FS simulation'
-      }
+      storage: {
+        ...storageStatus,
+        mockMode: platformConfig.MOCK_MODE
+      } as unknown as Record<string, unknown>
     };
   }
 
+  // CSTORE mode - get all statuses
   const client = getRatio1NodeClient();
   const [cstoreStatus, r1fsStatus] = await Promise.all([
     client.cstore.getStatus(),
@@ -194,7 +114,8 @@ export async function loadPlatformStatus(): Promise<{
 
   return {
     cstore: cstoreStatus as unknown as Record<string, unknown>,
-    r1fs: r1fsStatus as unknown as Record<string, unknown>
+    r1fs: r1fsStatus as unknown as Record<string, unknown>,
+    storage: storageStatus as unknown as Record<string, unknown>
   };
 }
 
@@ -227,18 +148,7 @@ export async function storeCaseSubmission(
     artifacts: {}
   };
 
-  if (platformConfig.MOCK_MODE) {
-    console.log('[data-platform] MOCK_MODE enabled - simulating case storage with prediction');
-
-    // Run prediction even in mock mode
-    const predictionResult = await runPrediction(submission, id);
-    if (predictionResult.inference) {
-      record.inference = predictionResult.inference;
-    }
-
-    return record;
-  }
-
+  // Always persist to storage (even in mock mode)
   return storeCaseInLiveMode(record, submission, timestamp);
 }
 
@@ -328,41 +238,46 @@ async function storeCaseInLiveMode(
   submission: CaseSubmission,
   timestamp: Date
 ): Promise<CaseRecord> {
-  const client = getRatio1NodeClient();
-
-  const payload = {
-    caseId: record.id,
-    submittedAt: record.submittedAt,
-    submission
-  };
+  const storage = getStorageAdapter();
 
   let payloadCid: string | undefined;
   let edgeNode: string | undefined;
 
-  try {
-    const uploadResponse = await client.r1fs.addFileBase64({
-      file_base64_str: Buffer.from(JSON.stringify(payload), 'utf-8').toString('base64'),
-      filename: `${record.id}.json`
-    });
+  // Only upload to R1FS when using CSTORE (not local storage)
+  if (!platformConfig.useLocalStorage) {
+    const client = getRatio1NodeClient();
 
-    const cidCandidate =
-      (uploadResponse as any)?.result?.cid ??
-      (uploadResponse as any)?.cid ??
-      uploadResponse ??
-      undefined;
+    const payload = {
+      caseId: record.id,
+      submittedAt: record.submittedAt,
+      submission
+    };
 
-    payloadCid = typeof cidCandidate === 'string' ? cidCandidate : undefined;
-    edgeNode =
-      (uploadResponse as any)?.ee_node_address ??
-      (uploadResponse as any)?.result?.ee_node_address ??
-      undefined;
-  } catch (error) {
-    console.error('[storeCaseInLiveMode] Failed to persist payload to R1FS', error);
+    try {
+      const uploadResponse = await client.r1fs.addFileBase64({
+        file_base64_str: Buffer.from(JSON.stringify(payload), 'utf-8').toString('base64'),
+        filename: `${record.id}.json`
+      });
+
+      const cidCandidate =
+        (uploadResponse as any)?.result?.cid ??
+        (uploadResponse as any)?.cid ??
+        uploadResponse ??
+        undefined;
+
+      payloadCid = typeof cidCandidate === 'string' ? cidCandidate : undefined;
+      edgeNode =
+        (uploadResponse as any)?.ee_node_address ??
+        (uploadResponse as any)?.result?.ee_node_address ??
+        undefined;
+    } catch (error) {
+      console.error('[storeCaseInLiveMode] Failed to persist payload to R1FS', error);
+    }
+
+    record.artifacts = {
+      payloadCid: payloadCid ?? record.artifacts?.payloadCid
+    };
   }
-
-  record.artifacts = {
-    payloadCid: payloadCid ?? record.artifacts?.payloadCid
-  };
 
   // Create initial job with queued status
   const job: InferenceJob = {
@@ -407,18 +322,9 @@ async function storeCaseInLiveMode(
     ];
   }
 
-  // Store case and job
-  await client.cstore.hset({
-    hkey: platformConfig.casesHKey,
-    key: record.id,
-    value: JSON.stringify(record)
-  });
-
-  await client.cstore.hset({
-    hkey: platformConfig.jobsHKey,
-    key: job.id,
-    value: JSON.stringify(job)
-  });
+  // Store case and job using the storage adapter
+  await storage.setCase(record.id, record);
+  await storage.setJob(job.id, job);
 
   return record;
 }
@@ -470,23 +376,12 @@ export async function retryCasePrediction(
     ];
   }
 
-  // Persist updates
-  if (!platformConfig.MOCK_MODE) {
-    const client = getRatio1NodeClient();
+  // Persist updates (always, even in mock mode)
+  const storage = getStorageAdapter();
+  await storage.setCase(record.id, record);
 
-    await client.cstore.hset({
-      hkey: platformConfig.casesHKey,
-      key: record.id,
-      value: JSON.stringify(record)
-    });
-
-    if (job) {
-      await client.cstore.hset({
-        hkey: platformConfig.jobsHKey,
-        key: job.id,
-        value: JSON.stringify(job)
-      });
-    }
+  if (job) {
+    await storage.setJob(job.id, job);
   }
 
   return { success: true, caseRecord: record };

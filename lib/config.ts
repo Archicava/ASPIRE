@@ -1,4 +1,4 @@
-import { ENFORCE_MOCK_MODE } from './constants';
+import { ENFORCE_MOCK_MODE, DEFAULT_USE_LOCAL_STORAGE, DEFAULT_DATA_DIR } from './constants';
 
 const rawDebug = process.env.NODE_ENV !== 'production' || process.env.DEBUG === 'true';
 
@@ -92,6 +92,13 @@ const aspireApiUrl = ensureHttpProtocol(process.env.ASPIRE_API_URL) || 'http://l
 const aspireApiEnabled = process.env.ASPIRE_API_ENABLED !== 'false';
 const aspireApiTimeoutMs = parseInt(process.env.ASPIRE_API_TIMEOUT_MS || '30000', 10);
 
+// Storage backend configuration
+const useLocalStorage = process.env.USE_LOCAL_STORAGE !== undefined
+  ? process.env.USE_LOCAL_STORAGE === 'true'
+  : DEFAULT_USE_LOCAL_STORAGE;
+
+const dataDir = process.env.DATA_DIR || DEFAULT_DATA_DIR;
+
 const authSessionCookieName = process.env.AUTH_SESSION_COOKIE || 'r1-session';
 const parsedSessionTtl = parseInt(process.env.AUTH_SESSION_TTL_SECONDS || '86400', 10);
 const authSessionTtlSeconds = Number.isFinite(parsedSessionTtl) ? parsedSessionTtl : 86400;
@@ -112,6 +119,8 @@ export const platformConfig = {
   chainstorePeers,
   casesHKey: process.env.RATIO1_CASES_HKEY || 'ratio1-asd-cases',
   jobsHKey: process.env.RATIO1_JOBS_HKEY || 'ratio1-asd-jobs',
+  useLocalStorage,
+  dataDir,
   aspire: {
     apiUrl: aspireApiUrl,
     enabled: aspireApiEnabled,

@@ -1,0 +1,13 @@
+import { platformConfig } from '@/lib/config';
+import { StorageAdapter } from './types';
+import { getCstoreBackend } from './cstore-backend';
+import { getJsonBackend } from './json-backend';
+
+export type { StorageAdapter } from './types';
+
+export function getStorageAdapter(): StorageAdapter {
+  if (platformConfig.useLocalStorage) {
+    return getJsonBackend();
+  }
+  return getCstoreBackend();
+}

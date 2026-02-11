@@ -116,3 +116,20 @@ export const JOB_POLLING_INTERVAL_MS = 5000; // 5 seconds
  * Health check interval (milliseconds)
  */
 export const HEALTH_CHECK_INTERVAL_MS = 30000; // 30 seconds
+
+/**
+ * DEFAULT_USE_LOCAL_STORAGE
+ *
+ * Controls the default storage backend when USE_LOCAL_STORAGE environment variable is not set.
+ *
+ * When true (default): Uses JSON files for local storage of cases and jobs
+ * When false: Uses CSTORE (distributed storage) for cases and jobs
+ *
+ * Note: Authentication always uses CSTORE regardless of this setting.
+ */
+export const DEFAULT_USE_LOCAL_STORAGE = true;
+
+/**
+ * Default data directory for local JSON storage
+ */
+export const DEFAULT_DATA_DIR = './data';

@@ -1,0 +1,106 @@
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
+
+import { platformConfig } from '@/lib/config';
+import { CaseRecord, InferenceJob } from '@/lib/types';
+import { StorageAdapter } from './types';
+
+type CasesStore = Record<string, CaseRecord>;
+type JobsStore = Record<string, InferenceJob>;
+
+class JsonBackend implements StorageAdapter {
+  private dataDir: string;
+  private casesPath: string;
+  private jobsPath: string;
+
+  constructor(dataDir: string) {
+    this.dataDir = dataDir;
+    this.casesPath = join(dataDir, 'cases.json');
+    this.jobsPath = join(dataDir, 'jobs.json');
+
+    // Ensure the data directory exists
+    if (!existsSync(dataDir)) {
+      mkdirSync(dataDir, { recursive: true });
+    }
+  }
+
+  private readCases(): CasesStore {
+    if (!existsSync(this.casesPath)) {
+      return {};
+    }
+    try {
+      const data = readFileSync(this.casesPath, 'utf-8');
+      return JSON.parse(data) as CasesStore;
+    } catch {
+      return {};
+    }
+  }
+
+  private writeCases(store: CasesStore): void {
+    writeFileSync(this.casesPath, JSON.stringify(store, null, 2), 'utf-8');
+  }
+
+  private readJobs(): JobsStore {
+    if (!existsSync(this.jobsPath)) {
+      return {};
+    }
+    try {
+      const data = readFileSync(this.jobsPath, 'utf-8');
+      return JSON.parse(data) as JobsStore;
+    } catch {
+      return {};
+    }
+  }
+
+  private writeJobs(store: JobsStore): void {
+    writeFileSync(this.jobsPath, JSON.stringify(store, null, 2), 'utf-8');
+  }
+
+  async getAllCases(): Promise<CaseRecord[]> {
+    const store = this.readCases();
+    return Object.values(store);
+  }
+
+  async getCase(id: string): Promise<CaseRecord | undefined> {
+    const store = this.readCases();
+    return store[id];
+  }
+
+  async setCase(id: string, record: CaseRecord): Promise<void> {
+    const store = this.readCases();
+    store[id] = record;
+    this.writeCases(store);
+  }
+
+  async getAllJobs(): Promise<InferenceJob[]> {
+    const store = this.readJobs();
+    return Object.values(store);
+  }
+
+  async getJob(id: string): Promise<InferenceJob | undefined> {
+    const store = this.readJobs();
+    return store[id];
+  }
+
+  async setJob(id: string, job: InferenceJob): Promise<void> {
+    const store = this.readJobs();
+    store[id] = job;
+    this.writeJobs(store);
+  }
+
+  async getStatus(): Promise<{ status: string; mode: string }> {
+    return {
+      status: 'healthy',
+      mode: 'json'
+    };
+  }
+}
+
+let instance: JsonBackend | null = null;
+
+export function getJsonBackend(): StorageAdapter {
+  if (!instance) {
+    instance = new JsonBackend(platformConfig.dataDir);
+  }
+  return instance;
+}
