@@ -4,7 +4,7 @@ import { platformConfig } from '@/lib/config';
 import { getCohortCaseRecords, getMockInferenceJobs } from '@/lib/cohort-data';
 import { CaseRecord, CaseSubmission, InferenceJob, InferenceJobStatus, InferenceResult } from '@/lib/types';
 import { getRatio1NodeClient } from '@/lib/ratio1-client';
-import { getStorageAdapter } from '@/lib/storage';
+import { getStorageAdapter, getJsonBackend } from '@/lib/storage';
 import {
   mapCaseToApiPayload,
   validateApiPayload,
@@ -96,7 +96,7 @@ export async function loadPlatformStatus(): Promise<{
   const storageStatus = await storage.getStatus();
 
   // If using local storage, we don't need CSTORE/R1FS status
-  if (platformConfig.useLocalStorage) {
+  if (platformConfig.useLocal) {
     return {
       storage: {
         ...storageStatus,
@@ -241,18 +241,26 @@ async function storeCaseInLiveMode(
 ): Promise<CaseRecord> {
   const storage = getStorageAdapter();
 
+  const payload = {
+    caseId: record.id,
+    submittedAt: record.submittedAt,
+    submission
+  };
+
+  let payloadPath: string | undefined;
   let payloadCid: string | undefined;
   let edgeNode: string | undefined;
 
-  // Only upload to R1FS when using CSTORE (not local storage)
-  if (!platformConfig.useLocalStorage) {
-    const client = getRatio1NodeClient();
-
-    const payload = {
-      caseId: record.id,
-      submittedAt: record.submittedAt,
-      submission
+  if (platformConfig.useLocal) {
+    // Save payload to local file
+    const localBackend = getJsonBackend();
+    payloadPath = localBackend.savePayload(record.id, payload);
+    record.artifacts = {
+      payloadPath
     };
+  } else {
+    // Upload to R1FS
+    const client = getRatio1NodeClient();
 
     try {
       const uploadResponse = await client.r1fs.addFileBase64({

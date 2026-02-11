@@ -1,4 +1,4 @@
-import { ENFORCE_MOCK_MODE, DEFAULT_MOCK_DATA, DEFAULT_USE_LOCAL_STORAGE, DEFAULT_DATA_DIR } from './constants';
+import { ENFORCE_MOCK_MODE, DEFAULT_MOCK_DATA, DEFAULT_USE_LOCAL, DEFAULT_DATA_DIR } from './constants';
 
 const rawDebug = process.env.NODE_ENV !== 'production' || process.env.DEBUG === 'true';
 
@@ -94,22 +94,31 @@ if (mockData) {
   );
 }
 
-// Storage backend configuration
-const useLocalStorage = process.env.USE_LOCAL_STORAGE !== undefined
-  ? process.env.USE_LOCAL_STORAGE === 'true'
-  : DEFAULT_USE_LOCAL_STORAGE;
+// Local storage configuration
+const useLocal = process.env.USE_LOCAL !== undefined
+  ? process.env.USE_LOCAL === 'true'
+  : DEFAULT_USE_LOCAL;
 
 const dataDir = process.env.DATA_DIR || DEFAULT_DATA_DIR;
 
 // Aspire ASD Screening API configuration
-const aspireApiUrl = ensureHttpProtocol(process.env.ASPIRE_API_URL) || 'http://localhost:5083';
+// Priority: ASPIRE_API_URL > construct from R1EN_HOST_IP:API_PORT > localhost:5083
+function buildAspireApiUrl(): string {
+  if (process.env.ASPIRE_API_URL) {
+    return ensureHttpProtocol(process.env.ASPIRE_API_URL) || '';
+  }
+  const host = process.env.R1EN_HOST_IP || 'localhost';
+  const port = process.env.API_PORT || '5083';
+  return `http://${host}:${port}`;
+}
+const aspireApiUrl = buildAspireApiUrl();
 const aspireApiEnabled = process.env.ASPIRE_API_ENABLED !== 'false';
 const aspireApiTimeoutMs = parseInt(process.env.ASPIRE_API_TIMEOUT_MS || '30000', 10);
 
-// CSTORE endpoints are only required when not using local storage
-if (!useLocalStorage && (!cstoreApiUrl || !r1fsApiUrl)) {
+// CSTORE/R1FS endpoints are only required when not using local storage
+if (!useLocal && (!cstoreApiUrl || !r1fsApiUrl)) {
   throw new Error(
-    'Missing Ratio1 endpoints. Set R1EN_CHAINSTORE_API_URL and R1EN_R1FS_API_URL (or EE_/legacy variants), or use USE_LOCAL_STORAGE=true.'
+    'Missing Ratio1 endpoints. Set R1EN_CHAINSTORE_API_URL and R1EN_R1FS_API_URL (or EE_/legacy variants), or use USE_LOCAL=true.'
   );
 }
 
@@ -134,7 +143,7 @@ export const platformConfig = {
   chainstorePeers,
   casesHKey: process.env.RATIO1_CASES_HKEY || 'ratio1-asd-cases',
   jobsHKey: process.env.RATIO1_JOBS_HKEY || 'ratio1-asd-jobs',
-  useLocalStorage,
+  useLocal,
   dataDir,
   aspire: {
     apiUrl: aspireApiUrl,

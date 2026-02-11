@@ -9,18 +9,23 @@ type CasesStore = Record<string, CaseRecord>;
 type JobsStore = Record<string, InferenceJob>;
 
 class JsonBackend implements StorageAdapter {
-  private dataDir: string;
+  private dbDir: string;
+  private payloadsDir: string;
   private casesPath: string;
   private jobsPath: string;
 
   constructor(dataDir: string) {
-    this.dataDir = dataDir;
-    this.casesPath = join(dataDir, 'cases.json');
-    this.jobsPath = join(dataDir, 'jobs.json');
+    this.dbDir = join(dataDir, 'db');
+    this.payloadsDir = join(dataDir, 'payloads');
+    this.casesPath = join(this.dbDir, 'cases.json');
+    this.jobsPath = join(this.dbDir, 'jobs.json');
 
-    // Ensure the data directory exists
-    if (!existsSync(dataDir)) {
-      mkdirSync(dataDir, { recursive: true });
+    // Ensure directories exist
+    if (!existsSync(this.dbDir)) {
+      mkdirSync(this.dbDir, { recursive: true });
+    }
+    if (!existsSync(this.payloadsDir)) {
+      mkdirSync(this.payloadsDir, { recursive: true });
     }
   }
 
@@ -91,14 +96,35 @@ class JsonBackend implements StorageAdapter {
   async getStatus(): Promise<{ status: string; mode: string }> {
     return {
       status: 'healthy',
-      mode: 'json'
+      mode: 'local'
     };
+  }
+
+  // Payload storage methods
+  savePayload(caseId: string, payload: unknown): string {
+    const filename = `${caseId}.json`;
+    const filepath = join(this.payloadsDir, filename);
+    writeFileSync(filepath, JSON.stringify(payload, null, 2), 'utf-8');
+    return filepath;
+  }
+
+  getPayload(caseId: string): unknown | undefined {
+    const filepath = join(this.payloadsDir, `${caseId}.json`);
+    if (!existsSync(filepath)) {
+      return undefined;
+    }
+    try {
+      const data = readFileSync(filepath, 'utf-8');
+      return JSON.parse(data);
+    } catch {
+      return undefined;
+    }
   }
 }
 
 let instance: JsonBackend | null = null;
 
-export function getJsonBackend(): StorageAdapter {
+export function getJsonBackend(): JsonBackend {
   if (!instance) {
     instance = new JsonBackend(platformConfig.dataDir);
   }

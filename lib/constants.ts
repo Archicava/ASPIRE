@@ -56,18 +56,31 @@ export const JOB_POLLING_INTERVAL_MS = 5000; // 5 seconds
 export const HEALTH_CHECK_INTERVAL_MS = 30000; // 30 seconds
 
 /**
- * DEFAULT_USE_LOCAL_STORAGE
+ * DEFAULT_USE_LOCAL
  *
- * Controls the default storage backend when USE_LOCAL_STORAGE environment variable is not set.
+ * Controls whether to use local storage instead of distributed services (default: true).
  *
- * When true (default): Uses JSON files for local storage of cases and jobs
- * When false: Uses CSTORE (distributed storage) for cases and jobs
+ * When true (default):
+ *   - Cases and jobs stored in JSON files
+ *   - Payloads stored as local files (instead of R1FS)
+ *
+ * When false:
+ *   - Cases and jobs stored in CSTORE
+ *   - Payloads uploaded to R1FS
  *
  * Note: Authentication always uses CSTORE regardless of this setting.
  */
-export const DEFAULT_USE_LOCAL_STORAGE = true;
+export const DEFAULT_USE_LOCAL = true;
 
 /**
- * Default data directory for local JSON storage
+ * Default data directory for local storage
+ *
+ * Structure:
+ *   {DATA_DIR}/
+ *     db/
+ *       cases.json    - Case records
+ *       jobs.json     - Inference job records
+ *     payloads/
+ *       {caseId}.json - Case submission payloads
  */
 export const DEFAULT_DATA_DIR = './data';

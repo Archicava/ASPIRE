@@ -93,7 +93,8 @@ export type CaseRecord = CaseSubmission & {
   inference: InferenceResult;
   jobId?: string;
   artifacts?: {
-    payloadCid?: string;
+    payloadCid?: string;  // R1FS CID when using distributed storage
+    payloadPath?: string; // Local file path when using local storage
   };
 };
 
