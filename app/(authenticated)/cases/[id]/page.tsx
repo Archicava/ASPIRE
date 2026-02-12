@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { ProbabilityBars } from '@/components/probability-bars';
 import { RetryButton } from '@/components/retry-button';
 import { loadCaseRecord, loadInferenceJob } from '@/lib/data-platform';
-import { formatDate } from '@/lib/format';
+import { formatDate, formatDateTime } from '@/lib/format';
 import { Hero } from '@/components/hero';
 import type { InferenceResult, RiskLevel } from '@/lib/types';
 
@@ -189,7 +188,7 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
               <ul style={{ margin: 0, paddingLeft: '1.1rem', display: 'grid', gap: '0.4rem' }}>
                 {job.statusHistory.map((entry) => (
                   <li key={`${entry.status}-${entry.timestamp}`} style={{ color: 'var(--color-text-secondary)', fontSize: '0.92rem' }}>
-                    <strong style={{ color: 'var(--color-text-primary)' }}>{entry.status}</strong> · {formatDate(entry.timestamp)}
+                    <strong style={{ color: 'var(--color-text-primary)' }}>{entry.status}</strong> · {formatDateTime(entry.timestamp)}
                     {entry.message ? ` – ${entry.message}` : ''}
                   </li>
                 ))}
@@ -267,59 +266,103 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
           ) : (
             <>
               <header>
-                <p className="section-title">Inference outcome</p>
+                <p className="section-title">Screening result</p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
                   <h2 style={{ margin: '0.35rem 0 0', fontSize: 'clamp(1.2rem, 3.4vw, 1.4rem)', fontWeight: 600 }}>
-                    {typeof inference.prediction === 'string' ? inference.prediction :
-                     typeof inference.topPrediction === 'string' ? inference.topPrediction : 'Analysis Complete'}
+                    {inference.riskLevel === 'low' ? 'Low' : inference.riskLevel === 'medium' ? 'Medium' : 'High'} Risk
                   </h2>
                   {inference.riskLevel && typeof inference.riskLevel === 'string' && riskLevelStyles[inference.riskLevel] && (
                     <span
                       style={{
-                        padding: '0.3rem 0.75rem',
-                        borderRadius: '999px',
-                        fontSize: '0.85rem',
-                        fontWeight: 600,
-                        textTransform: 'uppercase',
-                        ...riskLevelStyles[inference.riskLevel]
+                        width: '12px',
+                        height: '12px',
+                        borderRadius: '50%',
+                        background: inference.riskLevel === 'low' ? 'rgb(22, 163, 74)' :
+                                   inference.riskLevel === 'medium' ? 'rgb(217, 119, 6)' : 'rgb(220, 38, 38)'
                       }}
-                    >
-                      {inference.riskLevel} risk
-                    </span>
+                    />
                   )}
                 </div>
               </header>
               {inference.probability !== undefined && (
-                <div
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
-                    gap: '1rem'
-                  }}
-                >
-                  <div>
-                    <p style={{ margin: 0, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-secondary)' }}>
-                      Probability
-                    </p>
-                    <p style={{ margin: '0.2rem 0 0', fontSize: '1.5rem', fontWeight: 700 }}>
+                <div style={{ display: 'grid', gap: '0.75rem' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                    <span style={{ fontWeight: 600 }}>ASD Probability</span>
+                    <span style={{ fontSize: '1.25rem', fontWeight: 700 }}>
                       {(inference.probability * 100).toFixed(1)}%
-                    </p>
+                    </span>
                   </div>
-                  {inference.confidence !== undefined && (
-                    <div>
-                      <p style={{ margin: 0, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-secondary)' }}>
-                        Confidence
-                      </p>
-                      <p style={{ margin: '0.2rem 0 0', fontSize: '1.5rem', fontWeight: 700 }}>
-                        {(inference.confidence * 100).toFixed(1)}%
-                      </p>
+                  <div style={{ position: 'relative' }}>
+                    <div
+                      style={{
+                        height: '12px',
+                        borderRadius: '999px',
+                        background: 'linear-gradient(90deg, rgb(22, 163, 74) 0%, rgb(22, 163, 74) 40%, rgb(217, 119, 6) 40%, rgb(217, 119, 6) 70%, rgb(220, 38, 38) 70%, rgb(220, 38, 38) 100%)',
+                        opacity: 0.2
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        height: '12px',
+                        width: `${Math.min(inference.probability * 100, 100)}%`,
+                        borderRadius: '999px',
+                        background: inference.riskLevel === 'low' ? 'rgb(22, 163, 74)' :
+                                   inference.riskLevel === 'medium' ? 'rgb(217, 119, 6)' : 'rgb(220, 38, 38)'
+                      }}
+                    />
+                  </div>
+                  <div style={{ position: 'relative', fontSize: '0.7rem', color: 'var(--color-text-secondary)', marginTop: '0.25rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                      <span>0%</span>
+                      <span>100%</span>
                     </div>
-                  )}
+                    <div style={{ position: 'absolute', left: '40%', top: 0, transform: 'translateX(-50%)', textAlign: 'center' }}>
+                      <span style={{ fontSize: '0.65rem' }}>40%</span>
+                    </div>
+                    <div style={{ position: 'absolute', left: '70%', top: 0, transform: 'translateX(-50%)', textAlign: 'center' }}>
+                      <span style={{ fontSize: '0.65rem' }}>70%</span>
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', fontSize: '0.7rem', marginTop: '0.15rem' }}>
+                    <span style={{ width: '40%', color: 'rgb(22, 163, 74)', fontWeight: 600 }}>LOW</span>
+                    <span style={{ width: '30%', color: 'rgb(217, 119, 6)', fontWeight: 600, textAlign: 'center' }}>MEDIUM</span>
+                    <span style={{ width: '30%', color: 'rgb(220, 38, 38)', fontWeight: 600, textAlign: 'right' }}>HIGH</span>
+                  </div>
                 </div>
               )}
-              {inference.categories && Array.isArray(inference.categories) && inference.categories.length > 0 && (
-                <ProbabilityBars categories={inference.categories} />
-              )}
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1fr 1fr',
+                  gap: '1rem',
+                  paddingTop: '0.5rem',
+                  borderTop: '1px solid var(--color-border)',
+                  marginTop: '0.5rem'
+                }}
+              >
+                <div>
+                  <p style={{ margin: 0, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-secondary)' }}>
+                    Prediction
+                  </p>
+                  <p style={{ margin: '0.2rem 0 0', fontSize: '1.1rem', fontWeight: 600 }}>
+                    {typeof inference.prediction === 'string' ? inference.prediction :
+                     typeof inference.topPrediction === 'string' ? inference.topPrediction : '-'}
+                  </p>
+                </div>
+                {inference.confidence !== undefined && (
+                  <div>
+                    <p style={{ margin: 0, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-secondary)' }}>
+                      Confidence
+                    </p>
+                    <p style={{ margin: '0.2rem 0 0', fontSize: '1.1rem', fontWeight: 600 }}>
+                      {inference.confidence >= 0.7 ? 'High' : inference.confidence >= 0.4 ? 'Medium' : 'Low'} ({(inference.confidence * 100).toFixed(1)}%)
+                    </p>
+                  </div>
+                )}
+              </div>
             </>
           )}
         </article>

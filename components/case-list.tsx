@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 
-import { formatDate } from '@/lib/format';
+import { formatDateTime } from '@/lib/format';
 import { CaseRecord } from '@/lib/types';
 
 type CaseListProps = {
@@ -111,7 +111,7 @@ export function CaseList({
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>
                   <span>{item.demographics.ageMonths} months</span>
                   <span>{item.demographics.sex}</span>
-                  <span>{formatDate(item.submittedAt)}</span>
+                  <span>{formatDateTime(item.submittedAt)}</span>
                 </div>
                 {item.notes && (
                   <p style={{
