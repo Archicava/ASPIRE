@@ -18,16 +18,21 @@ import {
 export async function loadCaseRecords(): Promise<CaseRecord[]> {
   const storage = getStorageAdapter();
   const storedCases = await storage.getAllCases();
+  const jsonBackend = getJsonBackend();
+  const hiddenIds = new Set(jsonBackend.getHiddenCaseIds());
 
   if (platformConfig.MOCK_DATA) {
     // Combine seed data with any user-created cases
     const seedCases = getCohortCaseRecords();
     const seedIds = new Set(seedCases.map(c => c.id));
     const userCases = storedCases.filter(c => !seedIds.has(c.id));
-    return [...seedCases, ...userCases];
+    const allCases = [...seedCases, ...userCases];
+    // Filter out hidden cases
+    return allCases.filter(c => !hiddenIds.has(c.id));
   }
 
-  return storedCases;
+  // Filter out hidden cases
+  return storedCases.filter(c => !hiddenIds.has(c.id));
 }
 
 export function loadCohortSeedCases(limit?: number): CaseRecord[] {
@@ -39,6 +44,13 @@ export function loadCohortSeedCases(limit?: number): CaseRecord[] {
 }
 
 export async function loadCaseRecord(caseId: string): Promise<CaseRecord | undefined> {
+  const jsonBackend = getJsonBackend();
+
+  // Check if case is hidden
+  if (jsonBackend.isCaseHidden(caseId)) {
+    return undefined;
+  }
+
   const storage = getStorageAdapter();
   const storedCase = await storage.getCase(caseId);
 
@@ -394,4 +406,26 @@ export async function retryCasePrediction(
   }
 
   return { success: true, caseRecord: record };
+}
+
+export function hideCaseRecord(caseId: string): { success: boolean; error?: string } {
+  try {
+    const jsonBackend = getJsonBackend();
+    jsonBackend.hideCase(caseId);
+    return { success: true };
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    return { success: false, error: errorMessage };
+  }
+}
+
+export function unhideCaseRecord(caseId: string): { success: boolean; error?: string } {
+  try {
+    const jsonBackend = getJsonBackend();
+    jsonBackend.unhideCase(caseId);
+    return { success: true };
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    return { success: false, error: errorMessage };
+  }
 }

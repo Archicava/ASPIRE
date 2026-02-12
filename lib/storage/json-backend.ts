@@ -7,18 +7,21 @@ import { StorageAdapter } from './types';
 
 type CasesStore = Record<string, CaseRecord>;
 type JobsStore = Record<string, InferenceJob>;
+type HiddenCasesStore = { hiddenIds: string[] };
 
 class JsonBackend implements StorageAdapter {
   private dbDir: string;
   private payloadsDir: string;
   private casesPath: string;
   private jobsPath: string;
+  private hiddenCasesPath: string;
 
   constructor(dataDir: string) {
     this.dbDir = join(dataDir, 'db');
     this.payloadsDir = join(dataDir, 'payloads');
     this.casesPath = join(this.dbDir, 'cases.json');
     this.jobsPath = join(this.dbDir, 'jobs.json');
+    this.hiddenCasesPath = join(this.dbDir, 'hidden-cases.json');
 
     // Ensure directories exist
     if (!existsSync(this.dbDir)) {
@@ -98,6 +101,45 @@ class JsonBackend implements StorageAdapter {
       status: 'healthy',
       mode: 'local'
     };
+  }
+
+  // Hidden cases methods
+  private readHiddenCases(): HiddenCasesStore {
+    if (!existsSync(this.hiddenCasesPath)) {
+      return { hiddenIds: [] };
+    }
+    try {
+      const data = readFileSync(this.hiddenCasesPath, 'utf-8');
+      return JSON.parse(data) as HiddenCasesStore;
+    } catch {
+      return { hiddenIds: [] };
+    }
+  }
+
+  private writeHiddenCases(store: HiddenCasesStore): void {
+    writeFileSync(this.hiddenCasesPath, JSON.stringify(store, null, 2), 'utf-8');
+  }
+
+  getHiddenCaseIds(): string[] {
+    return this.readHiddenCases().hiddenIds;
+  }
+
+  hideCase(caseId: string): void {
+    const store = this.readHiddenCases();
+    if (!store.hiddenIds.includes(caseId)) {
+      store.hiddenIds.push(caseId);
+      this.writeHiddenCases(store);
+    }
+  }
+
+  unhideCase(caseId: string): void {
+    const store = this.readHiddenCases();
+    store.hiddenIds = store.hiddenIds.filter(id => id !== caseId);
+    this.writeHiddenCases(store);
+  }
+
+  isCaseHidden(caseId: string): boolean {
+    return this.getHiddenCaseIds().includes(caseId);
   }
 
   // Payload storage methods

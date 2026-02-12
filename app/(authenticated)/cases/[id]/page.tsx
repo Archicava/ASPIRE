@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { RemoveCaseButton } from '@/components/remove-case-button';
 import { RetryButton } from '@/components/retry-button';
 import { loadCaseRecord, loadInferenceJob } from '@/lib/data-platform';
 import { formatDate, formatDateTime } from '@/lib/format';
@@ -101,19 +102,22 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
         <Link href="/cases" style={{ color: 'var(--color-accent)', fontWeight: 600 }}>
           ← Back to cases
         </Link>
-        <Link
-          href={`/predict?caseId=${record.id}`}
-          style={{
-            padding: '0.6rem 1.1rem',
-            borderRadius: '0.75rem',
-            border: '1px solid var(--color-border)',
-            fontWeight: 600,
-            fontSize: '0.9rem',
-            color: 'var(--color-accent)'
-          }}
-        >
-          Open predictive lab →
-        </Link>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <Link
+            href={`/predict?caseId=${record.id}`}
+            style={{
+              padding: '0.6rem 1.1rem',
+              borderRadius: '0.75rem',
+              border: '1px solid var(--color-border)',
+              fontWeight: 600,
+              fontSize: '0.9rem',
+              color: 'var(--color-accent)'
+            }}
+          >
+            Open predictive lab →
+          </Link>
+          <RemoveCaseButton caseId={record.id} />
+        </div>
       </div>
       <header
         className="card"

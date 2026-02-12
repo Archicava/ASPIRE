@@ -1,8 +1,10 @@
 "use client";
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useMemo, useState } from 'react';
 
+import { useAuth } from '@/components/auth-context';
 import { formatDateTime } from '@/lib/format';
 import { CaseRecord } from '@/lib/types';
 
@@ -21,6 +23,11 @@ export function CaseList({
   enablePagination = false,
   pageSize = 6
 }: CaseListProps) {
+  const { user } = useAuth();
+  const router = useRouter();
+  const isAdmin = user?.role === 'admin';
+  const [removingId, setRemovingId] = useState<string | null>(null);
+
   const orderedCases = useMemo(
     () =>
       [...cases].sort(
@@ -30,6 +37,31 @@ export function CaseList({
   );
 
   const [page, setPage] = useState(1);
+
+  const handleRemoveCase = async (caseId: string) => {
+    if (!confirm('Are you sure you want to remove this case? This action cannot be undone.')) {
+      return;
+    }
+
+    setRemovingId(caseId);
+    try {
+      const response = await fetch(`/api/cases/${caseId}`, {
+        method: 'DELETE'
+      });
+
+      if (response.ok) {
+        router.refresh();
+      } else {
+        const data = await response.json();
+        alert(data.error || 'Failed to remove case');
+      }
+    } catch (error) {
+      console.error('Failed to remove case:', error);
+      alert('Failed to remove case');
+    } finally {
+      setRemovingId(null);
+    }
+  };
   const totalPages = enablePagination
     ? Math.max(1, Math.ceil(orderedCases.length / pageSize))
     : 1;
@@ -129,12 +161,33 @@ export function CaseList({
                   </p>
                 )}
                 {showActions && (
-                  <Link
-                    href={`/cases/${item.id}`}
-                    style={{ fontWeight: 600, color: 'var(--color-accent)', fontSize: '0.9rem' }}
-                  >
-                    View details →
-                  </Link>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
+                    <Link
+                      href={`/cases/${item.id}`}
+                      style={{ fontWeight: 600, color: 'var(--color-accent)', fontSize: '0.9rem' }}
+                    >
+                      View details →
+                    </Link>
+                    {isAdmin && (
+                      <button
+                        type="button"
+                        onClick={() => handleRemoveCase(item.id)}
+                        disabled={removingId === item.id}
+                        style={{
+                          background: 'none',
+                          border: 'none',
+                          padding: 0,
+                          fontWeight: 600,
+                          color: 'rgb(220, 38, 38)',
+                          fontSize: '0.9rem',
+                          cursor: removingId === item.id ? 'not-allowed' : 'pointer',
+                          opacity: removingId === item.id ? 0.5 : 1
+                        }}
+                      >
+                        {removingId === item.id ? 'Removing...' : 'Remove'}
+                      </button>
+                    )}
+                  </div>
                 )}
               </div>
 
