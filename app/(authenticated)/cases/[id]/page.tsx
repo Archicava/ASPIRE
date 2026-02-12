@@ -221,64 +221,106 @@ export default async function CaseDetailPage({ params }: CaseDetailPageProps) {
           className="card"
           style={{ padding: 'clamp(1.35rem, 4vw, 1.7rem)', display: 'grid', gap: '1rem' }}
         >
-          <header>
-            <p className="section-title">Inference outcome</p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
-              <h2 style={{ margin: '0.35rem 0 0', fontSize: 'clamp(1.2rem, 3.4vw, 1.4rem)', fontWeight: 600 }}>
-                {typeof inference.prediction === 'string' ? inference.prediction :
-                 typeof inference.topPrediction === 'string' ? inference.topPrediction : 'Analysis Complete'}
-              </h2>
-              {inference.riskLevel && typeof inference.riskLevel === 'string' && riskLevelStyles[inference.riskLevel] && (
-                <span
+          {inference.topPrediction === 'Pending' || (!inference.probability && !inference.categories?.length) ? (
+            <>
+              <header>
+                <p className="section-title">Inference outcome</p>
+                <h2 style={{ margin: '0.35rem 0 0', fontSize: 'clamp(1.2rem, 3.4vw, 1.4rem)', fontWeight: 600 }}>
+                  Awaiting results
+                </h2>
+              </header>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '1.25rem',
+                  padding: '1.5rem 1rem'
+                }}
+              >
+                <div
                   style={{
-                    padding: '0.3rem 0.75rem',
-                    borderRadius: '999px',
-                    fontSize: '0.85rem',
-                    fontWeight: 600,
-                    textTransform: 'uppercase',
-                    ...riskLevelStyles[inference.riskLevel]
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '50%',
+                    border: '3px solid var(--color-border)',
+                    borderTopColor: 'var(--color-accent)',
+                    animation: 'spin 1s linear infinite'
                   }}
-                >
-                  {inference.riskLevel} risk
-                </span>
-              )}
-            </div>
-          </header>
-          {inference.probability !== undefined && (
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
-                gap: '1rem'
-              }}
-            >
-              <div>
-                <p style={{ margin: 0, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-secondary)' }}>
-                  Probability
-                </p>
-                <p style={{ margin: '0.2rem 0 0', fontSize: '1.5rem', fontWeight: 700 }}>
-                  {(inference.probability * 100).toFixed(1)}%
-                </p>
-              </div>
-              {inference.confidence !== undefined && (
-                <div>
-                  <p style={{ margin: 0, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-secondary)' }}>
-                    Confidence
+                />
+                <div style={{ textAlign: 'center' }}>
+                  <p style={{ margin: 0, fontWeight: 600, color: 'var(--color-text-primary)' }}>
+                    Processing inference
                   </p>
-                  <p style={{ margin: '0.2rem 0 0', fontSize: '1.5rem', fontWeight: 700 }}>
-                    {(inference.confidence * 100).toFixed(1)}%
+                  <p style={{ margin: '0.35rem 0 0', color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
+                    The Ratio1 edge node is analyzing the clinical data. This typically completes within a few moments.
                   </p>
                 </div>
+              </div>
+              <style>{`
+                @keyframes spin {
+                  from { transform: rotate(0deg); }
+                  to { transform: rotate(360deg); }
+                }
+              `}</style>
+            </>
+          ) : (
+            <>
+              <header>
+                <p className="section-title">Inference outcome</p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  <h2 style={{ margin: '0.35rem 0 0', fontSize: 'clamp(1.2rem, 3.4vw, 1.4rem)', fontWeight: 600 }}>
+                    {typeof inference.prediction === 'string' ? inference.prediction :
+                     typeof inference.topPrediction === 'string' ? inference.topPrediction : 'Analysis Complete'}
+                  </h2>
+                  {inference.riskLevel && typeof inference.riskLevel === 'string' && riskLevelStyles[inference.riskLevel] && (
+                    <span
+                      style={{
+                        padding: '0.3rem 0.75rem',
+                        borderRadius: '999px',
+                        fontSize: '0.85rem',
+                        fontWeight: 600,
+                        textTransform: 'uppercase',
+                        ...riskLevelStyles[inference.riskLevel]
+                      }}
+                    >
+                      {inference.riskLevel} risk
+                    </span>
+                  )}
+                </div>
+              </header>
+              {inference.probability !== undefined && (
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+                    gap: '1rem'
+                  }}
+                >
+                  <div>
+                    <p style={{ margin: 0, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-secondary)' }}>
+                      Probability
+                    </p>
+                    <p style={{ margin: '0.2rem 0 0', fontSize: '1.5rem', fontWeight: 700 }}>
+                      {(inference.probability * 100).toFixed(1)}%
+                    </p>
+                  </div>
+                  {inference.confidence !== undefined && (
+                    <div>
+                      <p style={{ margin: 0, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-secondary)' }}>
+                        Confidence
+                      </p>
+                      <p style={{ margin: '0.2rem 0 0', fontSize: '1.5rem', fontWeight: 700 }}>
+                        {(inference.confidence * 100).toFixed(1)}%
+                      </p>
+                    </div>
+                  )}
+                </div>
               )}
-            </div>
-          )}
-          {inference.categories && Array.isArray(inference.categories) && inference.categories.length > 0 && (
-            <ProbabilityBars categories={inference.categories} />
-          )}
-          {inference.explanation && typeof inference.explanation === 'string' && (
-            <p style={{ margin: 0, color: 'var(--color-text-secondary)', lineHeight: 1.6 }}>
-              {inference.explanation}
-            </p>
+              {inference.categories && Array.isArray(inference.categories) && inference.categories.length > 0 && (
+                <ProbabilityBars categories={inference.categories} />
+              )}
+            </>
           )}
         </article>
         <article

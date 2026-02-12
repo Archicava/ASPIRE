@@ -5,6 +5,7 @@ export type DevelopmentalDelay = 'None' | 'Motor' | 'Language' | 'Cognitive' | '
 export type IntellectualDisability = 'N' | 'F70.0' | 'F71' | 'F72';
 
 export type BehaviorConcern =
+  | 'None'
   | 'Aggressivity'
   | 'Self-injury'
   | 'Agitation'
@@ -44,6 +45,7 @@ export type CaseSubmission = {
   behaviors: {
     concerns: BehaviorConcern[];
     languageLevel: 'Functional' | 'Delayed' | 'Absent';
+    languageDisorder: boolean;
     sensoryNotes: string;
   };
   notes: string;

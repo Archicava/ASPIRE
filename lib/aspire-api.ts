@@ -67,14 +67,15 @@ export function mapCaseToApiPayload(
   };
   const languageDevelopment = languageDevelopmentMap[behaviors.languageLevel] || 'N';
 
-  // Derive language_disorder: Y if not Functional
-  const languageDisorder: 'N' | 'Y' = behaviors.languageLevel !== 'Functional' ? 'Y' : 'N';
+  // Map language_disorder from diagnosed language disorder field
+  const languageDisorder: 'N' | 'Y' = behaviors.languageDisorder ? 'Y' : 'N';
 
   // Map dysmorphism
   const dysmorphism: 'NO' | 'Y' = development.dysmorphicFeatures ? 'Y' : 'NO';
 
-  // Derive behaviour_disorder: Y if any concerns present
-  const behaviourDisorder: 'N' | 'Y' = behaviors.concerns.length > 0 ? 'Y' : 'N';
+  // Derive behaviour_disorder: Y if any actual concerns present (not just 'None')
+  const hasActualConcerns = behaviors.concerns.some(c => c !== 'None');
+  const behaviourDisorder: 'N' | 'Y' = hasActualConcerns ? 'Y' : 'N';
 
   return {
     struct_data: {

@@ -10,6 +10,7 @@ import type { CaseRecord, CaseSubmission, IntellectualDisability } from '@/lib/t
 const prenatalOptions = ['Natural', 'IVF', 'Twin', 'Complication'] as const;
 const delayOptions = ['None', 'Motor', 'Language', 'Cognitive', 'Global'] as const;
 const concernOptions = [
+  'None',
   'Aggressivity',
   'Self-injury',
   'Agitation',
@@ -47,6 +48,7 @@ const fieldLabels: Record<string, string> = {
   headCircumference: 'Head circumference',
   concerns: 'Behavioral concerns',
   languageLevel: 'Language level',
+  languageDisorder: 'Language disorder diagnosed',
   sensoryNotes: 'Sensory notes',
   notes: 'Clinical notes'
 };
@@ -73,6 +75,7 @@ const schema = z.object({
   headCircumference: z.number().min(40).max(60),
   concerns: z.array(z.enum(concernOptions)).min(1),
   languageLevel: z.enum(['Functional', 'Delayed', 'Absent']),
+  languageDisorder: z.preprocess((val) => val ?? false, z.boolean()),
   sensoryNotes: z.string().optional(),
   notes: z.string().min(10)
 });
@@ -87,7 +90,7 @@ const defaults: FormValues = {
   parentalAgeFather: 35,
   diagnosticAgeMonths: 18,
   prenatalFactors: ['Natural'],
-  delays: ['Language'],
+  delays: ['None'],
   dysmorphicFeatures: false,
   intellectualDisability: 'N',
   comorbidities: '',
@@ -99,8 +102,9 @@ const defaults: FormValues = {
   mriFindings: '',
   neurologicalExam: 'N',
   headCircumference: 50,
-  concerns: ['Sensory'],
-  languageLevel: 'Delayed',
+  concerns: ['None'],
+  languageLevel: 'Functional',
+  languageDisorder: false,
   sensoryNotes: '',
   notes: ''
 };
@@ -118,6 +122,23 @@ export function CaseForm() {
       if (Array.isArray(current)) {
         const arr = current as string[];
         const exists = arr.includes(option);
+
+        // Special handling for fields with 'None' option (delays, concerns)
+        if (key === 'delays' || key === 'concerns') {
+          if (option === 'None') {
+            // If selecting 'None', clear all others and set only 'None'
+            // If deselecting 'None', just remove it
+            return { ...prev, [key]: exists ? [] : ['None'] };
+          } else {
+            // If selecting another option, remove 'None' if present
+            const withoutNone = arr.filter((item) => item !== 'None');
+            const next = exists
+              ? withoutNone.filter((item) => item !== option)
+              : [...withoutNone, option];
+            return { ...prev, [key]: next };
+          }
+        }
+
         const next = exists ? arr.filter((item) => item !== option) : [...arr, option];
         return { ...prev, [key]: next };
       }
@@ -434,6 +455,11 @@ export function CaseForm() {
             <option value="Absent">Absent</option>
           </select>
         </Field>
+        <ToggleRow
+          label="Language disorder diagnosed"
+          value={values.languageDisorder}
+          onChange={(val) => handleBoolean('languageDisorder', val)}
+        />
         <Field label="Sensory notes">
           <textarea
             value={values.sensoryNotes ?? ''}
@@ -691,6 +717,7 @@ function toSubmission(values: FormValues): CaseSubmission {
     behaviors: {
       concerns: [...values.concerns],
       languageLevel: values.languageLevel,
+      languageDisorder: values.languageDisorder,
       sensoryNotes: values.sensoryNotes?.trim() ?? ''
     },
     notes: values.notes.trim()
