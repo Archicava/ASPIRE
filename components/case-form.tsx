@@ -53,6 +53,33 @@ const fieldLabels: Record<string, string> = {
   notes: 'Clinical notes'
 };
 
+const fieldDescriptions: Record<string, string> = {
+  caseLabel: 'A unique identifier for this case, such as patient initials and age. Used for your reference only.',
+  ageMonths: 'Current age of the child in months. Provides developmental context for the assessment.',
+  sex: 'Biological sex. ASD is more commonly diagnosed in males (4:1 ratio).',
+  parentalAgeMother: 'Mother\'s age at the time of birth. Advanced parental age is associated with increased ASD risk.',
+  parentalAgeFather: 'Father\'s age at the time of birth. Paternal age over 40 is linked to higher ASD likelihood.',
+  diagnosticAgeMonths: 'Age when the ASD evaluation was conducted. Earlier diagnosis enables earlier intervention.',
+  prenatalFactors: 'Pregnancy and birth circumstances that may influence neurodevelopment.',
+  delays: 'Areas where developmental milestones were delayed. Select all that apply.',
+  dysmorphicFeatures: 'Observable physical anomalies that may suggest underlying genetic conditions.',
+  intellectualDisability: 'Formal classification of intellectual functioning based on ICD-10 criteria.',
+  comorbidities: 'Other medical conditions present alongside the primary concern (e.g., epilepsy, GI issues).',
+  regressionObserved: 'Loss of previously acquired skills, typically occurring between 15-24 months of age.',
+  adosScore: 'Autism Diagnostic Observation Schedule - a standardized assessment measuring social and communication behaviors.',
+  adirScore: 'Autism Diagnostic Interview-Revised - a structured parent interview covering developmental history.',
+  iqDq: 'Measure of cognitive ability. Scores below 70 typically indicate intellectual disability.',
+  eegAnomalies: 'Abnormal patterns in brain electrical activity detected through electroencephalography.',
+  mriFindings: 'Results from brain imaging that may reveal structural differences or abnormalities.',
+  neurologicalExam: 'Clinical assessment of nervous system function. Enter "N" for normal or describe any findings.',
+  headCircumference: 'Head size measurement. Unusually large head size (macrocephaly) is observed in some children with ASD.',
+  concerns: 'Behavioral patterns that may be relevant to the assessment. Select all that apply.',
+  languageLevel: 'Current level of expressive and receptive language ability.',
+  languageDisorder: 'Whether a formal language disorder diagnosis exists, separate from general language delays.',
+  sensoryNotes: 'Observations about sensory processing, such as over- or under-sensitivity to stimuli.',
+  notes: 'Additional clinical observations or context that may be relevant to the case.'
+};
+
 const schema = z.object({
   caseLabel: z.string().min(2),
   ageMonths: z.number().min(6).max(216),
@@ -261,7 +288,7 @@ export function CaseForm() {
       <section style={{ display: 'grid', gap: '1.25rem' }}>
         <h2 style={{ margin: 0, fontSize: '1.2rem' }}>Demographics</h2>
         <div className="grid-two form-grid">
-          <Field label="Case label" error={errors.caseLabel}>
+          <Field label="Case label" error={errors.caseLabel} info={fieldDescriptions.caseLabel}>
             <input
               value={values.caseLabel}
               onChange={textChange('caseLabel')}
@@ -269,7 +296,7 @@ export function CaseForm() {
               placeholder="Popescu, 4y"
             />
           </Field>
-          <Field label="Age (months)">
+          <Field label="Age (months)" info={fieldDescriptions.ageMonths}>
             <input
               type="number"
               min={6}
@@ -279,13 +306,13 @@ export function CaseForm() {
               style={inputStyle}
             />
           </Field>
-          <Field label="Sex">
+          <Field label="Sex" info={fieldDescriptions.sex}>
             <select value={values.sex} onChange={textChange('sex')} style={inputStyle}>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
           </Field>
-          <Field label="Diagnostic age (months)">
+          <Field label="Diagnostic age (months)" info={fieldDescriptions.diagnosticAgeMonths}>
             <input
               type="number"
               min={6}
@@ -295,7 +322,7 @@ export function CaseForm() {
               style={inputStyle}
             />
           </Field>
-          <Field label="Parental age - mother">
+          <Field label="Parental age - mother" info={fieldDescriptions.parentalAgeMother}>
             <input
               type="number"
               min={16}
@@ -305,7 +332,7 @@ export function CaseForm() {
               style={inputStyle}
             />
           </Field>
-          <Field label="Parental age - father">
+          <Field label="Parental age - father" info={fieldDescriptions.parentalAgeFather}>
             <input
               type="number"
               min={16}
@@ -322,6 +349,7 @@ export function CaseForm() {
           values={values.prenatalFactors}
           onToggle={(option) => handleToggle('prenatalFactors', option)}
           error={errors.prenatalFactors}
+          info={fieldDescriptions.prenatalFactors}
         />
       </section>
 
@@ -333,19 +361,22 @@ export function CaseForm() {
           values={values.delays}
           onToggle={(option) => handleToggle('delays', option)}
           error={errors.delays}
+          info={fieldDescriptions.delays}
         />
         <div className="grid-two form-grid">
           <ToggleRow
             label="Dysmorphic features observed"
             value={values.dysmorphicFeatures}
             onChange={(val) => handleBoolean('dysmorphicFeatures', val)}
+            info={fieldDescriptions.dysmorphicFeatures}
           />
           <ToggleRow
             label="Regression documented"
             value={values.regressionObserved}
             onChange={(val) => handleBoolean('regressionObserved', val)}
+            info={fieldDescriptions.regressionObserved}
           />
-          <Field label="Intellectual disability">
+          <Field label="Intellectual disability" info={fieldDescriptions.intellectualDisability}>
             <select
               value={values.intellectualDisability}
               onChange={textChange('intellectualDisability')}
@@ -359,7 +390,7 @@ export function CaseForm() {
             </select>
           </Field>
         </div>
-        <Field label="Comorbidities">
+        <Field label="Comorbidities" info={fieldDescriptions.comorbidities}>
           <input
             value={values.comorbidities}
             onChange={textChange('comorbidities')}
@@ -372,7 +403,7 @@ export function CaseForm() {
       <section style={{ display: 'grid', gap: '1.25rem' }}>
         <h2 style={{ margin: 0, fontSize: '1.2rem' }}>Clinical assessments</h2>
         <div className="grid-two form-grid">
-          <Field label="ADOS calibrated score">
+          <Field label="ADOS calibrated score" info={fieldDescriptions.adosScore}>
             <input
               type="number"
               min={1}
@@ -382,7 +413,7 @@ export function CaseForm() {
               style={inputStyle}
             />
           </Field>
-          <Field label="ADI-R total">
+          <Field label="ADI-R total" info={fieldDescriptions.adirScore}>
             <input
               type="number"
               min={1}
@@ -392,7 +423,7 @@ export function CaseForm() {
               style={inputStyle}
             />
           </Field>
-          <Field label="Head circumference (cm)">
+          <Field label="Head circumference (cm)" info={fieldDescriptions.headCircumference}>
             <input
               type="number"
               min={40}
@@ -402,7 +433,7 @@ export function CaseForm() {
               style={inputStyle}
             />
           </Field>
-          <Field label="IQ / Developmental Quotient" error={errors.iqDq}>
+          <Field label="IQ / Developmental Quotient" error={errors.iqDq} info={fieldDescriptions.iqDq}>
             <input
               type="number"
               min={20}
@@ -418,8 +449,9 @@ export function CaseForm() {
           label="EEG anomalies"
           value={values.eegAnomalies}
           onChange={(val) => handleBoolean('eegAnomalies', val)}
+          info={fieldDescriptions.eegAnomalies}
         />
-        <Field label="MRI findings">
+        <Field label="MRI findings" info={fieldDescriptions.mriFindings}>
           <textarea
             value={values.mriFindings ?? ''}
             onChange={textChange('mriFindings')}
@@ -428,7 +460,7 @@ export function CaseForm() {
             placeholder="Normal structural MRI"
           />
         </Field>
-        <Field label="Neurological examination" error={errors.neurologicalExam}>
+        <Field label="Neurological examination" error={errors.neurologicalExam} info={fieldDescriptions.neurologicalExam}>
           <textarea
             value={values.neurologicalExam}
             onChange={textChange('neurologicalExam')}
@@ -447,8 +479,9 @@ export function CaseForm() {
           values={values.concerns}
           onToggle={(option) => handleToggle('concerns', option)}
           error={errors.concerns}
+          info={fieldDescriptions.concerns}
         />
-        <Field label="Language level">
+        <Field label="Language level" info={fieldDescriptions.languageLevel}>
           <select value={values.languageLevel} onChange={textChange('languageLevel')} style={inputStyle}>
             <option value="Functional">Functional</option>
             <option value="Delayed">Delayed</option>
@@ -459,8 +492,9 @@ export function CaseForm() {
           label="Language disorder diagnosed"
           value={values.languageDisorder}
           onChange={(val) => handleBoolean('languageDisorder', val)}
+          info={fieldDescriptions.languageDisorder}
         />
-        <Field label="Sensory notes">
+        <Field label="Sensory notes" info={fieldDescriptions.sensoryNotes}>
           <textarea
             value={values.sensoryNotes ?? ''}
             onChange={textChange('sensoryNotes')}
@@ -473,7 +507,7 @@ export function CaseForm() {
 
       <section style={{ display: 'grid', gap: '1.25rem' }}>
         <h2 style={{ margin: 0, fontSize: '1.2rem' }}>Clinical narrative</h2>
-        <Field label="Notes" error={errors.notes}>
+        <Field label="Notes" error={errors.notes} info={fieldDescriptions.notes}>
           <textarea
             value={values.notes}
             onChange={textChange('notes')}
@@ -539,18 +573,73 @@ export function CaseForm() {
   );
 }
 
+function InfoTooltip({ text }: { text: string }) {
+  return (
+    <span
+      className="info-tooltip"
+      style={{
+        position: 'relative',
+        display: 'inline-flex',
+        alignItems: 'center',
+        marginLeft: '0.4rem',
+        cursor: 'help'
+      }}
+    >
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        style={{ color: 'var(--color-text-secondary)', opacity: 0.7 }}
+      >
+        <circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M8 7v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="8" cy="5" r="0.75" fill="currentColor" />
+      </svg>
+      <span
+        className="tooltip-content"
+        style={{
+          position: 'absolute',
+          bottom: 'calc(100% + 8px)',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          padding: '0.6rem 0.8rem',
+          background: 'var(--color-card)',
+          border: '1px solid var(--color-border)',
+          borderRadius: '0.5rem',
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+          fontSize: '0.8rem',
+          lineHeight: 1.4,
+          color: 'var(--color-text-secondary)',
+          width: 'max-content',
+          maxWidth: '280px',
+          zIndex: 1000,
+          pointerEvents: 'none'
+        }}
+      >
+        {text}
+      </span>
+    </span>
+  );
+}
+
 function Field({
   label,
   error,
+  info,
   children
 }: {
   label: string;
   error?: string;
+  info?: string;
   children: React.ReactNode;
 }) {
   return (
     <label className="form-field">
-      <span style={{ fontWeight: 600 }}>{label}</span>
+      <span style={{ fontWeight: 600, display: 'inline-flex', alignItems: 'center' }}>
+        {label}
+        {info && <InfoTooltip text={info} />}
+      </span>
       {children}
       {error ? (
         <span style={{ color: 'var(--color-danger)', fontSize: '0.8rem' }}>{error}</span>
@@ -564,17 +653,22 @@ function CheckboxGroup({
   options,
   values,
   onToggle,
-  error
+  error,
+  info
 }: {
   label: string;
   options: readonly string[];
   values: readonly string[];
   onToggle: (value: string) => void;
   error?: string;
+  info?: string;
 }) {
   return (
     <div style={{ display: 'grid', gap: '0.9rem' }}>
-      <span style={{ fontWeight: 600 }}>{label}</span>
+      <span style={{ fontWeight: 600, display: 'inline-flex', alignItems: 'center' }}>
+        {label}
+        {info && <InfoTooltip text={info} />}
+      </span>
       <div
         style={{
           display: 'flex',
@@ -614,11 +708,13 @@ function CheckboxGroup({
 function ToggleRow({
   label,
   value,
-  onChange
+  onChange,
+  info
 }: {
   label: string;
   value: boolean;
   onChange: (value: boolean) => void;
+  info?: string;
 }) {
   return (
     <div
@@ -634,7 +730,10 @@ function ToggleRow({
         gap: '0.75rem'
       }}
     >
-      <span style={{ fontWeight: 600 }}>{label}</span>
+      <span style={{ fontWeight: 600, display: 'inline-flex', alignItems: 'center' }}>
+        {label}
+        {info && <InfoTooltip text={info} />}
+      </span>
       <label style={{ position: 'relative', width: '42px', height: '24px' }}>
         <input
           type="checkbox"

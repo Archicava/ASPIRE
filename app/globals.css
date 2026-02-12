@@ -297,6 +297,19 @@ main {
   line-height: 1.35;
 }
 
+/* Info tooltip */
+.info-tooltip .tooltip-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 150ms ease, visibility 150ms ease;
+}
+
+.info-tooltip:hover .tooltip-content,
+.info-tooltip:focus .tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}
+
 .form-field input,
 .form-field select,
 .form-field textarea {
