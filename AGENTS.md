@@ -22,6 +22,7 @@ Update rules:
 - Session cookie is signed (HMAC) in `r1-session` (see `lib/auth/session.ts`); set `AUTH_SESSION_SECRET` in prod.
 - Auth UI caches sessions in `aspire-session` localStorage for client-side reloads.
 - Authenticated pages gate via `useAuth` in `app/(authenticated)/layout.tsx`; admin APIs validate the session cookie.
+- Download page is public at `app/download/page.tsx` and does not use the authenticated route group gate.
 
 ## Env Vars
 - `R1EN_CHAINSTORE_API_URL` / `R1EN_R1FS_API_URL` set endpoints; `R1EN_CHAINSTORE_PEERS` optional.
@@ -77,3 +78,4 @@ Update rules:
 - 2026-02-04: Centered the download content inside a single narrow card layout.
 - 2026-02-04: Reduced bottom padding on the download page to tighten footer spacing.
 - 2026-02-04: Set download page grid items to align to the start to prevent stretching.
+- 2026-02-17: Moved `/download` out of `app/(authenticated)` so the download page no longer requires login.
