@@ -81,3 +81,4 @@ Update rules:
 - 2026-02-17: Moved `/download` out of `app/(authenticated)` so the download page no longer requires login.
 - 2026-03-04: Added desktop client preview gallery images (`public/1.png`-`public/4.png`) and local-environment description copy to `/download`.
 - 2026-03-04: Upgraded `/download` previews with selectable cards and a zoom overlay (close/prev/next plus keyboard navigation).
+- 2026-03-04: Fixed build blockers by switching navbar logo rendering to `next/image` and guarding nullable preview index usage in the desktop preview modal header.

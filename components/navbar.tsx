@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 
@@ -35,9 +36,11 @@ export function Navbar() {
     <nav className={`card nav-shell ${isMenuOpen ? 'nav-open' : ''}`}>
       <div className="nav-left">
         <Link href={brandHref} className="nav-brand">
-          <img
+          <Image
             src="/AspireLogo.svg"
             alt="Aspire logo"
+            width={200}
+            height={52}
             style={{
               height: '52px',
               width: 'auto',

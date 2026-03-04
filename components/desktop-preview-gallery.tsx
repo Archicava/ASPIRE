@@ -67,6 +67,7 @@ export function DesktopPreviewGallery({ previews }: { previews: DesktopPreview[]
   }
 
   const activePreview = selectedIndex !== null ? previews[selectedIndex] : null;
+  const activePreviewIndex = selectedIndex ?? 0;
 
   return (
     <>
@@ -159,7 +160,7 @@ export function DesktopPreviewGallery({ previews }: { previews: DesktopPreview[]
               }}
             >
               <p className="section-title" style={{ margin: 0 }}>
-                Preview {selectedIndex + 1} of {totalPreviews}
+                Preview {activePreviewIndex + 1} of {totalPreviews}
               </p>
               <button
                 type="button"
