@@ -79,3 +79,5 @@ Update rules:
 - 2026-02-04: Reduced bottom padding on the download page to tighten footer spacing.
 - 2026-02-04: Set download page grid items to align to the start to prevent stretching.
 - 2026-02-17: Moved `/download` out of `app/(authenticated)` so the download page no longer requires login.
+- 2026-03-04: Added desktop client preview gallery images (`public/1.png`-`public/4.png`) and local-environment description copy to `/download`.
+- 2026-03-04: Upgraded `/download` previews with selectable cards and a zoom overlay (close/prev/next plus keyboard navigation).

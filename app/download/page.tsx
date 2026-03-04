@@ -1,3 +1,4 @@
+import { DesktopPreviewGallery } from "@/components/desktop-preview-gallery";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 
@@ -16,6 +17,12 @@ type GitHubRelease = {
 };
 
 const RELEASES_API = "https://api.github.com/repos/Archicava/ASPIRE-Desktop/releases/latest";
+const PREVIEW_IMAGES = [
+  { src: "/1.png", alt: "Aspire desktop client preview 1" },
+  { src: "/2.png", alt: "Aspire desktop client preview 2" },
+  { src: "/3.png", alt: "Aspire desktop client preview 3" },
+  { src: "/4.png", alt: "Aspire desktop client preview 4" },
+];
 
 export const revalidate = 300;
 
@@ -233,6 +240,17 @@ export default async function DownloadPage() {
                 No binary assets found in the latest release.
               </p>
             )}
+          </div>
+
+          <div style={{ display: "grid", gap: "0.45rem" }}>
+            <p className="section-title" style={{ margin: 0 }}>
+              Desktop client
+            </p>
+            <p style={{ margin: 0, color: "var(--color-text-secondary)" }}>
+              The Aspire desktop client facilitates interaction with your local environment so you can
+              launch workflows, access release builds, and stay in control of your case workspace.
+            </p>
+            <DesktopPreviewGallery previews={PREVIEW_IMAGES} />
           </div>
         </section>
       </main>
