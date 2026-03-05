@@ -17,8 +17,6 @@ type GitHubRelease = {
 };
 
 const DEFAULT_RELEASES_REPO = "Archicava/ASPIRE-Desktop";
-const releasesRepo = process.env.ASPIRE_GITHUB_REPO || DEFAULT_RELEASES_REPO;
-const RELEASES_API = `https://api.github.com/repos/${releasesRepo}/releases/latest`;
 const PREVIEW_IMAGES = [
   { src: "/1.png", alt: "Aspire desktop client preview 1" },
   { src: "/2.png", alt: "Aspire desktop client preview 2" },
@@ -28,27 +26,67 @@ const PREVIEW_IMAGES = [
 
 export const revalidate = 300;
 
-async function getLatestRelease(): Promise<GitHubRelease | null> {
+function normalizeRepo(value: string | undefined): string {
+  const raw = (value || "").trim();
+  if (!raw) return DEFAULT_RELEASES_REPO;
+
   try {
-    const headers: HeadersInit = {
+    if (raw.startsWith("http://") || raw.startsWith("https://")) {
+      const parsed = new URL(raw);
+      const parts = parsed.pathname.replace(/^\/+|\/+$/g, "").split("/").filter(Boolean);
+      if (parts.length >= 2) return `${parts[0]}/${parts[1]}`;
+      return DEFAULT_RELEASES_REPO;
+    }
+  } catch {
+    return DEFAULT_RELEASES_REPO;
+  }
+
+  const sanitized = raw
+    .replace(/^github\.com\//i, "")
+    .replace(/^\/+|\/+$/g, "");
+  const parts = sanitized.split("/").filter(Boolean);
+  if (parts.length >= 2) return `${parts[0]}/${parts[1]}`;
+
+  return DEFAULT_RELEASES_REPO;
+}
+
+async function getLatestRelease(): Promise<{ release: GitHubRelease | null; releasesRepo: string }> {
+  const releasesRepo = normalizeRepo(process.env.ASPIRE_GITHUB_REPO);
+  const releasesApi = `https://api.github.com/repos/${releasesRepo}/releases/latest`;
+  const githubToken = process.env.ASPIRE_GITHUB_TOKEN?.trim();
+
+  try {
+    const withTokenHeaders: HeadersInit = {
       Accept: "application/vnd.github+json",
+      "User-Agent": "aspire-download-page",
     };
-    if (process.env.ASPIRE_GITHUB_TOKEN) {
-      headers.Authorization = `Bearer ${process.env.ASPIRE_GITHUB_TOKEN}`;
+    if (githubToken) {
+      withTokenHeaders.Authorization = `Bearer ${githubToken}`;
     }
 
-    const response = await fetch(RELEASES_API, {
+    let response = await fetch(releasesApi, {
       next: { revalidate },
-      headers,
+      headers: withTokenHeaders,
     });
 
-    if (!response.ok) {
-      return null;
+    if (!response.ok && githubToken) {
+      const noTokenHeaders: HeadersInit = {
+        Accept: "application/vnd.github+json",
+        "User-Agent": "aspire-download-page",
+      };
+      response = await fetch(releasesApi, {
+        next: { revalidate },
+        headers: noTokenHeaders,
+      });
     }
 
-    return (await response.json()) as GitHubRelease;
+    if (!response.ok) {
+      return { release: null, releasesRepo };
+    }
+
+    return { release: (await response.json()) as GitHubRelease, releasesRepo };
   } catch {
-    return null;
+    return { release: null, releasesRepo };
   }
 }
 
@@ -78,7 +116,7 @@ function pickAsset(assets: GitHubAsset[], pattern: RegExp): GitHubAsset | null {
 }
 
 export default async function DownloadPage() {
-  const release = await getLatestRelease();
+  const { release, releasesRepo } = await getLatestRelease();
   const assets = release?.assets ?? [];
 
   const macDmg =

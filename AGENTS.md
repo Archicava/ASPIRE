@@ -84,3 +84,4 @@ Update rules:
 - 2026-03-04: Upgraded `/download` previews with selectable cards and a zoom overlay (close/prev/next plus keyboard navigation).
 - 2026-03-04: Fixed build blockers by switching navbar logo rendering to `next/image` and guarding nullable preview index usage in the desktop preview modal header.
 - 2026-03-05: Made `/download` read `ASPIRE_GITHUB_REPO` and `ASPIRE_GITHUB_TOKEN` instead of hardcoded GitHub release values, and documented the vars in `.env.example`.
+- 2026-03-05: Hardened `/download` releases fetch by normalizing `ASPIRE_GITHUB_REPO` (supports full GitHub URL) and retrying unauthenticated when a tokened request fails.
