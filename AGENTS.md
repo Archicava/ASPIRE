@@ -29,6 +29,7 @@ Update rules:
 - `R1EN_CSTORE_AUTH_HKEY`, `R1EN_CSTORE_AUTH_SECRET`, `R1EN_CSTORE_AUTH_BOOTSTRAP_ADMIN_PWD` (legacy: `EE_CSTORE_AUTH_HKEY`, `EE_CSTORE_AUTH_SECRET`, `EE_CSTORE_AUTH_BOOTSTRAP_ADMIN_PW`) for CStore auth.
 - `AUTH_SESSION_SECRET` is required in production for signed sessions.
 - `AUTH_SESSION_COOKIE`, `AUTH_SESSION_TTL_SECONDS` override session cookie settings.
+- `ASPIRE_GITHUB_REPO` and optional `ASPIRE_GITHUB_TOKEN` configure `/download` GitHub release source and API auth.
 
 ## Progress Log
 - 2025-12-23: Initial project review and created AGENTS.md with auth + architecture notes.
@@ -82,3 +83,4 @@ Update rules:
 - 2026-03-04: Added desktop client preview gallery images (`public/1.png`-`public/4.png`) and local-environment description copy to `/download`.
 - 2026-03-04: Upgraded `/download` previews with selectable cards and a zoom overlay (close/prev/next plus keyboard navigation).
 - 2026-03-04: Fixed build blockers by switching navbar logo rendering to `next/image` and guarding nullable preview index usage in the desktop preview modal header.
+- 2026-03-05: Made `/download` read `ASPIRE_GITHUB_REPO` and `ASPIRE_GITHUB_TOKEN` instead of hardcoded GitHub release values, and documented the vars in `.env.example`.

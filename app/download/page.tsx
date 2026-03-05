@@ -16,7 +16,9 @@ type GitHubRelease = {
   assets: GitHubAsset[];
 };
 
-const RELEASES_API = "https://api.github.com/repos/Archicava/ASPIRE-Desktop/releases/latest";
+const DEFAULT_RELEASES_REPO = "Archicava/ASPIRE-Desktop";
+const releasesRepo = process.env.ASPIRE_GITHUB_REPO || DEFAULT_RELEASES_REPO;
+const RELEASES_API = `https://api.github.com/repos/${releasesRepo}/releases/latest`;
 const PREVIEW_IMAGES = [
   { src: "/1.png", alt: "Aspire desktop client preview 1" },
   { src: "/2.png", alt: "Aspire desktop client preview 2" },
@@ -28,11 +30,16 @@ export const revalidate = 300;
 
 async function getLatestRelease(): Promise<GitHubRelease | null> {
   try {
+    const headers: HeadersInit = {
+      Accept: "application/vnd.github+json",
+    };
+    if (process.env.ASPIRE_GITHUB_TOKEN) {
+      headers.Authorization = `Bearer ${process.env.ASPIRE_GITHUB_TOKEN}`;
+    }
+
     const response = await fetch(RELEASES_API, {
       next: { revalidate },
-      headers: {
-        Accept: "application/vnd.github+json",
-      },
+      headers,
     });
 
     if (!response.ok) {
@@ -131,7 +138,7 @@ export default async function DownloadPage() {
             </h1>
             {release?.tag_name ? (
               <a
-                href={`https://github.com/Archicava/ASPIRE-Desktop/releases/tag/${release.tag_name}`}
+                href={`https://github.com/${releasesRepo}/releases/tag/${release.tag_name}`}
                 target="_blank"
                 rel="noreferrer"
                 style={{
